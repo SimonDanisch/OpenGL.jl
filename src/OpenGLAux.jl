@@ -14,7 +14,6 @@ export glvertex, glcolor,glcolorb, gltexcoord,glnormal,
        rect_vertices, rect_vertices_around
 # glenable (covered by autoFFI)
        
-
 #Macro to conveniently also support tupled arguments.
 # (TODO probably move elsewhere)
 macro also_tuple(of, to)
