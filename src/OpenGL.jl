@@ -619,7 +619,7 @@ export glteximage1d
 export glteximage2d
 @get_c_fun gl glgetteximage glGetTexImage(target::GLenum,level::GLint,format::GLenum,_type::GLenum,pixels::Ptr)::Void
 export glgetteximage
-@get_c_fun gl glgentextures glGenTextures(n::GLsizei,textures::Ptr)::Void
+@get_c_fun gl glgentextures glGenTextures(n::GLsizei,textures::Ptr{Int64})::Void
 export glgentextures
 @get_c_fun gl gldeletetextures glDeleteTextures(n::GLsizei,textures::Ptr)::Void
 export gldeletetextures
