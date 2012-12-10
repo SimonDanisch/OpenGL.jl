@@ -615,7 +615,7 @@ export glgettexlevelparameterfv
 export glgettexlevelparameteriv
 @get_c_fun gl glteximage1d glTexImage1D(target::GLenum,level::GLint,internalformat::GLint,width::GLsizei,border::GLint,format::GLenum,_type::GLenum,pixels::Ptr)::Void
 export glteximage1d
-@get_c_fun gl glteximage2d glTexImage2D(target::GLenum,level::GLint,internalformat::GLint,width::GLsizei,height::GLsizei,border::GLint,format::GLenum,_type::GLenum,pixels::Ptr)::Void
+@get_c_fun gl glteximage2d glTexImage2D(target::GLenum,level::GLint,internalformat::GLint,width::GLsizei,height::GLsizei,border::GLint,format::GLenum,_type::GLenum,pixels::Ptr{Uint8})::Void
 export glteximage2d
 @get_c_fun gl glgetteximage glGetTexImage(target::GLenum,level::GLint,format::GLenum,_type::GLenum,pixels::Ptr)::Void
 export glgetteximage

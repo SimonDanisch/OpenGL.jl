@@ -1,6 +1,9 @@
 #  Jasper den Ouden 02-08-2012
 # Placed in public domain.
 
+
+load("image")
+
 module OpenGLAux
 
 #Handy stuff to make use of Julia features.
@@ -10,7 +13,7 @@ export glvertex, glcolor,glcolorb, gltexcoord,glnormal,
        glscale, gltranslate, glrotate,glrotate_r,
        glprimitive,glpushed,
        unit_frame, unit_frame_from, unit_frame_to,
-       rect_vertices, rect_vertices_around, glimread
+       rect_vertices, rect_vertices_around, glimg #glimread
 
 #TODO upgrade so glbegin/glpushmatrix can be used directly.
 #glenable (covered by autoFFI)
@@ -216,8 +219,10 @@ vertices_rect_around(pos[1],pos[2],r)
 
 # OpenGL expects a 1D, upside-down image array in BGR format for textures (BMP data from Julia's imread is in a 3D, right-side-up, RGB format)
 # TODO: At the moment, this returns an image in the GL_UNSIGNED_BYTE format (Uint8 in Julia), but other formats are allowed
-function glimread(filename::String)
-    img3D = imread(filename)
+# TODO: How do I get imread into this modules' namespace?
+#function glimread(filename::String)
+    #img3D = imread(filename)
+function glimg(img3D::Array{Float64,3})
     w = size(img3D,2)
     h = size(img3D,1)
     img = Array(Uint8,w*h*3)
