@@ -19,7 +19,6 @@ in lowercase. For example:
 
 #C function                           Julia equivalent
 
-
 + glBegin															glbegin
 + glEnd																glend
 + glVertex3f													glvertex
