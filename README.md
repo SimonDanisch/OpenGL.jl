@@ -43,7 +43,7 @@ The VAST majority of work was done by Jasper den Ouden
 examples, and responses to my questions, I would never have been able to put
 this into a Julia package.  All credit goes to him.
 
-I'd also like to thank the Khronos Group (http://www.opengl.org) for making the
+We'd also like to thank the Khronos Group (http://www.opengl.org) for making the
 OpenGL spec and hardware/software companies (open- and closed-source) for
 adopting it. It has given countless amounts of people the freedom to make
 beautiful graphics and visualize whatever they desire.
