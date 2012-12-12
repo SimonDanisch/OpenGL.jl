@@ -36,6 +36,19 @@ glrotate, gltranslate, and glcolor act similarly.
 At the moment, this has only been tested on a 2010 Macbook running Linux
 (Fedora 17) and a custom built PC desktop running Linux (Fedora 17). Have fun!
 
+#Loading and using images as textures
+
+1. Load the image using imread from Julia's image.jl file. 
+2. Pass the image array into glimg (automatically exported when
+	 require("OpenGL") is evaluated). OpenGL expects upside-down, 1D image arrays
+	 in a BGR format and glimg performs the necessary conversion on the 3D image
+	 arrays produced by imread.
+3. Initialize an empty array of Uint8's to contain texture identifiers.  For
+	 example, an Array(Uint8,3) should be created if you want to make three
+	 different textures.
+4. Continue with the typical OpenGL image/texture process.  See Examples for 6,
+	 7, 8, 9, and 10 for the relevant code.
+
 #Credit
 
 The VAST majority of work was done by Jasper den Ouden
