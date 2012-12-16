@@ -17,20 +17,31 @@ automatically!)
 
 + FFI a newer OpenGL spec
 + Fix any performance hiccups
++ Fix strange graphical issues (e.g., gllighting routines)
 
 #Usage notes
 
 PLEASE NOTE: When used in a Julia file, all of the function names are written
 in lowercase. For example:
 
-C - Julia comparisons
+In C-OpenGL code, one would write,
 
-+ glBegin	-														glbegin
-+ glEnd	-															glend
-+ glVertex3f - 												glvertex
+```c
+glBegin
+glEnd
+glVertex3f
+```
 
-There are also some convienence functions that take advantage of Julia's
-multipe dispatch.
+In a Julia-OpenGL code, one would write:
+
+```julia
+glbegin
+glend
+glvertex
+```
+
+There are also some convienence functions, written by Jasper, that take
+advantage of Julia's multiple dispatch.
 
 glvertex takes Integer/Float scalars/vectors and calls the appopriate OpenGL
 function.
