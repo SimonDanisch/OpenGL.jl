@@ -9,8 +9,9 @@ This package is intended to be a fully fledged Julia (http://www.julialang.org)
 interface to the OpenGL implementation on your machine.
 
 Many OpenGL functions are working, but many (specifically those that expect
-arrays) are still not fully implemented.  (You can edit the method signatures by
-hand, but it is a painful process.  Jasper's FFI will soon handle this
+arrays) are still not fully implemented.  (You can edit the method signatures
+by hand, but it is a painful process.  Jasper's FFI
+(https://github.com/o-jasper/julia-ffi.git) will soon handle this
 automatically!)
 
 #TODO
