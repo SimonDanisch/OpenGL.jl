@@ -555,7 +555,7 @@ export glgetpixelmapusv
 export glbitmap
 @get_c_fun gl glreadpixels glReadPixels(x::GLint,y::GLint,width::GLsizei,height::GLsizei,format::GLenum,_type::GLenum,pixels::Ptr)::Void
 export glreadpixels
-@get_c_fun gl gldrawpixels glDrawPixels(width::GLsizei,height::GLsizei,format::GLenum,_type::GLenum,pixels::Ptr)::Void
+@get_c_fun gl gldrawpixels glDrawPixels(width::GLsizei,height::GLsizei,format::GLenum,_type::GLenum,pixels::Ptr{Float64})::Void
 export gldrawpixels
 @get_c_fun gl glcopypixels glCopyPixels(x::GLint,y::GLint,width::GLsizei,height::GLsizei,_type::GLenum)::Void
 export glcopypixels
