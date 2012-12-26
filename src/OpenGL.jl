@@ -499,7 +499,7 @@ export glshademodel
 export gllightf
 @get_c_fun gl gllighti glLighti(light::GLenum,pname::GLenum,param::GLint)::Void
 export gllighti
-@get_c_fun gl gllightfv glLightfv(light::GLenum,pname::GLenum,params::Ptr{Float64})::Void
+@get_c_fun gl gllightfv glLightfv(light::GLenum,pname::GLenum,params::Ptr{Float32})::Void
 export gllightfv
 @get_c_fun gl gllightiv glLightiv(light::GLenum,pname::GLenum,params::Ptr)::Void
 export gllightiv
@@ -619,7 +619,7 @@ export glteximage1d
 export glteximage2d
 @get_c_fun gl glgetteximage glGetTexImage(target::GLenum,level::GLint,format::GLenum,_type::GLenum,pixels::Ptr)::Void
 export glgetteximage
-@get_c_fun gl glgentextures glGenTextures(n::GLsizei,textures::Ptr{Int64})::Void
+@get_c_fun gl glgentextures glGenTextures(n::GLsizei,textures::Ptr{Uint32})::Void
 export glgentextures
 @get_c_fun gl gldeletetextures glDeleteTextures(n::GLsizei,textures::Ptr)::Void
 export gldeletetextures

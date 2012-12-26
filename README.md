@@ -27,7 +27,7 @@ glEnd
 glVertex3f
 ```
 
-In a Julia-OpenGL code, one would write:
+In Julia-OpenGL code, one would write:
 
 ```julia
 glbegin
@@ -52,10 +52,10 @@ Have fun!
 	 require("OpenGL") is evaluated). OpenGL expects upside-down, 1D image arrays
 	 in a BGR format and glimg performs the necessary conversion on the 3D image
 	 arrays produced by imread.
-3. Initialize an empty array of Uint8's to contain texture identifiers.  For
-	 example, an Array(Uint8,3) should be created if you want to make three
+3. Initialize an empty array of Uint32's to contain texture identifiers.  For
+	 example, an Array(Uint32,3) should be created if you want to make three
 	 different textures.
-4. Continue with the typical OpenGL image/texture process.  See Examples for 6,
+4. Continue with the typical OpenGL image/texture process.  See Examples 6,
 	 7, 8, 9, and 10 in the GLUT and SDL packages for the relevant code.
 
 #Credit
