@@ -27,6 +27,7 @@ In C-OpenGL code, one would write,
 glBegin
 glEnd
 glVertex3f
+gluPerspective
 ```
 
 In Julia-OpenGL code, one would write:
@@ -35,6 +36,7 @@ In Julia-OpenGL code, one would write:
 glbegin
 glend
 glvertex
+gluperspective
 ```
 
 There are also some convienence functions, written by Jasper, that take
