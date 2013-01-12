@@ -94,9 +94,51 @@ glcolor(r::Number,g::Number,b::Number) = glcolor3f(r,g,b)
 glcolor(r::Number,g::Number,b::Number,a::Number) = glcolor4f(r,g,b,a)
 @also_tuple glcolor 3:4
 
+function glcolor{T}(v::Array{T,1})
+    if length(v)==3
+        return glcolor(v[1],v[2],v[3])
+    end
+    if length(v)==2
+        return glcolor(v[1],v[2])
+    end
+    if length(v)==4
+        return glcolor(v[1],v[2],v[3],v[4])
+    end
+end
+
+function glcolor{T}(v::Array{T,2})
+    h, w = size(v)
+    if h == 1
+        return glcolor(vec(v))
+    else
+        error("Array must have 1 row (i.e., it must be like a vector).")
+    end
+end
+
 glcolorb(r::Integer,g::Integer,b::Integer) = glcolor3b(r,g,b)
 glcolorb(r::Integer,g::Integer,b::Integer,a::Integer) = glcolor4b(r,g,b,a)
 @also_tuple glcolorb 3:4
+
+function glcolorb(v::Array{Integer,1})
+    if length(v)==3
+        return glcolorb(v[1],v[2],v[3])
+    end
+    if length(v)==2
+        return glcolorb(v[1],v[2])
+    end
+    if length(v)==4
+        return glcolorb(v[1],v[2],v[3],v[4])
+    end
+end
+
+function glcolorb{T}(v::Array{T,2})
+    h, w = size(v)
+    if h == 1
+        return glcolorb(vec(v))
+    else
+        error("Array must have 1 row (i.e., it must be like a vector).")
+    end
+end
 
 glscale(x::Number,y::Number,z::Number) = glscaled(x,y,z)
 glscale(x::Number,y::Number) = glscaled(x,y,1)
@@ -217,7 +259,7 @@ vertices_rect_around(pos[1],pos[2],r)
 
 @also_tuple vertices_rect_around 2:3
 
-# OpenGL expects a 1D, upside-down image array in BGR format for textures (BMP data from Julia's imread is in a 3D, right-side-up, RGB format)
+# OpenGL expects a 1D, upside-down image array in an RGB format for textures (BMP data from Julia's imread is in a 3D, right-side-up, RGB format)
 # TODO: At the moment, this returns an image in the GL_UNSIGNED_BYTE format (Uint8 in Julia), but other formats are allowed
 # TODO: How do I get imread into this modules' namespace?
 #function glimread(filename::String)
@@ -227,7 +269,8 @@ function glimg(img3D::Array{Float64,3})
     h = size(img3D,1)
     img = Array(Uint8,w*h*3)
     for i=1:w, j=1:h, k=1:3
-        img[w*3*(j-1)+(i-1)*3+k] = uint8(img3D[i,(h+1)-j,4-k]*255)
+        #img[w*3*(j-1)+(i-1)*3+k] = uint8(img3D[i,(h+1)-j,4-k]*255)
+        img[w*3*(j-1)+(i-1)*3+k] = uint8(img3D[i,(h+1)-j,k]*255)
     end
     return img
 end

@@ -1,12 +1,14 @@
 This is essentially useless without adding the GLUT or SDL packages!!! (The SDL
 and GLUT packages include this package by default.)
 
-This package is intended to be a fully fledged Julia (http://www.julialang.org)
-interface to the OpenGL implementation on your machine.
-
 NOTE: It is recommended that you use the proprietary drivers for your graphics
 card.  Open-source drivers produce poor performance and have caused X11 to
 crash before.
+
+This package is intended to be a fully fledged Julia (http://www.julialang.org)
+interface to the OpenGL implementation on your machine.  At the moment, a good
+deal of OpenGL 1.x and some GLU functionality is enabled.  OpenGL 2.x, 3.x, and
+4.x functionality should be available soon.
 
 Many OpenGL functions are working, but many (specifically those that expect
 arrays) are still not fully implemented.  (You can edit the method signatures
@@ -36,12 +38,11 @@ glvertex
 ```
 
 There are also some convienence functions, written by Jasper, that take
-advantage of Julia's multiple dispatch.
-
-glvertex takes Integer/Float scalars/vectors and calls the appopriate OpenGL
-function.
-
+advantage of Julia's multiple dispatch.  For example, glvertex takes
+Integer/Float scalars/vectors and calls the appopriate OpenGL function.
 glrotate, gltranslate, and glcolor act similarly.
+
+See the Examples/NeHe directory in the GLUT and SDL packages for code.
 
 Have fun!
 
@@ -50,13 +51,14 @@ Have fun!
 1. Load the image using imread from Julia's image.jl file. 
 2. Pass the image array into glimg (automatically exported when
 	 require("OpenGL") is evaluated). OpenGL expects upside-down, 1D image arrays
-	 in a BGR format and glimg performs the necessary conversion on the 3D image
+	 in an RGB format and glimg performs the necessary conversion on the 3D image
 	 arrays produced by imread.
 3. Initialize an empty array of Uint32's to contain texture identifiers.  For
 	 example, an Array(Uint32,3) should be created if you want to make three
 	 different textures.
-4. Continue with the typical OpenGL image/texture process.  See Examples 6,
-	 7, 8, 9, and 10 in the GLUT and SDL packages for the relevant code.
+4. Continue with the typical OpenGL image/texture process.
+5. See Examples 6 or greater in the GLUT and SDL packages for the relevant
+	 code.
 
 #Credit
 

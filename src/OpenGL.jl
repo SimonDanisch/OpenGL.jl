@@ -183,7 +183,7 @@ export glnewlist
 export glendlist
 @get_c_fun gl glcalllist glCallList(list::GLuint)::Void
 export glcalllist
-@get_c_fun gl glcalllists glCallLists(n::GLsizei,_type::GLenum,lists::Ptr)::Void
+@get_c_fun gl glcalllists glCallLists(n::GLsizei,_type::GLenum,lists::Ptr{Uint8})::Void
 export glcalllists
 @get_c_fun gl gllistbase glListBase(base::GLuint)::Void
 export gllistbase
@@ -621,7 +621,7 @@ export glteximage2d
 export glgetteximage
 @get_c_fun gl glgentextures glGenTextures(n::GLsizei,textures::Ptr{Uint32})::Void
 export glgentextures
-@get_c_fun gl gldeletetextures glDeleteTextures(n::GLsizei,textures::Ptr)::Void
+@get_c_fun gl gldeletetextures glDeleteTextures(n::GLsizei,textures::Ptr{Uint32})::Void
 export gldeletetextures
 @get_c_fun gl glbindtexture glBindTexture(target::GLenum,texture::GLuint)::Void
 export glbindtexture
@@ -693,7 +693,7 @@ export glevalmesh2
 export glfogf
 @get_c_fun gl glfogi glFogi(pname::GLenum,param::GLint)::Void
 export glfogi
-@get_c_fun gl glfogfv glFogfv(pname::GLenum,params::Ptr)::Void
+@get_c_fun gl glfogfv glFogfv(pname::GLenum,params::Ptr{Float64})::Void
 export glfogfv
 @get_c_fun gl glfogiv glFogiv(pname::GLenum,params::Ptr)::Void
 export glfogiv
