@@ -1,20 +1,29 @@
 This is essentially useless without adding the GLUT or SDL packages!!! (The SDL
 and GLUT packages include this package by default.)
 
-NOTE: It is recommended that you use the proprietary drivers for your graphics
-card.  Open-source drivers produce poor performance and have caused X11 to
-crash before.
 
 This package is intended to be a fully fledged Julia (http://www.julialang.org)
 interface to the OpenGL implementation on your machine.  At the moment, a good
 deal of OpenGL 1.x and some GLU functionality is enabled.  OpenGL 2.x, 3.x, and
 4.x functionality should be available soon.
 
-Many OpenGL functions are working, but many (specifically those that expect
-arrays) are still not fully implemented.  (You can edit the method signatures
-by hand, but it is a painful process.  Jasper's FFI
-(https://github.com/o-jasper/julia-ffi.git) will soon handle this
+Many of the commonly used OpenGL 1.x functions are working, but many
+(specifically those that expect arrays) are still not fully implemented.  (You
+can edit the method signatures by hand, but it is a painful process.  Jasper's
+FFI (https://github.com/o-jasper/julia-ffi.git) will soon handle this
 automatically!)
+
+#Installation
+
+```julia
+Pkg.add("OpenGL")
+```
+
+NOTE: If you are on Linux, it is recommended that you use the proprietary
+drivers for your graphics card.  Open-source drivers produce poor performance
+and have caused X11 to crash before.  Mac and Windows users should be fine.
+However, I don't believe this package has been tested on either of those
+operating systems.
 
 #Usage notes
 
@@ -44,13 +53,22 @@ advantage of Julia's multiple dispatch.  For example, glvertex takes
 Integer/Float scalars/vectors and calls the appopriate OpenGL function.
 glrotate, gltranslate, and glcolor act similarly.
 
-See the Examples/NeHe directory in the GLUT and SDL packages for code.
+See the Examples/NeHe directory in the GLUT and SDL packages for code. Controls
+are listed in the opening comments of each example.
+
+Mouse and joystick versions of tutorial 7 can be found in the Examples/NeHe
+directory.  The joystick version is currently untested.
+
+(At the moment, NeHe tutorial 17 will run, but produces a glicthy output.  I've
+yet to figure that out.  It may be a while before I return to it, since fonts
+in 3D applications aren't terribly interesting to me.)
 
 Have fun!
 
 #Loading and using images as textures
 
-1. Load the image using imread from Julia's image.jl file. 
+1. Load the image using imread from Julia's image.jl file. (You will need to
+	 require("image") before imread will be available in the Main namespace.)
 2. Pass the image array into glimg (automatically exported when
 	 require("OpenGL") is evaluated). OpenGL expects upside-down, 1D image arrays
 	 in an RGB format and glimg performs the necessary conversion on the 3D image
@@ -59,8 +77,8 @@ Have fun!
 	 example, an Array(Uint32,3) should be created if you want to make three
 	 different textures.
 4. Continue with the typical OpenGL image/texture process.
-5. See Examples 6 or greater in the GLUT and SDL packages for the relevant
-	 code.
+5. See Examples 6 or greater in the Examples/NeHe directory of the GLUT and SDL
+	 packages for the relevant code.
 
 #Credit
 

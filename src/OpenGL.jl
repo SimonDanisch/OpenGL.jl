@@ -1,5 +1,3 @@
-require("GetC")
-
 module OpenGL
 
 import GetC.@get_c_fun

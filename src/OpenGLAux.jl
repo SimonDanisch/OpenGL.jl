@@ -2,7 +2,7 @@
 # Placed in public domain.
 
 
-load("image")
+require("image")
 
 module OpenGLAux
 
