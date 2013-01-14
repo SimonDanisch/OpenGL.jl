@@ -1,16 +1,19 @@
-This is essentially useless without adding the GLUT or SDL packages!!! (The SDL
-and GLUT packages include this package by default.)
+This is essentially useless without adding the
+[GLUT](https://www.github.com/rennis250/GLUT.jl.git) or
+[SDL](https://www.github.com/rennis250/SDL.jl.git) packages!!! (The SDL and
+GLUT packages include this package by default.)
 
 
-This package is intended to be a fully fledged Julia (http://www.julialang.org)
-interface to the OpenGL implementation on your machine.  At the moment, a good
-deal of OpenGL 1.x and some GLU functionality is enabled.  OpenGL 2.x, 3.x, and
-4.x functionality should be available soon.
+This package is intended to be a fully fledged
+[Julia](http://www.julialang.org) interface to the OpenGL implementation on
+your machine.  At the moment, a good deal of OpenGL 1.x and some GLU
+functionality is enabled.  OpenGL 2.x, 3.x, and 4.x functionality should be
+available soon.
 
 Many of the commonly used OpenGL 1.x functions are working, but many
 (specifically those that expect arrays) are still not fully implemented.  (You
-can edit the method signatures by hand, but it is a painful process.  Jasper's
-FFI (https://github.com/o-jasper/julia-ffi.git) will soon handle this
+can edit the method signatures by hand, but it is a painful process.  [Jasper's
+FFI](https://github.com/o-jasper/julia-ffi.git) will soon handle this
 automatically!)
 
 #Installation
@@ -63,8 +66,6 @@ directory.  The joystick version is currently untested.
 yet to figure that out.  It may be a while before I return to it, since fonts
 in 3D applications aren't terribly interesting to me.)
 
-Have fun!
-
 #Loading and using images as textures
 
 NOTE: Examples with images will not work, unless you have ImageMagick installed on
@@ -85,23 +86,24 @@ your system, since imread depends on it.
 
 #Credit
 
-The VAST majority of work was done by Jasper den Ouden
-(https://github.com/o-jasper).  Without his FFI, C header parser, original
-examples, and responses to my questions, I would never have been able to put
-this into a Julia package.  All credit goes to him.
+The VAST majority of work was done by [Jasper den
+Ouden](https://github.com/o-jasper).  Without his FFI, C header parser,
+original examples, and responses to my questions, I would never have been able
+to put this into a Julia package.  All credit goes to him.
 
-We'd also like to thank the Khronos Group (http://www.opengl.org) for making the
-OpenGL spec and hardware/software companies (open- and closed-source) for
+We'd also like to thank the [Khronos Group](http://www.opengl.org) for making
+the OpenGL spec and hardware/software companies (open- and closed-source) for
 adopting it. It has given countless amounts of people the freedom to make
 beautiful graphics and visualize whatever they desire.
 
-Thanks to NeHe Productions (http://nehe.gamedev.net) for making their excellent
-tutorials, which served as a wonderful test-bed for this interface. 
+Thanks to [NeHe Productions](http://nehe.gamedev.net) for making their
+excellent tutorials, which served as a wonderful test-bed for this interface. 
 
-Thanks to the Julia team (http://julialang.org) for making Julia, a programming
-language that many have been longing for, whether they knew about it or not.
-The "Octave-for-C-programmers," as one could think of it, is an incredibly fast
-and powerful programming language that is a welcome breath of fresh air in the
-technical and numerical programming communities.
+Thanks to the [Julia team](http://julialang.org) for making Julia, a
+programming language that many have been longing for, whether they knew about
+it or not. The "Octave-for-C-programmers," as one could think of it, is an
+incredibly fast and powerful programming language that is a welcome breath of
+fresh air in the technical and numerical programming communities.
 
+Have fun!
 --rennis250 & o-jasper
