@@ -10,9 +10,9 @@ your machine.  At the moment, a good deal of OpenGL 1.x and some GLU
 functionality is enabled.  OpenGL 2.x, 3.x, and 4.x functionality should be
 available soon.
 
-Many of the commonly used OpenGL 1.x functions are working, but many
-(specifically those that expect arrays) are still not fully implemented.  (You
-can edit the method signatures by hand, but it is a painful process.  [Jasper's
+Many of the commonly used OpenGL 1.x functions are working, but most of the
+less commonly used functions are still not fully implemented.  (You can edit
+the method signatures by hand, but it is a painful process.  [Jasper's
 FFI](https://github.com/o-jasper/julia-ffi.git) will soon handle this
 automatically!)
 
