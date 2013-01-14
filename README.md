@@ -91,13 +91,13 @@ Ouden](https://github.com/o-jasper).  Without his FFI, C header parser,
 original examples, and responses to my questions, I would never have been able
 to put this into a Julia package.  All credit goes to him.
 
+Thanks to [NeHe Productions](http://nehe.gamedev.net) for making their
+excellent tutorials, which served as a wonderful test-bed for this interface. 
+
 We'd also like to thank the [Khronos Group](http://www.opengl.org) for making
 the OpenGL spec and hardware/software companies (open- and closed-source) for
 adopting it. It has given countless amounts of people the freedom to make
 beautiful graphics and visualize whatever they desire.
-
-Thanks to [NeHe Productions](http://nehe.gamedev.net) for making their
-excellent tutorials, which served as a wonderful test-bed for this interface. 
 
 Thanks to the [Julia team](http://julialang.org) for making Julia, a
 programming language that many have been longing for, whether they knew about
