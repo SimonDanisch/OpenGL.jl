@@ -3,8 +3,6 @@ module GLU
 
 import GetC.@get_c_fun
 
-glu = dlopen("libGLU")
-
 typealias GLenum Uint32
 typealias GLboolean Uint8
 typealias GLbitfield Uint32
@@ -117,17 +115,17 @@ export uintptr_t
 export intmax_t 
 export uintmax_t 
 export __gwchar_t
-@get_c_fun glu imaxabs imaxabs(__n::intmax_t)::intmax_t
+@get_c_fun "libGLU" imaxabs imaxabs(__n::intmax_t)::intmax_t
 export imaxabs
-@get_c_fun glu imaxdiv imaxdiv(__numer::intmax_t,__denom::intmax_t)::imaxdiv_t
+@get_c_fun "libGLU" imaxdiv imaxdiv(__numer::intmax_t,__denom::intmax_t)::imaxdiv_t
 export imaxdiv
-@get_c_fun glu strtoimax strtoimax(__nptr::Ptr,__endptr::Ptr,__base::Int32)::intmax_t
+@get_c_fun "libGLU" strtoimax strtoimax(__nptr::Ptr,__endptr::Ptr,__base::Int32)::intmax_t
 export strtoimax
-@get_c_fun glu strtoumax strtoumax(__nptr::Ptr,__endptr::Ptr,__base::Int32)::uintmax_t
+@get_c_fun "libGLU" strtoumax strtoumax(__nptr::Ptr,__endptr::Ptr,__base::Int32)::uintmax_t
 export strtoumax
-@get_c_fun glu wcstoimax wcstoimax(__nptr::Ptr,__endptr::Ptr,__base::Int32)::intmax_t
+@get_c_fun "libGLU" wcstoimax wcstoimax(__nptr::Ptr,__endptr::Ptr,__base::Int32)::intmax_t
 export wcstoimax
-@get_c_fun glu wcstoumax wcstoumax(__nptr::Ptr,__endptr::Ptr,__base::Int32)::uintmax_t
+@get_c_fun "libGLU" wcstoumax wcstoumax(__nptr::Ptr,__endptr::Ptr,__base::Int32)::uintmax_t
 export wcstoumax
 typealias GLint64EXT int64_t
 typealias GLuint64EXT uint64_t
@@ -141,23 +139,23 @@ export GLint64
 export GLuint64 
 export GLvdpauSurfaceNV 
 export GLeglImageOES 
-@get_c_fun glu gluperspective gluPerspective(fovy::GLdouble,aspect::GLdouble,znear::GLdouble,zfar::GLdouble)::Void
+@get_c_fun "libGLU" gluperspective gluPerspective(fovy::GLdouble,aspect::GLdouble,znear::GLdouble,zfar::GLdouble)::Void
 export gluperspective
-@get_c_fun glu glubuild2dmipmaps gluBuild2DMipmaps(target::GLenum,internalFormat::GLint,width::GLsizei,height::GLsizei,format::GLenum,thetype::GLenum,data::Ptr{Uint8})::GLint
+@get_c_fun "libGLU" glubuild2dmipmaps gluBuild2DMipmaps(target::GLenum,internalFormat::GLint,width::GLsizei,height::GLsizei,format::GLenum,thetype::GLenum,data::Ptr{Uint8})::GLint
 export glubuild2dmipmaps
-@get_c_fun glu glunewquadric gluNewQuadric()::Ptr{Void}
+@get_c_fun "libGLU" glunewquadric gluNewQuadric()::Ptr{Void}
 export glunewquadric
-@get_c_fun glu gluquadricnormals gluQuadricNormals(quad::Ptr{Void},normal::GLenum)::Void
+@get_c_fun "libGLU" gluquadricnormals gluQuadricNormals(quad::Ptr{Void},normal::GLenum)::Void
 export gluquadricnormals
-@get_c_fun glu gluquadrictexture gluQuadricTexture(quad::Ptr{Void},texture::GLboolean)::Void
+@get_c_fun "libGLU" gluquadrictexture gluQuadricTexture(quad::Ptr{Void},texture::GLboolean)::Void
 export gluquadrictexture
-@get_c_fun glu glucylinder gluCylinder(quad::Ptr{Void},base::GLdouble,top::GLdouble,height::GLdouble,slices::GLint,stacks::GLint)::Void
+@get_c_fun "libGLU" glucylinder gluCylinder(quad::Ptr{Void},base::GLdouble,top::GLdouble,height::GLdouble,slices::GLint,stacks::GLint)::Void
 export glucylinder
-@get_c_fun glu gludisk gluDisk(quad::Ptr{Void},inner::GLdouble,outer::GLdouble,slices::GLint,stacks::GLint)::Void
+@get_c_fun "libGLU" gludisk gluDisk(quad::Ptr{Void},inner::GLdouble,outer::GLdouble,slices::GLint,stacks::GLint)::Void
 export gludisk
-@get_c_fun glu glusphere gluSphere(quad::Ptr{Void},radius::GLdouble,slices::GLint,stacks::GLint)::Void
+@get_c_fun "libGLU" glusphere gluSphere(quad::Ptr{Void},radius::GLdouble,slices::GLint,stacks::GLint)::Void
 export glusphere
-@get_c_fun glu glupartialdisk gluPartialDisk(quad::Ptr{Void},inner::GLdouble,outer::GLdouble,slices::GLint,loops::GLint,start::GLdouble,sweep::GLdouble)::Void
+@get_c_fun "libGLU" glupartialdisk gluPartialDisk(quad::Ptr{Void},inner::GLdouble,outer::GLdouble,slices::GLint,loops::GLint,start::GLdouble,sweep::GLdouble)::Void
 export glupartialdisk
 const GLU_EXT_object_space_tess       = 1
 const GLU_EXT_nurbs_tessellator       = 1
