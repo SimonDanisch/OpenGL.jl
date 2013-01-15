@@ -35,7 +35,7 @@ macro also_tuple(of, to)
     ret = {}
     #  nT(n) = map((i->(:T)), 1:n)
     for n = getwhich(to)
-        push(ret, 
+        push!(ret, 
         Expr(:function,
             #TODO templated it earlier, but unequal argument types make that not work.
             #                   {Expr(:call, {Expr(:curly, {of,:T}, Any),
