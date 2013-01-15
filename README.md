@@ -28,6 +28,9 @@ and have caused X11 to crash before.  Mac and Windows users should be fine.
 However, I don't believe this package has been tested on either of those
 operating systems.
 
+I wish I could provide some advice to Windows or Mac OS users, but I barely use
+those systems anymore.
+
 #Usage notes
 
 PLEASE NOTE: When used in a Julia file, all of the function names are written
