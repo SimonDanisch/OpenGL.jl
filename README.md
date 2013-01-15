@@ -51,10 +51,11 @@ glvertex
 gluperspective
 ```
 
-There are also some convienence functions, written by Jasper, that take
-advantage of Julia's multiple dispatch.  For example, glvertex takes
-Integer/Float scalars/vectors and calls the appopriate OpenGL function.
-glrotate, gltranslate, and glcolor act similarly.
+There are also some convienence functions, written by
+[Jasper](https://github.com/o-jasper), that take advantage of Julia's multiple
+dispatch.  For example, glvertex takes Integer/Float scalars/vectors and calls
+the appopriate OpenGL function. glrotate, gltranslate, and glcolor act
+similarly.
 
 See the Examples/NeHe directory in the GLUT and SDL packages for code. Controls
 are listed in the opening comments of each example.
