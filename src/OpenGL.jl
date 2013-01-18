@@ -10,9 +10,13 @@ using OpenGLStd
 
 module OpenGL
 
-#Handy stuff to make use of Julia features.
-using OpenGLStd
+import OpenGLStd.glvertex2i, OpenGLStd.glvertex3i, OpenGLStd.glvertex2d, OpenGLStd.glvertex3d, OpenGLStd.glvertex4d,
+       OpenGLStd.gltexcoord2i, OpenGLStd.gltexcoord3i, OpenGLStd.gltexcoord4i, OpenGLStd.gltexcoord2d, OpenGLStd.gltexcoord3d,
+       OpenGLStd.gltexcoord4d, OpenGLStd.glnormal3d, OpenGLStd.glcolor3f, OpenGLStd.glcolor4f, OpenGLStd.glcolor3b, OpenGLStd.glcolor4b,
+       OpenGLStd.glscaled, OpenGLStd.gltranslated, OpenGLStd.glrotated, OpenGLStd.glenable, OpenGLStd.gldisable, OpenGLStd.glbegin,
+       OpenGLStd.glend, OpenGLStd.glpushmatrix, OpenGLStd.glloadidentity
 
+#Handy stuff to make use of Julia features.
 export glvertex, glcolor,glcolorb, gltexcoord,glnormal,
        glscale, gltranslate, glrotate,glrotate_r,
        glprimitive,glpushed,
@@ -82,8 +86,7 @@ end
 #Texture coordinates
 gltexcoord(i::Integer,j::Integer) = gltexcoord2i(i,j)
 gltexcoord(i::Integer,j::Integer,k::Integer) = gltexcoord3i(i,j,k)
-gltexcoord(i::Integer,j::Integer,k::Integer,l::Integer) = 
-gltexcoord3i(i,j,k,l)
+gltexcoord(i::Integer,j::Integer,k::Integer,l::Integer) = gltexcoord4i(i,j,k,l)
 
 gltexcoord(x::Number,y::Number) = gltexcoord2d(x,y)
 gltexcoord(x::Number,y::Number,z::Number) = gltexcoord3d(x,y,z)
@@ -153,18 +156,14 @@ gltranslate(x::Number,y::Number,z::Number) = gltranslated(x,y,z)
 gltranslate(x::Number,y::Number) = gltranslated(x,y,0)
 @also_tuple gltranslate 2:3
 
-glrotate(angle::Number, nx::Number,ny::Number,nz::Number) =
-glrotated(angle, nx,ny,nz)
+glrotate(angle::Number, nx::Number,ny::Number,nz::Number) = glrotated(angle, nx,ny,nz)
 glrotate(angle::Number) = glrotated(angle,0,0,1)
-glrotate(angle::Number, n::(Number,Number,Number)) =
-glrotate(angle, n[1],n[2],n[3])
+glrotate(angle::Number, n::(Number,Number,Number)) = glrotate(angle, n[1],n[2],n[3])
 
 #Damn degrees.
 glrotate_r(angle::Number) = glrotate(angle*180/pi)
-glrotate_r(angle::Number, nx::Number,ny::Number,nz::Number) = 
-glrotate(angle*180/pi, nx,ny,nz)
-glrotate_r(angle::Number, n::(Number,Number,Number)) = 
-glrotate(angle*180/pi, n)
+glrotate_r(angle::Number, nx::Number,ny::Number,nz::Number) = glrotate(angle*180/pi, nx,ny,nz)
+glrotate_r(angle::Number, n::(Number,Number,Number)) = glrotate(angle*180/pi, n)
 
 #Enabling lists of stuff.
 type _GlEnable
@@ -228,8 +227,7 @@ end
 
 typealias Vector2 Union((Number,Number),Vector) #(just for here)
 
-unit_frame_from(fr::Vector2, to::Vector2) =
-unit_frame_from(fr[1],fr[2], to[1],to[2])
+unit_frame_from(fr::Vector2, to::Vector2) = unit_frame_from(fr[1],fr[2], to[1],to[2])
 
 @also_tuple unit_frame_from 2,4
 
@@ -238,8 +236,7 @@ function unit_frame_to(fx::Number,fy::Number,tx::Number,ty::Number)
     gltranslate(fx,fy)
     glscale(tx-fx, ty-fy)
 end
-unit_frame_to(fr::Vector2, to::Vector2) = 
-unit_frame_to(fr[1],fr[2], to[1],to[2])
+unit_frame_to(fr::Vector2, to::Vector2) = unit_frame_to(fr[1],fr[2], to[1],to[2])
 
 @also_tuple unit_frame_from 2,4
 
@@ -250,16 +247,13 @@ function rect_vertices(fx::Number,fy::Number,tx::Number,ty::Number)
     glvertex(tx,ty)
     glvertex(tx,fy)
 end
-rect_vertices(fr::Vector2, to::Vector2) = 
-rect_vertices(fr[1],fr[2], to[1],to[2])
+rect_vertices(fr::Vector2, to::Vector2) = rect_vertices(fr[1],fr[2], to[1],to[2])
 
 @also_tuple rect_vertices 2,4
 
-vertices_rect_around(x::Number,y::Number, r::Number) = 
-rect_vertices(x-r,y-r, x+r, y+r)
+vertices_rect_around(x::Number,y::Number, r::Number) = rect_vertices(x-r,y-r, x+r, y+r)
 
-vertices_rect_around(pos::Vector2, r::Number) = 
-vertices_rect_around(pos[1],pos[2],r)
+vertices_rect_around(pos::Vector2, r::Number) = vertices_rect_around(pos[1],pos[2],r)
 
 @also_tuple vertices_rect_around 2:3
 
