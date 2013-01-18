@@ -11,6 +11,7 @@ using OpenGLStd
 module OpenGL
 
 #Handy stuff to make use of Julia features.
+using OpenGLStd
 
 export glvertex, glcolor,glcolorb, gltexcoord,glnormal,
        glscale, gltranslate, glrotate,glrotate_r,
