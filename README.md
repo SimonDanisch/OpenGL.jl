@@ -70,7 +70,7 @@ directory.  The joystick version is currently untested.
 yet to figure that out.  It may be a while before I return to it, since fonts
 in 3D applications aren't terribly interesting to me.)
 
-#Loading and using images as textures
+#Loading and using images as OpenGL textures
 
 NOTE: Examples with images will not work, unless you have ImageMagick installed on
 your system, since imread depends on it.
