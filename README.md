@@ -177,7 +177,7 @@ put this into a Julia package.  All credit goes to him.
 Thanks to [jayschwa](https://github.com/jayschwa) for suggesting
 [gogl](https://github.com/chsc/gogl.git) as a source of inspiration.
 They've done an excellent job of using the correct OpenGL specs
-(thanks ??!) and of translating them into clean, parseable
+(thanks to [Jason McKesson](https://bitbucket.org/alfonse/gl-xml-specs)) and of translating them into clean, parseable
 [golang](http://www.golang.org) code.  The scripts used to translate the
 gogl code to Julia-OpenGL code can be found at
 [gogl_to_jlgl](https://www.github.com/rennis250/gogl_to_jlgl.git).
