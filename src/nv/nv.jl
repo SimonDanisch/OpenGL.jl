@@ -1986,7 +1986,7 @@ export glgetvertexattribdvnv
 export glgetvertexattribfvnv
 @get_c_fun "libGL" glgetvertexattribivnv glGetVertexAttribivNV(index::GLuint, pname::GLenum, params::Ptr{GLint})::Void
 export glgetvertexattribivnv
-@get_c_fun "libGL" glgetvertexattribpointervnv glGetVertexAttribPointervNV(index::GLuint, pname::GLenum, (*unsafe.Pointer)(pointer))::Void
+@get_c_fun "libGL" glgetvertexattribpointervnv glGetVertexAttribPointervNV(index::GLuint, pname::GLenum, pointer::Ptr{Ptr{Void}})::Void
 export glgetvertexattribpointervnv
 @get_c_fun "libGL" glisprogramnv glIsProgramNV(id::GLuInt)::Bool
 export glisprogramnv

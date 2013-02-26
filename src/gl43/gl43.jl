@@ -1,4 +1,4 @@
-module OpenGLStd
+module GL43
 
 import GetC.@get_c_fun
 
@@ -3464,7 +3464,7 @@ export glgeterror
 export glgetfloatv
 @get_c_fun "libGL" glgetintegerv glGetIntegerv(pname::GLenum, params::Ptr{GLint})::Void
 export glgetintegerv
-@get_c_fun "libGL" glgetstring glGetString(name::GLenum)::*UInt8
+@get_c_fun "libGL" glgetstring glGetString(name::GLenum)::Ptr{UInt8}
 export glgetstring
 @get_c_fun "libGL" glgetteximage glGetTexImage(target::GLenum, level::GLint, format::GLenum, type_::GLenum, pixels::Ptr{Void})::Void
 export glgetteximage
@@ -3486,7 +3486,7 @@ export glviewport
 export gldrawarrays
 @get_c_fun "libGL" gldrawelements glDrawElements(mode::GLenum, count::GLsizei, type_::GLenum, indices::Ptr{Void})::Void
 export gldrawelements
-@get_c_fun "libGL" glgetpointerv glGetPointerv(pname::GLenum, (*unsafe.Pointer)(params))::Void
+@get_c_fun "libGL" glgetpointerv glGetPointerv(pname::GLenum, params::Ptr{Ptr{Void}})::Void
 export glgetpointerv
 @get_c_fun "libGL" glpolygonoffset glPolygonOffset(factor::GLfloat, units::GLfloat)::Void
 export glpolygonoffset
@@ -3518,7 +3518,7 @@ export glindexubv
 export glblendcolor
 @get_c_fun "libGL" glblendequation glBlendEquation(mode::GLenum)::Void
 export glblendequation
-@get_c_fun "libGL" gldrawrangeelements glDrawRangeElements(mode::GLenum, start::GLuint, end::GLuint, count::GLsizei, type_::GLenum, indices::Ptr{Void})::Void
+@get_c_fun "libGL" gldrawrangeelements glDrawRangeElements(mode::GLenum, start::GLuint, end_::GLuint, count::GLsizei, type_::GLenum, indices::Ptr{Void})::Void
 export gldrawrangeelements
 @get_c_fun "libGL" glteximage3d glTexImage3D(target::GLenum, level::GLint, internalformat::GLint, width::GLsizei, height::GLsizei, depth::GLsizei, border::GLint, format::GLenum, type_::GLenum, pixels::Ptr{Void})::Void
 export glteximage3d
@@ -3548,7 +3548,7 @@ export glgetcompressedteximage
 export glblendfuncseparate
 @get_c_fun "libGL" glmultidrawarrays glMultiDrawArrays(mode::GLenum, first::Ptr{GLint}, count::Ptr{GLsizei}, drawcount::GLsizei)::Void
 export glmultidrawarrays
-@get_c_fun "libGL" glmultidrawelements glMultiDrawElements(mode::GLenum, count::Ptr{GLsizei}, type_::GLenum, (*unsafe.Pointer)(indices), drawcount::GLsizei)::Void
+@get_c_fun "libGL" glmultidrawelements glMultiDrawElements(mode::GLenum, count::Ptr{GLsizei}, type_::GLenum, indices::Ptr{Ptr{Void}}, drawcount::GLsizei)::Void
 export glmultidrawelements
 @get_c_fun "libGL" glpointparameterf glPointParameterf(pname::GLenum, param::GLfloat)::Void
 export glpointparameterf
@@ -3594,7 +3594,7 @@ export glmapbuffer
 export glunmapbuffer
 @get_c_fun "libGL" glgetbufferparameteriv glGetBufferParameteriv(target::GLenum, pname::GLenum, params::Ptr{GLint})::Void
 export glgetbufferparameteriv
-@get_c_fun "libGL" glgetbufferpointerv glGetBufferPointerv(target::GLenum, pname::GLenum, (*unsafe.Pointer)(params))::Void
+@get_c_fun "libGL" glgetbufferpointerv glGetBufferPointerv(target::GLenum, pname::GLenum, params::Ptr{Ptr{Void}})::Void
 export glgetbufferpointerv
 @get_c_fun "libGL" glblendequationseparate glBlendEquationSeparate(modeRGB::GLenum, modeAlpha::GLenum)::Void
 export glblendequationseparate
@@ -3656,7 +3656,7 @@ export glgetvertexattribdv
 export glgetvertexattribfv
 @get_c_fun "libGL" glgetvertexattribiv glGetVertexAttribiv(index::GLuint, pname::GLenum, params::Ptr{GLint})::Void
 export glgetvertexattribiv
-@get_c_fun "libGL" glgetvertexattribpointerv glGetVertexAttribPointerv(index::GLuint, pname::GLenum, (*unsafe.Pointer)(pointer))::Void
+@get_c_fun "libGL" glgetvertexattribpointerv glGetVertexAttribPointerv(index::GLuint, pname::GLenum, pointer::Ptr{Ptr{Void}})::Void
 export glgetvertexattribpointerv
 @get_c_fun "libGL" glisprogram glIsProgram(program::GLuInt)::Bool
 export glisprogram
@@ -3836,7 +3836,7 @@ export glclearbufferuiv
 export glclearbufferfv
 @get_c_fun "libGL" glclearbufferfi glClearBufferfi(buffer::GLenum, drawbuffer::GLint, depth::GLfloat, stencil::GLint)::Void
 export glclearbufferfi
-@get_c_fun "libGL" glgetstringi glGetStringi(name::GLenum, index::GLuInt)::*Uint8
+@get_c_fun "libGL" glgetstringi glGetStringi(name::GLenum, index::GLuInt)::Ptr{Uint8}
 export glgetstringi
 @get_c_fun "libGL" glisrenderbuffer glIsRenderbuffer(renderbuffer::GLuInt)::Bool
 export glisrenderbuffer
@@ -3922,11 +3922,11 @@ export glgetbufferparameteri64v
 export glframebuffertexture
 @get_c_fun "libGL" gldrawelementsbasevertex glDrawElementsBaseVertex(mode::GLenum, count::GLsizei, type_::GLenum, indices::Ptr{Void}, basevertex::GLint)::Void
 export gldrawelementsbasevertex
-@get_c_fun "libGL" gldrawrangeelementsbasevertex glDrawRangeElementsBaseVertex(mode::GLenum, start::GLuint, end::GLuint, count::GLsizei, type_::GLenum, indices::Ptr{Void}, basevertex::GLint)::Void
+@get_c_fun "libGL" gldrawrangeelementsbasevertex glDrawRangeElementsBaseVertex(mode::GLenum, start::GLuint, end_::GLuint, count::GLsizei, type_::GLenum, indices::Ptr{Void}, basevertex::GLint)::Void
 export gldrawrangeelementsbasevertex
 @get_c_fun "libGL" gldrawelementsinstancedbasevertex glDrawElementsInstancedBaseVertex(mode::GLenum, count::GLsizei, type_::GLenum, indices::Ptr{Void}, instancecount::GLsizei, basevertex::GLint)::Void
 export gldrawelementsinstancedbasevertex
-@get_c_fun "libGL" glmultidrawelementsbasevertex glMultiDrawElementsBaseVertex(mode::GLenum, count::Ptr{GLsizei}, type_::GLenum, (*unsafe.Pointer)(indices), drawcount::GLsizei, basevertex::Ptr{GLint})::Void
+@get_c_fun "libGL" glmultidrawelementsbasevertex glMultiDrawElementsBaseVertex(mode::GLenum, count::Ptr{GLsizei}, type_::GLenum, indices::Ptr{Ptr{Void}}, drawcount::GLsizei, basevertex::Ptr{GLint})::Void
 export glmultidrawelementsbasevertex
 @get_c_fun "libGL" glprovokingvertex glProvokingVertex(mode::GLenum)::Void
 export glprovokingvertex

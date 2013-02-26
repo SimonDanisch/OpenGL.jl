@@ -1832,13 +1832,13 @@ export glgetmultitexgenivext
 export glgetfloatindexedvext
 @get_c_fun "libGL" glgetdoubleindexedvext glGetDoubleIndexedvEXT(target::GLenum, index::GLuint, data::Ptr{GLdouble})::Void
 export glgetdoubleindexedvext
-@get_c_fun "libGL" glgetpointerindexedvext glGetPointerIndexedvEXT(target::GLenum, index::GLuint, (*unsafe.Pointer)(data))::Void
+@get_c_fun "libGL" glgetpointerindexedvext glGetPointerIndexedvEXT(target::GLenum, index::GLuint, data::Ptr{Ptr{Void}})::Void
 export glgetpointerindexedvext
 @get_c_fun "libGL" glGetFloati_vEXT(target::GLenum, index::GLuint, data::Ptr{GLfloat})::Void
 export glGetFloati_vEXT(target::GLenum,
 @get_c_fun "libGL" glGetDoublei_vEXT(target::GLenum, index::GLuint, data::Ptr{GLdouble})::Void
 export glGetDoublei_vEXT(target::GLenum,
-@get_c_fun "libGL" glGetPointeri_vEXT(target::GLenum, index::GLuint, (*unsafe.Pointer)(data))::Void
+@get_c_fun "libGL" glGetPointeri_vEXT(target::GLenum, index::GLuint, data::Ptr{Ptr{Void}})::Void
 export glGetPointeri_vEXT(target::GLenum,
 @get_c_fun "libGL" glcompressedtextureimage3dext glCompressedTextureImage3DEXT(texture::GLuint, target::GLenum, level::GLint, internalformat::GLenum, width::GLsizei, height::GLsizei, depth::GLsizei, border::GLint, imageSize::GLsizei, bits::Ptr{Void})::Void
 export glcompressedtextureimage3dext
@@ -2002,7 +2002,7 @@ export glflushmappednamedbufferrangeext
 export glnamedcopybuffersubdataext
 @get_c_fun "libGL" glgetnamedbufferparameterivext glGetNamedBufferParameterivEXT(buffer::GLuint, pname::GLenum, params::Ptr{GLint})::Void
 export glgetnamedbufferparameterivext
-@get_c_fun "libGL" glgetnamedbufferpointervext glGetNamedBufferPointervEXT(buffer::GLuint, pname::GLenum, (*unsafe.Pointer)(params))::Void
+@get_c_fun "libGL" glgetnamedbufferpointervext glGetNamedBufferPointervEXT(buffer::GLuint, pname::GLenum, params::Ptr{Ptr{Void}})::Void
 export glgetnamedbufferpointervext
 @get_c_fun "libGL" glgetnamedbuffersubdataext glGetNamedBufferSubDataEXT(buffer::GLuint, offset::GLintptr, size::GLsizeiptr, data::Ptr{Void})::Void
 export glgetnamedbuffersubdataext
@@ -2118,11 +2118,11 @@ export glvertexarrayvertexattribioffsetext
 export glvertexarrayvertexattriboffsetext
 @get_c_fun "libGL" glgetvertexarrayintegervext glGetVertexArrayIntegervEXT(vaobj::GLuint, pname::GLenum, param::Ptr{GLint})::Void
 export glgetvertexarrayintegervext
-@get_c_fun "libGL" glgetvertexarraypointervext glGetVertexArrayPointervEXT(vaobj::GLuint, pname::GLenum, (*unsafe.Pointer)(param))::Void
+@get_c_fun "libGL" glgetvertexarraypointervext glGetVertexArrayPointervEXT(vaobj::GLuint, pname::GLenum, param::Ptr{Ptr{Void}})::Void
 export glgetvertexarraypointervext
 @get_c_fun "libGL" glGetVertexArrayIntegeri_vEXT(vaobj::GLuint, index::GLuint, pname::GLenum, param::Ptr{GLint})::Void
 export glGetVertexArrayIntegeri_vEXT(vaobj::GLuint,
-@get_c_fun "libGL" glGetVertexArrayPointeri_vEXT(vaobj::GLuint, index::GLuint, pname::GLenum, (*unsafe.Pointer)(param))::Void
+@get_c_fun "libGL" glGetVertexArrayPointeri_vEXT(vaobj::GLuint, index::GLuint, pname::GLenum, param::Ptr{Ptr{Void}})::Void
 export glGetVertexArrayPointeri_vEXT(vaobj::GLuint,
 @get_c_fun "libGL" glcolormaskindexedext glColorMaskIndexedEXT(index::GLuint, r::GLboolean, g::GLboolean, b::GLboolean, a::GLboolean)::Void
 export glcolormaskindexedext
@@ -2140,7 +2140,7 @@ export glisenabledindexedext
 export gldrawarraysinstancedext
 @get_c_fun "libGL" gldrawelementsinstancedext glDrawElementsInstancedEXT(mode::GLenum, count::GLsizei, type_::GLenum, indices::Ptr{Void}, primcount::GLsizei)::Void
 export gldrawelementsinstancedext
-@get_c_fun "libGL" gldrawrangeelementsext glDrawRangeElementsEXT(mode::GLenum, start::GLuint, end::GLuint, count::GLsizei, type_::GLenum, indices::Ptr{Void})::Void
+@get_c_fun "libGL" gldrawrangeelementsext glDrawRangeElementsEXT(mode::GLenum, start::GLuint, end_::GLuint, count::GLsizei, type_::GLenum, indices::Ptr{Void})::Void
 export gldrawrangeelementsext
 @get_c_fun "libGL" glfogcoordfext glFogCoordfEXT(coord::GLfloat)::Void
 export glfogcoordfext
@@ -2250,7 +2250,7 @@ export gltexturelightext
 export gltexturematerialext
 @get_c_fun "libGL" glmultidrawarraysext glMultiDrawArraysEXT(mode::GLenum, first::Ptr{GLint}, count::Ptr{GLsizei}, primcount::GLsizei)::Void
 export glmultidrawarraysext
-@get_c_fun "libGL" glmultidrawelementsext glMultiDrawElementsEXT(mode::GLenum, count::Ptr{GLsizei}, type_::GLenum, (*unsafe.Pointer)(indices), primcount::GLsizei)::Void
+@get_c_fun "libGL" glmultidrawelementsext glMultiDrawElementsEXT(mode::GLenum, count::Ptr{GLsizei}, type_::GLenum, indices::Ptr{Ptr{Void}}, primcount::GLsizei)::Void
 export glmultidrawelementsext
 @get_c_fun "libGL" glsamplemaskext glSampleMaskEXT(value::GLclampf, invert::GLboolean)::Void
 export glsamplemaskext
@@ -2394,7 +2394,7 @@ export glcolorpointerext
 export gldrawarraysext
 @get_c_fun "libGL" gledgeflagpointerext glEdgeFlagPointerEXT(stride::GLsizei, count::GLsizei, pointer::Ptr{GLboolean})::Void
 export gledgeflagpointerext
-@get_c_fun "libGL" glgetpointervext glGetPointervEXT(pname::GLenum, (*unsafe.Pointer)(params))::Void
+@get_c_fun "libGL" glgetpointervext glGetPointervEXT(pname::GLenum, params::Ptr{Ptr{Void}})::Void
 export glgetpointervext
 @get_c_fun "libGL" glindexpointerext glIndexPointerEXT(type_::GLenum, stride::GLsizei, count::GLsizei, pointer::Ptr{Void})::Void
 export glindexpointerext
@@ -2496,7 +2496,7 @@ export glgetvariantbooleanvext
 export glgetvariantintegervext
 @get_c_fun "libGL" glgetvariantfloatvext glGetVariantFloatvEXT(id::GLuint, value::GLenum, data::Ptr{GLfloat})::Void
 export glgetvariantfloatvext
-@get_c_fun "libGL" glgetvariantpointervext glGetVariantPointervEXT(id::GLuint, value::GLenum, (*unsafe.Pointer)(data))::Void
+@get_c_fun "libGL" glgetvariantpointervext glGetVariantPointervEXT(id::GLuint, value::GLenum, data::Ptr{Ptr{Void}})::Void
 export glgetvariantpointervext
 @get_c_fun "libGL" glgetinvariantbooleanvext glGetInvariantBooleanvEXT(id::GLuint, value::GLenum, data::Ptr{GLboolean})::Void
 export glgetinvariantbooleanvext

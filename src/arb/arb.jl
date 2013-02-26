@@ -2412,11 +2412,11 @@ export glblendfunciarb
 export glblendfuncseparateiarb
 @get_c_fun "libGL" gldrawelementsbasevertex glDrawElementsBaseVertex(mode::GLenum, count::GLsizei, type_::GLenum, indices::Ptr{Void}, basevertex::GLint)::Void
 export gldrawelementsbasevertex
-@get_c_fun "libGL" gldrawrangeelementsbasevertex glDrawRangeElementsBaseVertex(mode::GLenum, start::GLuint, end::GLuint, count::GLsizei, type_::GLenum, indices::Ptr{Void}, basevertex::GLint)::Void
+@get_c_fun "libGL" gldrawrangeelementsbasevertex glDrawRangeElementsBaseVertex(mode::GLenum, start::GLuint, end_::GLuint, count::GLsizei, type_::GLenum, indices::Ptr{Void}, basevertex::GLint)::Void
 export gldrawrangeelementsbasevertex
 @get_c_fun "libGL" gldrawelementsinstancedbasevertex glDrawElementsInstancedBaseVertex(mode::GLenum, count::GLsizei, type_::GLenum, indices::Ptr{Void}, instancecount::GLsizei, basevertex::GLint)::Void
 export gldrawelementsinstancedbasevertex
-@get_c_fun "libGL" glmultidrawelementsbasevertex glMultiDrawElementsBaseVertex(mode::GLenum, count::Ptr{GLsizei}, type_::GLenum, (*unsafe.Pointer)(indices), drawcount::GLsizei, basevertex::Ptr{GLint})::Void
+@get_c_fun "libGL" glmultidrawelementsbasevertex glMultiDrawElementsBaseVertex(mode::GLenum, count::Ptr{GLsizei}, type_::GLenum, indices::Ptr{Ptr{Void}}, drawcount::GLsizei, basevertex::Ptr{GLint})::Void
 export glmultidrawelementsbasevertex
 @get_c_fun "libGL" gldrawarraysindirect glDrawArraysIndirect(mode::GLenum, indirect::Ptr{Void})::Void
 export gldrawarraysindirect
@@ -3182,7 +3182,7 @@ export glmapbufferarb
 export glunmapbufferarb
 @get_c_fun "libGL" glgetbufferparameterivarb glGetBufferParameterivARB(target::GLenum, pname::GLenum, params::Ptr{GLint})::Void
 export glgetbufferparameterivarb
-@get_c_fun "libGL" glgetbufferpointervarb glGetBufferPointervARB(target::GLenum, pname::GLenum, (*unsafe.Pointer)(params))::Void
+@get_c_fun "libGL" glgetbufferpointervarb glGetBufferPointervARB(target::GLenum, pname::GLenum, params::Ptr{Ptr{Void}})::Void
 export glgetbufferpointervarb
 @get_c_fun "libGL" glvertexattrib1darb glVertexAttrib1dARB(index::GLuint, x::GLdouble)::Void
 export glvertexattrib1darb
@@ -3304,7 +3304,7 @@ export glgetvertexattribdvarb
 export glgetvertexattribfvarb
 @get_c_fun "libGL" glgetvertexattribivarb glGetVertexAttribivARB(index::GLuint, pname::GLenum, params::Ptr{GLint})::Void
 export glgetvertexattribivarb
-@get_c_fun "libGL" glgetvertexattribpointervarb glGetVertexAttribPointervARB(index::GLuint, pname::GLenum, (*unsafe.Pointer)(pointer))::Void
+@get_c_fun "libGL" glgetvertexattribpointervarb glGetVertexAttribPointervARB(index::GLuint, pname::GLenum, pointer::Ptr{Ptr{Void}})::Void
 export glgetvertexattribpointervarb
 @get_c_fun "libGL" glisprogramarb glIsProgramARB(program::GLuInt)::Bool
 export glisprogramarb

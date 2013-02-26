@@ -380,7 +380,7 @@ export gldrawbuffersati
 export glelementpointerati
 @get_c_fun "libGL" gldrawelementarrayati glDrawElementArrayATI(mode::GLenum, count::GLsizei)::Void
 export gldrawelementarrayati
-@get_c_fun "libGL" gldrawrangeelementarrayati glDrawRangeElementArrayATI(mode::GLenum, start::GLuint, end::GLuint, count::GLsizei)::Void
+@get_c_fun "libGL" gldrawrangeelementarrayati glDrawRangeElementArrayATI(mode::GLenum, start::GLuint, end_::GLuint, count::GLsizei)::Void
 export gldrawrangeelementarrayati
 @get_c_fun "libGL" gltexbumpparameterivati glTexBumpParameterivATI(pname::GLenum, param::Ptr{GLint})::Void
 export gltexbumpparameterivati
