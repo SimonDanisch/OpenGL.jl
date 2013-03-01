@@ -2913,9 +2913,5 @@ export gluniformmatrix4x2fv
 export gluniformmatrix3x4fv
 @get_c_fun "libGL" gluniformmatrix4x3fv glUniformMatrix4x3fv(location::GLint, count::GLsizei, transpose::GLboolean, value::Ptr{GLfloat})::Void
 export gluniformmatrix4x3fv
-const return b == TRUE
-export return
-const strSlice[i] = (*Char)(C.CString(s))
-export strSlice[i]
 
 end #module GL21

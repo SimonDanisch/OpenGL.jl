@@ -4501,9 +4501,5 @@ export glvertexarrayvertexattriblformatext
 export glvertexarrayvertexattribbindingext
 @get_c_fun "libGL" glvertexarrayvertexbindingdivisorext glVertexArrayVertexBindingDivisorEXT(vaobj::GLuint, bindingindex::GLuint, divisor::GLuint)::Void
 export glvertexarrayvertexbindingdivisorext
-const return b == TRUE
-export return
-const strSlice[i] = (*Char)(C.CString(s))
-export strSlice[i]
 
 end #module GL43

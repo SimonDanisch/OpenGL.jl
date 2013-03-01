@@ -3155,9 +3155,5 @@ export glvertexattribp3uiv
 export glvertexattribp4ui
 @get_c_fun "libGL" glvertexattribp4uiv glVertexAttribP4uiv(index::GLuint, type_::GLenum, normalized::GLboolean, value::Ptr{GLuint})::Void
 export glvertexattribp4uiv
-const return b == TRUE
-export return
-const strSlice[i] = (*Char)(C.CString(s))
-export strSlice[i]
 
 end #module GL33

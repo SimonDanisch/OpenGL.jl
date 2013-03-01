@@ -3875,9 +3875,5 @@ export gltexturestorage1dext
 export gltexturestorage2dext
 @get_c_fun "libGL" gltexturestorage3dext glTextureStorage3DEXT(texture::GLuint, target::GLenum, levels::GLsizei, internalformat::GLenum, width::GLsizei, height::GLsizei, depth::GLsizei)::Void
 export gltexturestorage3dext
-const return b == TRUE
-export return
-const strSlice[i] = (*Char)(C.CString(s))
-export strSlice[i]
 
 end #module GL42
