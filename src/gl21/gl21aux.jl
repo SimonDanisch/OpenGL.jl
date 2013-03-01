@@ -1,4 +1,4 @@
-module OpenGLAux
+module OpenGL
 
 import OpenGLStd.glvertex2i, OpenGLStd.glvertex3i, OpenGLStd.glvertex2d, OpenGLStd.glvertex3d, OpenGLStd.glvertex4d,
        OpenGLStd.gltexcoord2i, OpenGLStd.gltexcoord3i, OpenGLStd.gltexcoord4i, OpenGLStd.gltexcoord2d, OpenGLStd.gltexcoord3d,

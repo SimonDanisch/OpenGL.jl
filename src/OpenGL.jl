@@ -24,4 +24,3 @@ end
 
 using GLU
 using OpenGLStd
-using OpenGLAux
