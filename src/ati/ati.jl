@@ -2,6 +2,29 @@ module ATI
 
 import GetC.@get_c_fun
 
+typealias GLenum Cuint
+typealias GLboolean Cuchar
+typealias GLbitfield Cuint
+typealias GLvoid Void
+typealias GLbyte Cuchar
+typealias GLshort Cshort
+typealias GLint Cint
+typealias GLubyte Cuchar
+typealias GLushort Cushort
+typealias GLuint Cuint
+typealias GLsizei Csize_t
+typealias GLfloat Cfloat
+typealias GLclampf Cfloat
+typealias GLdouble Cdouble
+typealias GLclampd Cdouble
+typealias GLchar Cchar
+typealias GLint64 Clonglong
+typealias GLuint64 Culonglong
+typealias GLhalf Cushort
+typealias GLhalfARB Cushort
+typealias GLhalfNV Cushort
+typealias GLsync Ptr{Void}
+typealias Pointer Ptr{Void}
 const DRAW_BUFFER0_ATI = 0x8825
 export DRAW_BUFFER0_ATI
 const DRAW_BUFFER10_ATI = 0x882F
@@ -390,7 +413,7 @@ export gltexbumpparameterfvati
 export glgettexbumpparameterivati
 @get_c_fun "libGL" glgettexbumpparameterfvati glGetTexBumpParameterfvATI(pname::GLenum, param::Ptr{GLfloat})::Void
 export glgettexbumpparameterfvati
-@get_c_fun "libGL" glgenfragmentshadersati glGenFragmentShadersATI(range_::GLuInt)::Uint
+@get_c_fun "libGL" glgenfragmentshadersati glGenFragmentShadersATI(range_::GLuCint)::Uint
 export glgenfragmentshadersati
 @get_c_fun "libGL" glbindfragmentshaderati glBindFragmentShaderATI(id::GLuint)::Void
 export glbindfragmentshaderati
@@ -418,7 +441,7 @@ export glalphafragmentop2ati
 export glalphafragmentop3ati
 @get_c_fun "libGL" glsetfragmentshaderconstantati glSetFragmentShaderConstantATI(dst::GLuint, value::Ptr{GLfloat})::Void
 export glsetfragmentshaderconstantati
-@get_c_fun "libGL" glmapobjectbufferati glMapObjectBufferATI(buffer::GLuInt)::Ptr{Void}
+@get_c_fun "libGL" glmapobjectbufferati glMapObjectBufferATI(buffer::GLuCint)::Ptr{Void}
 export glmapobjectbufferati
 @get_c_fun "libGL" glunmapobjectbufferati glUnmapObjectBufferATI(buffer::GLuint)::Void
 export glunmapobjectbufferati
@@ -430,9 +453,9 @@ export glpntrianglesfati
 export glstencilopseparateati
 @get_c_fun "libGL" glstencilfuncseparateati glStencilFuncSeparateATI(frontfunc::GLenum, backfunc::GLenum, ref::GLint, mask::GLuint)::Void
 export glstencilfuncseparateati
-@get_c_fun "libGL" glnewobjectbufferati glNewObjectBufferATI(size::GLsizei, poInter::Ptr{Void}, usage::GLenum)::Uint
+@get_c_fun "libGL" glnewobjectbufferati glNewObjectBufferATI(size::GLsizei, poCinter::Ptr{Void}, usage::GLenum)::Uint
 export glnewobjectbufferati
-@get_c_fun "libGL" glisobjectbufferati glIsObjectBufferATI(buffer::GLuInt)::Bool
+@get_c_fun "libGL" glisobjectbufferati glIsObjectBufferATI(buffer::GLuCint)::Bool
 export glisobjectbufferati
 @get_c_fun "libGL" glupdateobjectbufferati glUpdateObjectBufferATI(buffer::GLuint, offset::GLuint, size::GLsizei, pointer::Ptr{Void}, preserve::GLenum)::Void
 export glupdateobjectbufferati
@@ -551,4 +574,4 @@ export glvertexblendenviati
 @get_c_fun "libGL" glvertexblendenvfati glVertexBlendEnvfATI(pname::GLenum, param::GLfloat)::Void
 export glvertexblendenvfati
 
-end
+end #module ATI

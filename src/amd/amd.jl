@@ -2,6 +2,29 @@ module AMD
 
 import GetC.@get_c_fun
 
+typealias GLenum Cuint
+typealias GLboolean Cuchar
+typealias GLbitfield Cuint
+typealias GLvoid Void
+typealias GLbyte Cuchar
+typealias GLshort Cshort
+typealias GLint Cint
+typealias GLubyte Cuchar
+typealias GLushort Cushort
+typealias GLuint Cuint
+typealias GLsizei Csize_t
+typealias GLfloat Cfloat
+typealias GLclampf Cfloat
+typealias GLdouble Cdouble
+typealias GLclampd Cdouble
+typealias GLchar Cchar
+typealias GLint64 Clonglong
+typealias GLuint64 Culonglong
+typealias GLhalf Cushort
+typealias GLhalfARB Cushort
+typealias GLhalfNV Cushort
+typealias GLsync Ptr{Void}
+typealias Pointer Ptr{Void}
 const FACTOR_MAX_AMD = 0x901D
 export FACTOR_MAX_AMD
 const FACTOR_MIN_AMD = 0x901C
@@ -120,7 +143,7 @@ export gldebugmessageenableamd
 export gldebugmessageinsertamd
 @get_c_fun "libGL" gldebugmessagecallbackamd glDebugMessageCallbackAMD((*[0]byte)(callback), userParam::Ptr{Void})::Void
 export gldebugmessagecallbackamd
-@get_c_fun "libGL" glgetdebugmessagelogamd glGetDebugMessageLogAMD(count::GLuInt, bufsize::GLsizei, categories::Ptr{GLenum}, severities::Ptr{GLUint}, ids::Ptr{GLuint}, lengths::Ptr{GLsizei}, message::Ptr{GLchar})::Uint
+@get_c_fun "libGL" glgetdebugmessagelogamd glGetDebugMessageLogAMD(count::GLuCint, bufsize::GLsizei, categories::Ptr{GLenum}, severities::Ptr{GLCuint}, ids::Ptr{GLuint}, lengths::Ptr{GLsizei}, message::Ptr{GLchar})::Uint
 export glgetdebugmessagelogamd
 @get_c_fun "libGL" glblendfuncindexedamd glBlendFuncIndexedAMD(buf::GLuint, src::GLenum, dst::GLenum)::Void
 export glblendfuncindexedamd
@@ -138,7 +161,7 @@ export glmultidrawelementsindirectamd
 export glgennamesamd
 @get_c_fun "libGL" gldeletenamesamd glDeleteNamesAMD(identifier::GLenum, num::GLuint, names::Ptr{GLuint})::Void
 export gldeletenamesamd
-@get_c_fun "libGL" glisnameamd glIsNameAMD(identifier::GLenum, name::GLuInt)::Bool
+@get_c_fun "libGL" glisnameamd glIsNameAMD(identifier::GLenum, name::GLuCint)::Bool
 export glisnameamd
 @get_c_fun "libGL" glgetperfmonitorgroupsamd glGetPerfMonitorGroupsAMD(numGroups::Ptr{GLint}, groupsSize::GLsizei, groups::Ptr{GLuint})::Void
 export glgetperfmonitorgroupsamd
@@ -175,4 +198,4 @@ export gltessellationfactoramd
 @get_c_fun "libGL" gltessellationmodeamd glTessellationModeAMD(mode::GLenum)::Void
 export gltessellationmodeamd
 
-end
+end #module AMD

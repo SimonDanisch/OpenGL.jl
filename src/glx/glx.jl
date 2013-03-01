@@ -2,6 +2,29 @@ module GLX
 
 import GetC.@get_c_fun
 
+typealias GLenum Cuint
+typealias GLboolean Cuchar
+typealias GLbitfield Cuint
+typealias GLvoid Void
+typealias GLbyte Cuchar
+typealias GLshort Cshort
+typealias GLint Cint
+typealias GLubyte Cuchar
+typealias GLushort Cushort
+typealias GLuint Cuint
+typealias GLsizei Csize_t
+typealias GLfloat Cfloat
+typealias GLclampf Cfloat
+typealias GLdouble Cdouble
+typealias GLclampd Cdouble
+typealias GLchar Cchar
+typealias GLint64 Clonglong
+typealias GLuint64 Culonglong
+typealias GLhalf Cushort
+typealias GLhalfARB Cushort
+typealias GLhalfNV Cushort
+typealias GLsync Ptr{Void}
+typealias Pointer Ptr{Void}
 const SAMPLES_3DFX = 0x8051
 export SAMPLES_3DFX
 const SAMPLE_BUFFERS_3DFX = 0x8050
@@ -464,15 +487,15 @@ const SAMPLES = 100001
 export SAMPLES
 const SAMPLE_BUFFERS = 100000
 export SAMPLE_BUFFERS
-@get_c_fun "libGL" glxcreatecontextattribsarb glxCreateContextAttribsARB(dpy::Ptr{Display}, config::GLXFBConfig, share_context::GLXContext, direct::Int, attrib_list::Ptr{int})::Ptr{Void}
+@get_c_fun "libGL" glxcreatecontextattribsarb glxCreateContextAttribsARB(dpy::Ptr{Display}, config::GLXFBConfig, share_context::GLXContext, direct::Cint, attrib_list::Ptr{int})::Ptr{Void}
 export glxcreatecontextattribsarb
 @get_c_fun "libGL" glxgetprocaddressarb glxGetProcAddressARB(procName::Ptr{GLubyte})::Ptr{Void}
 export glxgetprocaddressarb
 @get_c_fun "libGL" glxgetcurrentdisplayext glxGetCurrentDisplayEXT()::Ptr{Void}
 export glxgetcurrentdisplayext
-@get_c_fun "libGL" glxquerycontextinfoext glxQueryContextInfoEXT(dpy::Ptr{Display}, context::GLXContext, attribute::Int, value::Ptr{int})::Int
+@get_c_fun "libGL" glxquerycontextinfoext glxQueryContextInfoEXT(dpy::Ptr{Display}, context::GLXContext, attribute::Cint, value::Ptr{int})::Int
 export glxquerycontextinfoext
-@get_c_fun "libGL" glxgetcontextidext glxGetContextIDEXT(context::GLXContext)::uInt32
+@get_c_fun "libGL" glxgetcontextidext glxGetContextIDEXT(context::GLXContext)::uCint32
 export glxgetcontextidext
 @get_c_fun "libGL" glximportcontextext glxImportContextEXT(dpy::Ptr{Display}, contextID::GLXContextID)::Ptr{Void}
 export glximportcontextext
@@ -484,175 +507,175 @@ export glxswapintervalext
 export glxbindteximageext
 @get_c_fun "libGL" glxreleaseteximageext glxReleaseTexImageEXT(dpy::Ptr{Display}, drawable::GLXDrawable, buffer::int)::Void
 export glxreleaseteximageext
-@get_c_fun "libGL" glxgetagpoffsetmesa glxGetAGPOffsetMESA(poInter::Ptr{Void})::Uint32
+@get_c_fun "libGL" glxgetagpoffsetmesa glxGetAGPOffsetMESA(poCinter::Ptr{Void})::CCuint
 export glxgetagpoffsetmesa
 @get_c_fun "libGL" glxcopysubbuffermesa glxCopySubBufferMESA(dpy::Ptr{Display}, drawable::GLXDrawable, x::int, y::int, width::int, height::int)::Void
 export glxcopysubbuffermesa
 @get_c_fun "libGL" glxcreateglxpixmapmesa glxCreateGLXPixmapMESA(dpy::Ptr{Display}, visual::XVisualInfo, pixmap::Pixmap, cmap::Colormap)::Ptr{Void}
 export glxcreateglxpixmapmesa
-@get_c_fun "libGL" glxreleasebuffersmesa glxReleaseBuffersMESA(dpy::Ptr{Display}, drawable::GLXDrawable)::Int
+@get_c_fun "libGL" glxreleasebuffersmesa glxReleaseBuffersMESA(dpy::Ptr{Display}, drawable::GLXDrawable)::Cint
 export glxreleasebuffersmesa
-@get_c_fun "libGL" glxset3dfxmodemesa glxSet3DfxModeMESA(mode::Int)::int
+@get_c_fun "libGL" glxset3dfxmodemesa glxSet3DfxModeMESA(mode::Cint)::int
 export glxset3dfxmodemesa
 @get_c_fun "libGL" glxcopyimagesubdatanv glxCopyImageSubDataNV(dpy::Ptr{Display}, srcCtx::GLXContext, srcName::GLuint, srcTarget::GLenum, srcLevel::GLint, srcX::GLint, srcY::GLint, srcZ::GLint, dstCtx::GLXContext, dstName::GLuint, dstTarget::GLenum, dstLevel::GLint, dstX::GLint, dstY::GLint, dstZ::GLint, width::GLsizei, height::GLsizei, depth::GLsizei)::Void
 export glxcopyimagesubdatanv
-@get_c_fun "libGL" glxenumeratevideodevicesnv glxInterateVideoDevicesNV(dpy::Ptr{Display}, screen::Int, nelements::Ptr{int})::*Uint32
+@get_c_fun "libGL" glxenumeratevideodevicesnv glxCuCinterateVideoDevicesNV(dpy::Ptr{Display}, screen::int, nelements::Ptr{int})::*CCuint
 export glxenumeratevideodevicesnv
-@get_c_fun "libGL" glxbindvideodevicenv glxBindVideoDeviceNV(dpy::Ptr{Display}, (C.uInt32)(video_slot), (C.Uint32)(video_device), attrib_list::Ptr{int})::Int
+@get_c_fun "libGL" glxbindvideodevicenv glxBindVideoDeviceNV(dpy::Ptr{Display}, video_slot::uCint32, video_device::CCuint, attrib_list::Ptr{int})::Int
 export glxbindvideodevicenv
-@get_c_fun "libGL" glxjoinswapgroupnv glxJoinSwapGroupNV(dpy::Ptr{Display}, drawable::GLXDrawable, group::GLuInt)::int
+@get_c_fun "libGL" glxjoinswapgroupnv glxJoinSwapGroupNV(dpy::Ptr{Display}, drawable::GLXDrawable, group::GLuCint)::int
 export glxjoinswapgroupnv
-@get_c_fun "libGL" glxbindswapbarriernv glxBindSwapBarrierNV(dpy::Ptr{Display}, group::GLuInt, barrier::GLUint)::int
+@get_c_fun "libGL" glxbindswapbarriernv glxBindSwapBarrierNV(dpy::Ptr{Display}, group::GLuCint, barrier::GLCuint)::int
 export glxbindswapbarriernv
-@get_c_fun "libGL" glxqueryswapgroupnv glxQuerySwapGroupNV(dpy::Ptr{Display}, drawable::GLXDrawable, group::Ptr{GLuInt}, barrier::Ptr{GLUint})::int
+@get_c_fun "libGL" glxqueryswapgroupnv glxQuerySwapGroupNV(dpy::Ptr{Display}, drawable::GLXDrawable, group::Ptr{GLuCint}, barrier::Ptr{GLCuint})::int
 export glxqueryswapgroupnv
-@get_c_fun "libGL" glxquerymaxswapgroupsnv glxQueryMaxSwapGroupsNV(dpy::Ptr{Display}, screen::Int, maxGroups::Ptr{GLUint}, maxBarriers::Ptr{GLuint})::int
+@get_c_fun "libGL" glxquerymaxswapgroupsnv glxQueryMaxSwapGroupsNV(dpy::Ptr{Display}, screen::Cint, maxGroups::Ptr{GLCuint}, maxBarriers::Ptr{GLuint})::int
 export glxquerymaxswapgroupsnv
-@get_c_fun "libGL" glxqueryframecountnv glxQueryFrameCountNV(dpy::Ptr{Display}, screen::Int, count::Ptr{GLUint})::int
+@get_c_fun "libGL" glxqueryframecountnv glxQueryFrameCountNV(dpy::Ptr{Display}, screen::Cint, count::Ptr{GLCuint})::int
 export glxqueryframecountnv
-@get_c_fun "libGL" glxresetframecountnv glxResetFrameCountNV(dpy::Ptr{Display}, screen::Int)::int
+@get_c_fun "libGL" glxresetframecountnv glxResetFrameCountNV(dpy::Ptr{Display}, screen::Cint)::int
 export glxresetframecountnv
-@get_c_fun "libGL" glxbindvideocapturedevicenv glxBindVideoCaptureDeviceNV(dpy::Ptr{Display}, (C.uInt32)(video_capture_slot), device::GLXVideoCaptureDeviceNV)::Int
+@get_c_fun "libGL" glxbindvideocapturedevicenv glxBindVideoCaptureDeviceNV(dpy::Ptr{Display}, video_capture_slot::uCint32, device::GLXVideoCaptureDeviceNV)::Int
 export glxbindvideocapturedevicenv
-@get_c_fun "libGL" glxenumeratevideocapturedevicesnv glxInterateVideoCaptureDevicesNV(dpy::Ptr{Display}, screen::Int, nelements::Ptr{int})::Ptr{Void}
+@get_c_fun "libGL" glxenumeratevideocapturedevicesnv glxCuCinterateVideoCaptureDevicesNV(dpy::Ptr{Display}, screen::int, nelements::Ptr{int})::Ptr{Void}
 export glxenumeratevideocapturedevicesnv
 @get_c_fun "libGL" glxlockvideocapturedevicenv glxLockVideoCaptureDeviceNV(dpy::Ptr{Display}, device::GLXVideoCaptureDeviceNV)::Void
 export glxlockvideocapturedevicenv
-@get_c_fun "libGL" glxqueryvideocapturedevicenv glxQueryVideoCaptureDeviceNV(dpy::Ptr{Display}, device::GLXVideoCaptureDeviceNV, attribute::Int, value::Ptr{int})::Int
+@get_c_fun "libGL" glxqueryvideocapturedevicenv glxQueryVideoCaptureDeviceNV(dpy::Ptr{Display}, device::GLXVideoCaptureDeviceNV, attribute::Cint, value::Ptr{int})::Int
 export glxqueryvideocapturedevicenv
 @get_c_fun "libGL" glxreleasevideocapturedevicenv glxReleaseVideoCaptureDeviceNV(dpy::Ptr{Display}, device::GLXVideoCaptureDeviceNV)::Void
 export glxreleasevideocapturedevicenv
-@get_c_fun "libGL" glxgetvideodevicenv glxGetVideoDeviceNV(dpy::Ptr{Display}, screen::Int, numVideoDevices::int, pVideoDevice::GLXVideoDeviceNV)::Int
+@get_c_fun "libGL" glxgetvideodevicenv glxGetVideoDeviceNV(dpy::Ptr{Display}, screen::Cint, numVideoDevices::int, pVideoDevice::GLXVideoDeviceNV)::Int
 export glxgetvideodevicenv
-@get_c_fun "libGL" glxreleasevideodevicenv glxReleaseVideoDeviceNV(dpy::Ptr{Display}, screen::Int, VideoDevice::GLXVideoDeviceNV)::Int
+@get_c_fun "libGL" glxreleasevideodevicenv glxReleaseVideoDeviceNV(dpy::Ptr{Display}, screen::Cint, VideoDevice::GLXVideoDeviceNV)::Int
 export glxreleasevideodevicenv
-@get_c_fun "libGL" glxbindvideoimagenv glxBindVideoImageNV(dpy::Ptr{Display}, VideoDevice::GLXVideoDeviceNV, pbuf::GLXPbuffer, iVideoBuffer::Int)::Int
+@get_c_fun "libGL" glxbindvideoimagenv glxBindVideoImageNV(dpy::Ptr{Display}, VideoDevice::GLXVideoDeviceNV, pbuf::GLXPbuffer, iVideoBuffer::Cint)::Int
 export glxbindvideoimagenv
 @get_c_fun "libGL" glxreleasevideoimagenv glxReleaseVideoImageNV(dpy::Ptr{Display}, pbuf::GLXPbuffer)::Int
 export glxreleasevideoimagenv
-@get_c_fun "libGL" glxsendpbuffertovideonv glxSendPbufferToVideoNV(dpy::Ptr{Display}, pbuf::GLXPbuffer, iBufferType::Int, (*C.unsigned_long)(pulCounterPbuffer), bBlock::GLboolean)::Int
+@get_c_fun "libGL" glxsendpbuffertovideonv glxSendPbufferToVideoNV(dpy::Ptr{Display}, pbuf::GLXPbuffer, iBufferType::Cint, pulCounterPbuffer::Ptr{Culong}, bBlock::GLboolean)::Int
 export glxsendpbuffertovideonv
-@get_c_fun "libGL" glxgetvideoinfonv glxGetVideoInfoNV(dpy::Ptr{Display}, screen::Int, VideoDevice::GLXVideoDeviceNV, (*C.unsigned_long)(pulCounterOutputPbuffer), (*C.unsigned_long)(pulCounterOutputVideo))::Int
+@get_c_fun "libGL" glxgetvideoinfonv glxGetVideoInfoNV(dpy::Ptr{Display}, screen::Cint, VideoDevice::GLXVideoDeviceNV, pulCounterOutputPbuffer::Ptr{Culong}, pulCounterOutputVideo::Ptr{unsigned_long})::Int
 export glxgetvideoinfonv
-@get_c_fun "libGL" glxgetsyncvaluesoml glxGetSyncValuesOML(dpy::Ptr{Display}, drawable::GLXDrawable, (*C.Int64_t)(ust), (*C.Int64_t)(msc), (*C.int64_t)(sbc))::int
+@get_c_fun "libGL" glxgetsyncvaluesoml glxGetSyncValuesOML(dpy::Ptr{Display}, drawable::GLXDrawable, ust::Ptr{Clonglong}, msc::Ptr{Clonglong_t}, sbc::Ptr{Cint64_t})::int
 export glxgetsyncvaluesoml
-@get_c_fun "libGL" glxgetmscrateoml glxGetMscRateOML(dpy::Ptr{Display}, drawable::GLXDrawable, (*C.Int32_t)(numerator), (*C.int32_t)(denominator))::int
+@get_c_fun "libGL" glxgetmscrateoml glxGetMscRateOML(dpy::Ptr{Display}, drawable::GLXDrawable, numerator::Ptr{CCint}, denominator::Ptr{int32_t})::int
 export glxgetmscrateoml
-@get_c_fun "libGL" glxswapbuffersmscoml glxSwapBuffersMscOML(dpy::Ptr{Display}, drawable::GLXDrawable, (C.Int64_t)(target_msc), (C.Int64_t)(divisor), (C.int64_t)(remainder))::int64
+@get_c_fun "libGL" glxswapbuffersmscoml glxSwapBuffersMscOML(dpy::Ptr{Display}, drawable::GLXDrawable, target_msc::Clonglong, divisor::Clonglong_t, remainder::Cint64_t)::int64
 export glxswapbuffersmscoml
-@get_c_fun "libGL" glxwaitformscoml glxWaitForMscOML(dpy::Ptr{Display}, drawable::GLXDrawable, (C.Int64_t)(target_msc), (C.Int64_t)(divisor), (C.int64_t)(remainder), (*C.int64_t)(ust), (*C.int64_t)(msc), (*C.int64_t)(sbc))::int
+@get_c_fun "libGL" glxwaitformscoml glxWaitForMscOML(dpy::Ptr{Display}, drawable::GLXDrawable, target_msc::Clonglong, divisor::Clonglong_t, remainder::Cint64_t, ust::Ptr{int64_t}, msc::Ptr{int64_t}, sbc::Ptr{int64_t})::int
 export glxwaitformscoml
-@get_c_fun "libGL" glxwaitforsbcoml glxWaitForSbcOML(dpy::Ptr{Display}, drawable::GLXDrawable, (C.Int64_t)(target_sbc), (*C.Int64_t)(ust), (*C.int64_t)(msc), (*C.int64_t)(sbc))::int
+@get_c_fun "libGL" glxwaitforsbcoml glxWaitForSbcOML(dpy::Ptr{Display}, drawable::GLXDrawable, target_sbc::Clonglong, ust::Ptr{Clonglong_t}, msc::Ptr{Cint64_t}, sbc::Ptr{int64_t})::int
 export glxwaitforsbcoml
-@get_c_fun "libGL" glxassociatedmpbuffersgix glxAssociateDMPbufferSGIX(dpy::Ptr{Display}, pbuffer::GLXPbufferSGIX, params::DMparams, dmbuffer::DMbuffer)::Int
+@get_c_fun "libGL" glxassociatedmpbuffersgix glxAssociateDMPbufferSGIX(dpy::Ptr{Display}, pbuffer::GLXPbufferSGIX, params::DMparams, dmbuffer::DMbuffer)::Cint
 export glxassociatedmpbuffersgix
-@get_c_fun "libGL" glxgetfbconfigattribsgix glxGetFBConfigAttribSGIX(dpy::Ptr{Display}, config::GLXFBConfigSGIX, attribute::Int, value::Ptr{int})::Int
+@get_c_fun "libGL" glxgetfbconfigattribsgix glxGetFBConfigAttribSGIX(dpy::Ptr{Display}, config::GLXFBConfigSGIX, attribute::Cint, value::Ptr{int})::Int
 export glxgetfbconfigattribsgix
-@get_c_fun "libGL" glxchoosefbconfigsgix glxChooseFBConfigSGIX(dpy::Ptr{Display}, screen::Int, attrib_list::Ptr{int}, nelements::Ptr{int})::Ptr{Void}
+@get_c_fun "libGL" glxchoosefbconfigsgix glxChooseFBConfigSGIX(dpy::Ptr{Display}, screen::Cint, attrib_list::Ptr{int}, nelements::Ptr{int})::Ptr{Void}
 export glxchoosefbconfigsgix
 @get_c_fun "libGL" glxcreateglxpixmapwithconfigsgix glxCreateGLXPixmapWithConfigSGIX(dpy::Ptr{Display}, config::GLXFBConfigSGIX, pixmap::Pixmap)::Ptr{Void}
 export glxcreateglxpixmapwithconfigsgix
-@get_c_fun "libGL" glxcreatecontextwithconfigsgix glxCreateContextWithConfigSGIX(dpy::Ptr{Display}, config::GLXFBConfigSGIX, render_type::Int, share_list::GLXContext, direct::int)::Ptr{Void}
+@get_c_fun "libGL" glxcreatecontextwithconfigsgix glxCreateContextWithConfigSGIX(dpy::Ptr{Display}, config::GLXFBConfigSGIX, render_type::Cint, share_list::GLXContext, direct::int)::Ptr{Void}
 export glxcreatecontextwithconfigsgix
 @get_c_fun "libGL" glxgetvisualfromfbconfigsgix glxGetVisualFromFBConfigSGIX(dpy::Ptr{Display}, config::GLXFBConfigSGIX)::Ptr{Void}
 export glxgetvisualfromfbconfigsgix
 @get_c_fun "libGL" glxgetfbconfigfromvisualsgix glxGetFBConfigFromVisualSGIX(dpy::Ptr{Display}, vis::XVisualInfo)::Ptr{Void}
 export glxgetfbconfigfromvisualsgix
-@get_c_fun "libGL" glxqueryhyperpipenetworksgix glxQueryHyperpipeNetworkSGIX(dpy::Ptr{Display}, npipes::Ptr{Int})::Ptr{Void}
+@get_c_fun "libGL" glxqueryhyperpipenetworksgix glxQueryHyperpipeNetworkSGIX(dpy::Ptr{Display}, npipes::Ptr{Cint})::Ptr{Void}
 export glxqueryhyperpipenetworksgix
-@get_c_fun "libGL" glxhyperpipeconfigsgix glxHyperpipeConfigSGIX(dpy::Ptr{Display}, networkId::Int, npipes::int, cfg::Ptr{GLXHyperpipeConfigSGIX}, hpId::Ptr{int})::Int
+@get_c_fun "libGL" glxhyperpipeconfigsgix glxHyperpipeConfigSGIX(dpy::Ptr{Display}, networkId::Cint, npipes::int, cfg::Ptr{GLXHyperpipeConfigSGIX}, hpId::Ptr{int})::Int
 export glxhyperpipeconfigsgix
-@get_c_fun "libGL" glxqueryhyperpipeconfigsgix glxQueryHyperpipeConfigSGIX(dpy::Ptr{Display}, hpId::Int, npipes::Ptr{int})::Ptr{Void}
+@get_c_fun "libGL" glxqueryhyperpipeconfigsgix glxQueryHyperpipeConfigSGIX(dpy::Ptr{Display}, hpId::Cint, npipes::Ptr{int})::Ptr{Void}
 export glxqueryhyperpipeconfigsgix
-@get_c_fun "libGL" glxdestroyhyperpipeconfigsgix glxDestroyHyperpipeConfigSGIX(dpy::Ptr{Display}, hpId::Int)::Int
+@get_c_fun "libGL" glxdestroyhyperpipeconfigsgix glxDestroyHyperpipeConfigSGIX(dpy::Ptr{Display}, hpId::Cint)::Int
 export glxdestroyhyperpipeconfigsgix
-@get_c_fun "libGL" glxbindhyperpipesgix glxBindHyperpipeSGIX(dpy::Ptr{Display}, hpId::Int)::Int
+@get_c_fun "libGL" glxbindhyperpipesgix glxBindHyperpipeSGIX(dpy::Ptr{Display}, hpId::Cint)::Int
 export glxbindhyperpipesgix
-@get_c_fun "libGL" glxqueryhyperpipebestattribsgix glxQueryHyperpipeBestAttribSGIX(dpy::Ptr{Display}, timeSlice::Int, attrib::int, size::int, attribList::Ptr{Void}, returnAttribList::Ptr{Void})::Int
+@get_c_fun "libGL" glxqueryhyperpipebestattribsgix glxQueryHyperpipeBestAttribSGIX(dpy::Ptr{Display}, timeSlice::Cint, attrib::int, size::int, attribList::Ptr{Void}, returnAttribList::Ptr{Void})::Int
 export glxqueryhyperpipebestattribsgix
-@get_c_fun "libGL" glxhyperpipeattribsgix glxHyperpipeAttribSGIX(dpy::Ptr{Display}, timeSlice::Int, attrib::int, size::int, attribList::Ptr{Void})::Int
+@get_c_fun "libGL" glxhyperpipeattribsgix glxHyperpipeAttribSGIX(dpy::Ptr{Display}, timeSlice::Cint, attrib::int, size::int, attribList::Ptr{Void})::Int
 export glxhyperpipeattribsgix
-@get_c_fun "libGL" glxqueryhyperpipeattribsgix glxQueryHyperpipeAttribSGIX(dpy::Ptr{Display}, timeSlice::Int, attrib::int, size::int, returnAttribList::Ptr{Void})::Int
+@get_c_fun "libGL" glxqueryhyperpipeattribsgix glxQueryHyperpipeAttribSGIX(dpy::Ptr{Display}, timeSlice::Cint, attrib::int, size::int, returnAttribList::Ptr{Void})::Int
 export glxqueryhyperpipeattribsgix
-@get_c_fun "libGL" glxcreateglxpbuffersgix glxCreateGLXPbufferSGIX(dpy::Ptr{Display}, config::GLXFBConfigSGIX, (C.uInt32)(width), (C.Uint32)(height), attrib_list::Ptr{int})::Ptr{Void}
+@get_c_fun "libGL" glxcreateglxpbuffersgix glxCreateGLXPbufferSGIX(dpy::Ptr{Display}, config::GLXFBConfigSGIX, width::uCint32, height::CCuint, attrib_list::Ptr{int})::Ptr{Void}
 export glxcreateglxpbuffersgix
 @get_c_fun "libGL" glxdestroyglxpbuffersgix glxDestroyGLXPbufferSGIX(dpy::Ptr{Display}, pbuf::GLXPbufferSGIX)::Void
 export glxdestroyglxpbuffersgix
-@get_c_fun "libGL" glxqueryglxpbuffersgix glxQueryGLXPbufferSGIX(dpy::Ptr{Display}, pbuf::GLXPbufferSGIX, attribute::Int, (*C.Uint32)(value))::Int
+@get_c_fun "libGL" glxqueryglxpbuffersgix glxQueryGLXPbufferSGIX(dpy::Ptr{Display}, pbuf::GLXPbufferSGIX, attribute::Cint, value::Ptr{CCuint})::Int
 export glxqueryglxpbuffersgix
-@get_c_fun "libGL" glxselecteventsgix glxSelectEventSGIX(dpy::Ptr{Display}, drawable::GLXDrawable, (C.unsigned_long)(mask))::Void
+@get_c_fun "libGL" glxselecteventsgix glxSelectEventSGIX(dpy::Ptr{Display}, drawable::GLXDrawable, mask::unsigned_long)::Void
 export glxselecteventsgix
-@get_c_fun "libGL" glxgetselectedeventsgix glxGetSelectedEventSGIX(dpy::Ptr{Display}, drawable::GLXDrawable, (*C.unsigned_long)(mask))::Void
+@get_c_fun "libGL" glxgetselectedeventsgix glxGetSelectedEventSGIX(dpy::Ptr{Display}, drawable::GLXDrawable, mask::Ptr{unsigned_long})::Void
 export glxgetselectedeventsgix
 @get_c_fun "libGL" glxbindswapbarriersgix glxBindSwapBarrierSGIX(dpy::Ptr{Display}, drawable::GLXDrawable, barrier::int)::Void
 export glxbindswapbarriersgix
-@get_c_fun "libGL" glxquerymaxswapbarrierssgix glxQueryMaxSwapBarriersSGIX(dpy::Ptr{Display}, screen::Int, max::Ptr{int})::int
+@get_c_fun "libGL" glxquerymaxswapbarrierssgix glxQueryMaxSwapBarriersSGIX(dpy::Ptr{Display}, screen::Cint, max::Ptr{int})::int
 export glxquerymaxswapbarrierssgix
 @get_c_fun "libGL" glxjoinswapgroupsgix glxJoinSwapGroupSGIX(dpy::Ptr{Display}, drawable::GLXDrawable, member::GLXDrawable)::Void
 export glxjoinswapgroupsgix
-@get_c_fun "libGL" glxbindchanneltowindowsgix glxBindChannelToWindowSGIX(display::Ptr{Display}, screen::Int, channel::int, window::Window)::Int
+@get_c_fun "libGL" glxbindchanneltowindowsgix glxBindChannelToWindowSGIX(display::Ptr{Display}, screen::Cint, channel::int, window::Window)::Int
 export glxbindchanneltowindowsgix
-@get_c_fun "libGL" glxchannelrectsgix glxChannelRectSGIX(display::Ptr{Display}, screen::Int, channel::int, x::int, y::int, w::int, h::int)::Int
+@get_c_fun "libGL" glxchannelrectsgix glxChannelRectSGIX(display::Ptr{Display}, screen::Cint, channel::int, x::int, y::int, w::int, h::int)::Int
 export glxchannelrectsgix
-@get_c_fun "libGL" glxquerychannelrectsgix glxQueryChannelRectSGIX(display::Ptr{Display}, screen::Int, channel::int, dx::Ptr{int}, dy::Ptr{int}, dw::Ptr{int}, dh::Ptr{int})::Int
+@get_c_fun "libGL" glxquerychannelrectsgix glxQueryChannelRectSGIX(display::Ptr{Display}, screen::Cint, channel::int, dx::Ptr{int}, dy::Ptr{int}, dw::Ptr{int}, dh::Ptr{int})::Int
 export glxquerychannelrectsgix
-@get_c_fun "libGL" glxquerychanneldeltassgix glxQueryChannelDeltasSGIX(display::Ptr{Display}, screen::Int, channel::int, x::Ptr{int}, y::Ptr{int}, w::Ptr{int}, h::Ptr{int})::Int
+@get_c_fun "libGL" glxquerychanneldeltassgix glxQueryChannelDeltasSGIX(display::Ptr{Display}, screen::Cint, channel::int, x::Ptr{int}, y::Ptr{int}, w::Ptr{int}, h::Ptr{int})::Int
 export glxquerychanneldeltassgix
-@get_c_fun "libGL" glxchannelrectsyncsgix glxChannelRectSyncSGIX(display::Ptr{Display}, screen::Int, channel::int, synctype::GLenum)::Int
+@get_c_fun "libGL" glxchannelrectsyncsgix glxChannelRectSyncSGIX(display::Ptr{Display}, screen::Cint, channel::int, synctype::GLenum)::Int
 export glxchannelrectsyncsgix
-@get_c_fun "libGL" glxcreateglxvideosourcesgix glxCreateGLXVideoSourceSGIX(display::Ptr{Display}, screen::Int, server::VLServer, path::VLPath, nodeClass::int, drainNode::VLNode)::Ptr{Void}
+@get_c_fun "libGL" glxcreateglxvideosourcesgix glxCreateGLXVideoSourceSGIX(display::Ptr{Display}, screen::Cint, server::VLServer, path::VLPath, nodeClass::int, drainNode::VLNode)::Ptr{Void}
 export glxcreateglxvideosourcesgix
 @get_c_fun "libGL" glxdestroyglxvideosourcesgix glxDestroyGLXVideoSourceSGIX(dpy::Ptr{Display}, glxvideosource::Ptr{GGLXVideoSourceSGIX})::Void
 export glxdestroyglxvideosourcesgix
-@get_c_fun "libGL" glxcushionsgi glxCushionSGI(dpy::Ptr{Display}, window::Window, (C.float32)(cushion))::Void
+@get_c_fun "libGL" glxcushionsgi glxCushionSGI(dpy::Ptr{Display}, window::Window, cushion::float32)::Void
 export glxcushionsgi
-@get_c_fun "libGL" glxmakecurrentreadsgi glxMakeCurrentReadSGI(dpy::Ptr{Display}, draw::GLXDrawable, read::GLXDrawable, ctx::GLXContext)::Int
+@get_c_fun "libGL" glxmakecurrentreadsgi glxMakeCurrentReadSGI(dpy::Ptr{Display}, draw::GLXDrawable, read::GLXDrawable, ctx::GLXContext)::Cint
 export glxmakecurrentreadsgi
 @get_c_fun "libGL" glxgetcurrentreaddrawablesgi glxGetCurrentReadDrawableSGI()::Ptr{Void}
 export glxgetcurrentreaddrawablesgi
-@get_c_fun "libGL" glxswapIntervalsgi glxSwapIntervalSGI(interval::int)::Int
-export glxswapIntervalsgi
-@get_c_fun "libGL" glxgetvideosyncsgi glxGetVideoSyncSGI((*C.uInt32)(count))::Int
+@get_c_fun "libGL" glxswapCintervalsgi glxSwapIntervalSGI(interval::int)::Int
+export glxswapCintervalsgi
+@get_c_fun "libGL" glxgetvideosyncsgi glxGetVideoSyncSGI(count::Ptr{uCint32})::Int
 export glxgetvideosyncsgi
-@get_c_fun "libGL" glxwaitvideosyncsgi glxWaitVideoSyncSGI(divisor::Int, remainder::int, (*C.Uint32)(count))::Int
+@get_c_fun "libGL" glxwaitvideosyncsgi glxWaitVideoSyncSGI(divisor::Cint, remainder::int, count::Ptr{CCuint})::Int
 export glxwaitvideosyncsgi
-@get_c_fun "libGL" glxgettransparentindexsun glxGetTransparentIndexSUN(dpy::Ptr{Display}, overlay::Window, underlay::Window, pTransparentIndex::Ptr{long})::Int
+@get_c_fun "libGL" glxgettransparentindexsun glxGetTransparentIndexSUN(dpy::Ptr{Display}, overlay::Window, underlay::Window, pTransparentIndex::Ptr{long})::Cint
 export glxgettransparentindexsun
-@get_c_fun "libGL" glxgetfbconfigs glxGetFBConfigs(dpy::Ptr{Display}, screen::Int, nelements::Ptr{int})::Ptr{Void}
+@get_c_fun "libGL" glxgetfbconfigs glxGetFBConfigs(dpy::Ptr{Display}, screen::Cint, nelements::Ptr{int})::Ptr{Void}
 export glxgetfbconfigs
-@get_c_fun "libGL" glxchoosefbconfig glxChooseFBConfig(dpy::Ptr{Display}, screen::Int, attrib_list::Ptr{int}, nelements::Ptr{int})::Ptr{Void}
+@get_c_fun "libGL" glxchoosefbconfig glxChooseFBConfig(dpy::Ptr{Display}, screen::Cint, attrib_list::Ptr{int}, nelements::Ptr{int})::Ptr{Void}
 export glxchoosefbconfig
-@get_c_fun "libGL" glxgetfbconfigattrib glxGetFBConfigAttrib(dpy::Ptr{Display}, config::GLXFBConfig, attribute::Int, value::Ptr{int})::Int
+@get_c_fun "libGL" glxgetfbconfigattrib glxGetFBConfigAttrib(dpy::Ptr{Display}, config::GLXFBConfig, attribute::Cint, value::Ptr{int})::Int
 export glxgetfbconfigattrib
 @get_c_fun "libGL" glxgetvisualfromfbconfig glxGetVisualFromFBConfig(dpy::Ptr{Display}, config::GLXFBConfig)::Ptr{Void}
 export glxgetvisualfromfbconfig
-@get_c_fun "libGL" glxcreatewindow glxCreateWindow(dpy::Ptr{Display}, config::GLXFBConfig, win::Window, attrib_list::Ptr{Int})::Ptr{Void}
+@get_c_fun "libGL" glxcreatewindow glxCreateWindow(dpy::Ptr{Display}, config::GLXFBConfig, win::Window, attrib_list::Ptr{Cint})::Ptr{Void}
 export glxcreatewindow
 @get_c_fun "libGL" glxdestroywindow glxDestroyWindow(dpy::Ptr{Display}, win::GLXWindow)::Void
 export glxdestroywindow
-@get_c_fun "libGL" glxcreatepixmap glxCreatePixmap(dpy::Ptr{Display}, config::GLXFBConfig, pixmap::Pixmap, attrib_list::Ptr{Int})::Ptr{Void}
+@get_c_fun "libGL" glxcreatepixmap glxCreatePixmap(dpy::Ptr{Display}, config::GLXFBConfig, pixmap::Pixmap, attrib_list::Ptr{Cint})::Ptr{Void}
 export glxcreatepixmap
 @get_c_fun "libGL" glxdestroypixmap glxDestroyPixmap(dpy::Ptr{Display}, pixmap::GLXPixmap)::Void
 export glxdestroypixmap
-@get_c_fun "libGL" glxcreatepbuffer glxCreatePbuffer(dpy::Ptr{Display}, config::GLXFBConfig, attrib_list::Ptr{Int})::Ptr{Void}
+@get_c_fun "libGL" glxcreatepbuffer glxCreatePbuffer(dpy::Ptr{Display}, config::GLXFBConfig, attrib_list::Ptr{Cint})::Ptr{Void}
 export glxcreatepbuffer
 @get_c_fun "libGL" glxdestroypbuffer glxDestroyPbuffer(dpy::Ptr{Display}, pbuf::GLXPbuffer)::Void
 export glxdestroypbuffer
-@get_c_fun "libGL" glxquerydrawable glxQueryDrawable(dpy::Ptr{Display}, draw::GLXDrawable, attribute::int, (*C.uint32)(value))::Void
+@get_c_fun "libGL" glxquerydrawable glxQueryDrawable(dpy::Ptr{Display}, draw::GLXDrawable, attribute::int, value::Ptr{uint32})::Void
 export glxquerydrawable
-@get_c_fun "libGL" glxcreatenewcontext glxCreateNewContext(dpy::Ptr{Display}, config::GLXFBConfig, render_type::Int, share_list::GLXContext, direct::int)::Ptr{Void}
+@get_c_fun "libGL" glxcreatenewcontext glxCreateNewContext(dpy::Ptr{Display}, config::GLXFBConfig, render_type::Cint, share_list::GLXContext, direct::int)::Ptr{Void}
 export glxcreatenewcontext
-@get_c_fun "libGL" glxmakecontextcurrent glxMakeContextCurrent(dpy::Ptr{Display}, draw::GLXDrawable, read::GLXDrawable, ctx::GLXContext)::Int
+@get_c_fun "libGL" glxmakecontextcurrent glxMakeContextCurrent(dpy::Ptr{Display}, draw::GLXDrawable, read::GLXDrawable, ctx::GLXContext)::Cint
 export glxmakecontextcurrent
 @get_c_fun "libGL" glxgetcurrentreaddrawable glxGetCurrentReadDrawable()::Ptr{Void}
 export glxgetcurrentreaddrawable
 @get_c_fun "libGL" glxgetcurrentdisplay glxGetCurrentDisplay()::Ptr{Void}
 export glxgetcurrentdisplay
-@get_c_fun "libGL" glxquerycontext glxQueryContext(dpy::Ptr{Display}, ctx::GLXContext, attribute::Int, value::Ptr{int})::Int
+@get_c_fun "libGL" glxquerycontext glxQueryContext(dpy::Ptr{Display}, ctx::GLXContext, attribute::Cint, value::Ptr{int})::Int
 export glxquerycontext
-@get_c_fun "libGL" glxselectevent glxSelectEvent(dpy::Ptr{Display}, draw::GLXDrawable, (C.unsigned_long)(event_mask))::Void
+@get_c_fun "libGL" glxselectevent glxSelectEvent(dpy::Ptr{Display}, draw::GLXDrawable, event_mask::unsigned_long)::Void
 export glxselectevent
-@get_c_fun "libGL" glxgetselectedevent glxGetSelectedEvent(dpy::Ptr{Display}, draw::GLXDrawable, (*C.unsigned_long)(event_mask))::Void
+@get_c_fun "libGL" glxgetselectedevent glxGetSelectedEvent(dpy::Ptr{Display}, draw::GLXDrawable, event_mask::Ptr{unsigned_long})::Void
 export glxgetselectedevent
 @get_c_fun "libGL" glxgetprocaddress glxGetProcAddress(procName::Ptr{GLubyte})::Ptr{Void}
 export glxgetprocaddress
@@ -750,21 +773,21 @@ export glxjoinswapgroupsgix
 export glxbindswapbarriersgix
 @get_c_fun "libGL" glxquerymaxswapbarrierssgix glxQueryMaxSwapBarriersSGIX()::Void
 export glxquerymaxswapbarrierssgix
-@get_c_fun "libGL" glxqueryhyperpipenetworksgix glxQueryHyperpipeNetworkSGIX(dpy::Ptr{Display}, npipes::Ptr{Int})::Ptr{Void}
+@get_c_fun "libGL" glxqueryhyperpipenetworksgix glxQueryHyperpipeNetworkSGIX(dpy::Ptr{Display}, npipes::Ptr{Cint})::Ptr{Void}
 export glxqueryhyperpipenetworksgix
-@get_c_fun "libGL" glxhyperpipeconfigsgix glxHyperpipeConfigSGIX(dpy::Ptr{Display}, networkId::Int, npipes::int, cfg::Ptr{GLXHyperpipeConfigSGIX}, hpId::Ptr{int})::Int
+@get_c_fun "libGL" glxhyperpipeconfigsgix glxHyperpipeConfigSGIX(dpy::Ptr{Display}, networkId::Cint, npipes::int, cfg::Ptr{GLXHyperpipeConfigSGIX}, hpId::Ptr{int})::Int
 export glxhyperpipeconfigsgix
-@get_c_fun "libGL" glxqueryhyperpipeconfigsgix glxQueryHyperpipeConfigSGIX(dpy::Ptr{Display}, hpId::Int, npipes::Ptr{int})::Ptr{Void}
+@get_c_fun "libGL" glxqueryhyperpipeconfigsgix glxQueryHyperpipeConfigSGIX(dpy::Ptr{Display}, hpId::Cint, npipes::Ptr{int})::Ptr{Void}
 export glxqueryhyperpipeconfigsgix
-@get_c_fun "libGL" glxdestroyhyperpipeconfigsgix glxDestroyHyperpipeConfigSGIX(dpy::Ptr{Display}, hpId::Int)::Int
+@get_c_fun "libGL" glxdestroyhyperpipeconfigsgix glxDestroyHyperpipeConfigSGIX(dpy::Ptr{Display}, hpId::Cint)::Int
 export glxdestroyhyperpipeconfigsgix
-@get_c_fun "libGL" glxbindhyperpipesgix glxBindHyperpipeSGIX(dpy::Ptr{Display}, hpId::Int)::Int
+@get_c_fun "libGL" glxbindhyperpipesgix glxBindHyperpipeSGIX(dpy::Ptr{Display}, hpId::Cint)::Int
 export glxbindhyperpipesgix
-@get_c_fun "libGL" glxqueryhyperpipebestattribsgix glxQueryHyperpipeBestAttribSGIX(dpy::Ptr{Display}, timeSlice::Int, attrib::int, size::int, attribList::Ptr{Void}, returnAttribList::Ptr{Void})::Int
+@get_c_fun "libGL" glxqueryhyperpipebestattribsgix glxQueryHyperpipeBestAttribSGIX(dpy::Ptr{Display}, timeSlice::Cint, attrib::int, size::int, attribList::Ptr{Void}, returnAttribList::Ptr{Void})::Int
 export glxqueryhyperpipebestattribsgix
-@get_c_fun "libGL" glxhyperpipeattribsgix glxHyperpipeAttribSGIX(dpy::Ptr{Display}, timeSlice::Int, attrib::int, size::int, attribList::Ptr{Void})::Int
+@get_c_fun "libGL" glxhyperpipeattribsgix glxHyperpipeAttribSGIX(dpy::Ptr{Display}, timeSlice::Cint, attrib::int, size::int, attribList::Ptr{Void})::Int
 export glxhyperpipeattribsgix
-@get_c_fun "libGL" glxqueryhyperpipeattribsgix glxQueryHyperpipeAttribSGIX(dpy::Ptr{Display}, timeSlice::Int, attrib::int, size::int, returnAttribList::Ptr{Void})::Int
+@get_c_fun "libGL" glxqueryhyperpipeattribsgix glxQueryHyperpipeAttribSGIX(dpy::Ptr{Display}, timeSlice::Cint, attrib::int, size::int, returnAttribList::Ptr{Void})::Int
 export glxqueryhyperpipeattribsgix
 
-end
+end #module GLX

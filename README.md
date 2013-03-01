@@ -61,9 +61,9 @@ using OpenGL
 
 NOTE: It is not possible to load multiple versions of OpenGL into the
 same instance of Julia.  Each successive call to load a given version
-will try to load the OpenGL module into the Julia instance.  Since Julia
-does not allow redefining modules by reloading them, one should not run
-into any trouble.
+will redefine the current OpenGL module, effectively replacing that
+version with whichever new version you have specified.  This should not
+produce any problems and should (hopefully) work as expected.
 
 (You can also load an OpenGL version by requiring the file directly,
 e.g. require("OpenGL/src/gl33/gl33"))
