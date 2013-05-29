@@ -13,7 +13,7 @@ export glvertex, glcolor,glcolorb, gltexcoord,glnormal,
        glscale, gltranslate, glrotate,glrotate_r,
        glprimitive,glpushed,
        unit_frame, unit_frame_from, unit_frame_to,
-       rect_vertices, rect_vertices_around, glimg #glimread
+       rect_vertices, rect_vertices_around, glimread #glimg
 
 #TODO upgrade so glbegin/glpushmatrix can be used directly.
 #glenable (covered by autoFFI)
