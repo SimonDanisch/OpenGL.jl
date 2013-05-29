@@ -20,6 +20,9 @@ elseif OpenGLver == "4.2"
 elseif OpenGLver == "4.3"
     require("OpenGL/src/gl43/gl43")
     require("OpenGL/src/gl43/gl43aux")
+else
+    require("OpenGL/src/gl21/gl21")
+    require("OpenGL/src/gl21/gl21aux")
 end
 
 using GLU
