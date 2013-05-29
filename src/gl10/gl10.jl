@@ -1055,8 +1055,8 @@ export glcleardebuglogmesa
 export glgetdebuglogmesa
 @get_c_fun "libGL" glgetdebugloglengthmesa glGetDebugLogLengthMESA(obj::GLhandleARB,logtype::GLenum,shadertype::GLenum)::GLsizei
 export glgetdebugloglengthmesa
-@get_c_fun "libGL" glprogramcallbackmesa glProgramCallbackMESA(target::GLenum,callback::GLprogramcallbackMESA,data::Ptr)::Void
-export glprogramcallbackmesa
+#@get_c_fun "libGL" glprogramcallbackmesa glProgramCallbackMESA(target::GLenum,callback::GLprogramcallbackMESA,data::Ptr)::Void
+#export glprogramcallbackmesa
 @get_c_fun "libGL" glgetprogramregisterfvmesa glGetProgramRegisterfvMESA(target::GLenum,len::GLsizei,name::Ptr,v::Ptr)::Void
 export glgetprogramregisterfvmesa
 @get_c_fun "libGL" glblendequationseparateati glBlendEquationSeparateATI(modergb::GLenum,modea::GLenum)::Void
