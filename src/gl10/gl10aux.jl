@@ -250,7 +250,6 @@ vertices_rect_around(pos::Vector2, r::Number) = vertices_rect_around(pos[1],pos[
 @also_tuple vertices_rect_around 2:3
 
 # OpenGL expects a 1D, upside-down image array in an RGB format for textures (Images.jl's imread returns an Image datatype)
-# TODO: How do I get imread into this modules' namespace?
 function glimread(filename::String)
     img3D = imread(filename)
     w = size(img3D.data,3)
