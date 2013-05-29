@@ -259,7 +259,7 @@ function glimread(filename::String)
     for i=1:3, j=1:w, k=1:h
         img[w*3*(j-1)+(i-1)*3+k] = img3D.data[i,(h+1)-j,k]
     end
-    return img
+    return img, w, h
 end
 
 end
