@@ -252,13 +252,13 @@ vertices_rect_around(pos::Vector2, r::Number) = vertices_rect_around(pos[1],pos[
 # TODO: How do I get imread into this modules' namespace?
 #function glimread(filename::String)
     #img3D = imread(filename)
-function glimg(img3D::Array{Float64,3})
+function glimg(img3D::Array{Uint8,3})
     w = size(img3D,2)
     h = size(img3D,1)
     img = Array(Uint8,w*h*3)
     for i=1:w, j=1:h, k=1:3
         #img[w*3*(j-1)+(i-1)*3+k] = uint8(img3D[i,(h+1)-j,4-k]*255)
-        img[w*3*(j-1)+(i-1)*3+k] = uint8(img3D[i,(h+1)-j,k]*255)
+        img[w*3*(j-1)+(i-1)*3+k] = img3D[i,(h+1)-j,k]
     end
     return img
 end
