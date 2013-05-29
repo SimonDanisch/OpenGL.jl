@@ -256,7 +256,7 @@ function glimg(img3D::Array{Uint8,3})
     w = size(img3D,3)
     h = size(img3D,2)
     img = Array(Uint8,w*h*3)
-    for i=1:w, j=1:h, k=1:3
+    for i=1:3, j=1:w, k=1:h
         #img[w*3*(j-1)+(i-1)*3+k] = uint8(img3D[i,(h+1)-j,4-k]*255)
         img[w*3*(j-1)+(i-1)*3+k] = img3D[i,(h+1)-j,k]
     end
