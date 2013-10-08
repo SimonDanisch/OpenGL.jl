@@ -515,275 +515,275 @@ const WGL_VIDEO_OUT_STACKED_FIELDS_1_2 = 0x20CB
 export WGL_VIDEO_OUT_STACKED_FIELDS_1_2
 const WGL_VIDEO_OUT_STACKED_FIELDS_2_1 = 0x20CC
 export WGL_VIDEO_OUT_STACKED_FIELDS_2_1
-@get_c_fun "libGL" wglsetstereoemitterstate3dl wglSetStereoEmitterState3DL glSetStereoEmitterState3DL(hDC::HDC, uState::UINT)::Cint32
-export wglsetstereoemitterstate3dl
-@get_c_fun "libGL" wglgetgpuidsamd wglGetGPUIDsAMD glGetGPUIDsAMD(maxCount::UINT, ids::Ptr{UINT})::uCint32
-export wglgetgpuidsamd
-@get_c_fun "libGL" wglgetgpuinfoamd wglGetGPUInfoAMD glGetGPUInfoAMD(id::UINT, property::Cint, dataType::GLenum, size::UINT, data::Ptr{Void})::int32
-export wglgetgpuinfoamd
-@get_c_fun "libGL" wglgetcontextgpuidamd wglGetContextGPUIDAMD glGetContextGPUIDAMD(hglrc::HGLRC)::uCint32
-export wglgetcontextgpuidamd
-@get_c_fun "libGL" wglcreateassociatedcontextamd wglCreateAssociatedContextAMD glCreateAssociatedContextAMD(id::UINT)::Ptr{Void}
-export wglcreateassociatedcontextamd
-@get_c_fun "libGL" wglcreateassociatedcontextattribsamd wglCreateAssociatedContextAttribsAMD glCreateAssociatedContextAttribsAMD(id::UINT, hShareContext::HGLRC, attribList::Ptr{Cint})::Ptr{Void}
-export wglcreateassociatedcontextattribsamd
-@get_c_fun "libGL" wgldeleteassociatedcontextamd wglDeleteAssociatedContextAMD glDeleteAssociatedContextAMD(hglrc::HGLRC)::Cint32
-export wgldeleteassociatedcontextamd
-@get_c_fun "libGL" wglmakeassociatedcontextcurrentamd wglMakeAssociatedContextCurrentAMD glMakeAssociatedContextCurrentAMD(hglrc::HGLRC)::Cint32
-export wglmakeassociatedcontextcurrentamd
-@get_c_fun "libGL" wglgetcurrentassociatedcontextamd wglGetCurrentAssociatedContextAMD glGetCurrentAssociatedContextAMD()::Ptr{Void}
-export wglgetcurrentassociatedcontextamd
-@get_c_fun "libGL" wglcreatebufferregionarb wglCreateBufferRegionARB glCreateBufferRegionARB(hDC::HDC, iLayerPlane::Cint, uType::UINT)::Ptr{Void}
-export wglcreatebufferregionarb
-@get_c_fun "libGL" wglsavebufferregionarb wglSaveBufferRegionARB glSaveBufferRegionARB(hRegion::HANDLE, x::Cint, y::int, width::int, height::int)::int32
-export wglsavebufferregionarb
-@get_c_fun "libGL" wglrestorebufferregionarb wglRestoreBufferRegionARB glRestoreBufferRegionARB(hRegion::HANDLE, x::Cint, y::int, width::int, height::int, xSrc::int, ySrc::int)::int32
-export wglrestorebufferregionarb
-@get_c_fun "libGL" wglcreatecontextattribsarb wglCreateContextAttribsARB glCreateContextAttribsARB(hDC::HDC, hShareContext::HGLRC, attribList::Ptr{Cint})::Ptr{Void}
-export wglcreatecontextattribsarb
-@get_c_fun "libGL" wglgetextensionsstringarb wglGetExtensionsStringARB glGetExtensionsStringARB(hdc::HDC)::*byte
-export wglgetextensionsstringarb
-@get_c_fun "libGL" wglmakecontextcurrentarb wglMakeContextCurrentARB glMakeContextCurrentARB(hDrawDC::HDC, hReadDC::HDC, hglrc::HGLRC)::Cint32
-export wglmakecontextcurrentarb
-@get_c_fun "libGL" wglgetcurrentreaddcarb wglGetCurrentReadDCARB glGetCurrentReadDCARB()::Ptr{Void}
-export wglgetcurrentreaddcarb
-@get_c_fun "libGL" wglcreatepbufferarb wglCreatePbufferARB glCreatePbufferARB(hDC::HDC, iPixelFormat::Cint, iWidth::int, iHeight::int, piAttribList::Ptr{int})::Ptr{Void}
-export wglcreatepbufferarb
-@get_c_fun "libGL" wglgetpbufferdcarb wglGetPbufferDCARB glGetPbufferDCARB(hPbuffer::HPBUFFERARB)::Ptr{Void}
-export wglgetpbufferdcarb
-@get_c_fun "libGL" wglreleasepbufferdcarb wglReleasePbufferDCARB glReleasePbufferDCARB(hPbuffer::HPBUFFERARB, hDC::HDC)::Int
-export wglreleasepbufferdcarb
-@get_c_fun "libGL" wgldestroypbufferarb wglDestroyPbufferARB glDestroyPbufferARB(hPbuffer::HPBUFFERARB)::Cint32
-export wgldestroypbufferarb
-@get_c_fun "libGL" wglquerypbufferarb wglQueryPbufferARB glQueryPbufferARB(hPbuffer::HPBUFFERARB, iAttribute::Cint, piValue::Ptr{int})::int32
-export wglquerypbufferarb
-@get_c_fun "libGL" wglgetpixelformatattribivarb wglGetPixelFormatAttribivARB glGetPixelFormatAttribivARB(hdc::HDC, iPixelFormat::Cint, iLayerPlane::int, nAttributes::UINT, piAttributes::Ptr{int}, piValues::Ptr{int})::int32
-export wglgetpixelformatattribivarb
-@get_c_fun "libGL" wglgetpixelformatattribfvarb wglGetPixelFormatAttribfvARB glGetPixelFormatAttribfvARB(hdc::HDC, iPixelFormat::Cint, iLayerPlane::int, nAttributes::UINT, piAttributes::Ptr{int}, pfValues::Ptr{FLOAT})::int32
-export wglgetpixelformatattribfvarb
-@get_c_fun "libGL" wglchoosepixelformatarb wglChoosePixelFormatARB glChoosePixelFormatARB(hdc::HDC, piAttribIList::Ptr{Cint}, pfAttribFList::Ptr{FLOAT}, nMaxFormats::UINT, piFormats::Ptr{int}, nNumFormats::Ptr{UINT})::int32
-export wglchoosepixelformatarb
-@get_c_fun "libGL" wglbindteximagearb wglBindTexImageARB glBindTexImageARB(hPbuffer::HPBUFFERARB, iBuffer::Cint)::int32
-export wglbindteximagearb
-@get_c_fun "libGL" wglreleaseteximagearb wglReleaseTexImageARB glReleaseTexImageARB(hPbuffer::HPBUFFERARB, iBuffer::Cint)::int32
-export wglreleaseteximagearb
-@get_c_fun "libGL" wglsetpbufferattribarb wglSetPbufferAttribARB glSetPbufferAttribARB(hPbuffer::HPBUFFERARB, piAttribList::Ptr{Cint})::int32
-export wglsetpbufferattribarb
-@get_c_fun "libGL" wglcreatedisplaycolortableext wglCreateDisplayColorTableEXT glCreateDisplayColorTableEXT(id::GLushort)::Bool
-export wglcreatedisplaycolortableext
-@get_c_fun "libGL" wglloaddisplaycolortableext wglLoadDisplayColorTableEXT glLoadDisplayColorTableEXT(table::Ptr{GLushort}, length::GLuCint)::Bool
-export wglloaddisplaycolortableext
-@get_c_fun "libGL" wglbinddisplaycolortableext wglBindDisplayColorTableEXT glBindDisplayColorTableEXT(id::GLushort)::Bool
-export wglbinddisplaycolortableext
-@get_c_fun "libGL" wglgetextensionsstringext wglGetExtensionsStringEXT glGetExtensionsStringEXT()::*byte
-export wglgetextensionsstringext
-@get_c_fun "libGL" wglmakecontextcurrentext wglMakeContextCurrentEXT glMakeContextCurrentEXT(hDrawDC::HDC, hReadDC::HDC, hglrc::HGLRC)::Cint32
-export wglmakecontextcurrentext
-@get_c_fun "libGL" wglgetcurrentreaddcext wglGetCurrentReadDCEXT glGetCurrentReadDCEXT()::Ptr{Void}
-export wglgetcurrentreaddcext
-@get_c_fun "libGL" wglcreatepbufferext wglCreatePbufferEXT glCreatePbufferEXT(hDC::HDC, iPixelFormat::Cint, iWidth::int, iHeight::int, piAttribList::Ptr{int})::Ptr{Void}
-export wglcreatepbufferext
-@get_c_fun "libGL" wglgetpbufferdcext wglGetPbufferDCEXT glGetPbufferDCEXT(hPbuffer::HPBUFFEREXT)::Ptr{Void}
-export wglgetpbufferdcext
-@get_c_fun "libGL" wglreleasepbufferdcext wglReleasePbufferDCEXT glReleasePbufferDCEXT(hPbuffer::HPBUFFEREXT, hDC::HDC)::Int
-export wglreleasepbufferdcext
-@get_c_fun "libGL" wgldestroypbufferext wglDestroyPbufferEXT glDestroyPbufferEXT(hPbuffer::HPBUFFEREXT)::Cint32
-export wgldestroypbufferext
-@get_c_fun "libGL" wglquerypbufferext wglQueryPbufferEXT glQueryPbufferEXT(hPbuffer::HPBUFFEREXT, iAttribute::Cint, piValue::Ptr{int})::int32
-export wglquerypbufferext
-@get_c_fun "libGL" wglgetpixelformatattribivext wglGetPixelFormatAttribivEXT glGetPixelFormatAttribivEXT(hdc::HDC, iPixelFormat::Cint, iLayerPlane::int, nAttributes::UINT, piAttributes::Ptr{int}, piValues::Ptr{int})::int32
-export wglgetpixelformatattribivext
-@get_c_fun "libGL" wglgetpixelformatattribfvext wglGetPixelFormatAttribfvEXT glGetPixelFormatAttribfvEXT(hdc::HDC, iPixelFormat::Cint, iLayerPlane::int, nAttributes::UINT, piAttributes::Ptr{int}, pfValues::Ptr{FLOAT})::int32
-export wglgetpixelformatattribfvext
-@get_c_fun "libGL" wglchoosepixelformatext wglChoosePixelFormatEXT glChoosePixelFormatEXT(hdc::HDC, piAttribIList::Ptr{Cint}, pfAttribFList::Ptr{FLOAT}, nMaxFormats::UINT, piFormats::Ptr{int}, nNumFormats::Ptr{UINT})::int32
-export wglchoosepixelformatext
+@get_c_fun "libGL" wglSetStereoEmitterState3DL wglSetStereoEmitterState3DL(hDC::HDC, uState::UINT)::Cint32
+export wglSetStereoEmitterState3DL
+@get_c_fun "libGL" wglGetGPUIDsAMD wglGetGPUIDsAMD(maxCount::UINT, ids::Ptr{UINT})::uCint32
+export wglGetGPUIDsAMD
+@get_c_fun "libGL" wglGetGPUInfoAMD wglGetGPUInfoAMD(id::UINT, property::Cint, dataType::GLenum, size::UINT, data::Ptr{Void})::int32
+export wglGetGPUInfoAMD
+@get_c_fun "libGL" wglGetContextGPUIDAMD wglGetContextGPUIDAMD(hglrc::HGLRC)::uCint32
+export wglGetContextGPUIDAMD
+@get_c_fun "libGL" wglCreateAssociatedContextAMD wglCreateAssociatedContextAMD(id::UINT)::Ptr{Void}
+export wglCreateAssociatedContextAMD
+@get_c_fun "libGL" wglCreateAssociatedContextAttribsAMD wglCreateAssociatedContextAttribsAMD(id::UINT, hShareContext::HGLRC, attribList::Ptr{Cint})::Ptr{Void}
+export wglCreateAssociatedContextAttribsAMD
+@get_c_fun "libGL" wglDeleteAssociatedContextAMD wglDeleteAssociatedContextAMD(hglrc::HGLRC)::Cint32
+export wglDeleteAssociatedContextAMD
+@get_c_fun "libGL" wglMakeAssociatedContextCurrentAMD wglMakeAssociatedContextCurrentAMD(hglrc::HGLRC)::Cint32
+export wglMakeAssociatedContextCurrentAMD
+@get_c_fun "libGL" wglGetCurrentAssociatedContextAMD wglGetCurrentAssociatedContextAMD()::Ptr{Void}
+export wglGetCurrentAssociatedContextAMD
+@get_c_fun "libGL" wglCreateBufferRegionARB wglCreateBufferRegionARB(hDC::HDC, iLayerPlane::Cint, uType::UINT)::Ptr{Void}
+export wglCreateBufferRegionARB
+@get_c_fun "libGL" wglSaveBufferRegionARB wglSaveBufferRegionARB(hRegion::HANDLE, x::Cint, y::int, width::int, height::int)::int32
+export wglSaveBufferRegionARB
+@get_c_fun "libGL" wglRestoreBufferRegionARB wglRestoreBufferRegionARB(hRegion::HANDLE, x::Cint, y::int, width::int, height::int, xSrc::int, ySrc::int)::int32
+export wglRestoreBufferRegionARB
+@get_c_fun "libGL" wglCreateContextAttribsARB wglCreateContextAttribsARB(hDC::HDC, hShareContext::HGLRC, attribList::Ptr{Cint})::Ptr{Void}
+export wglCreateContextAttribsARB
+@get_c_fun "libGL" wglGetExtensionsStringARB wglGetExtensionsStringARB(hdc::HDC)::*byte
+export wglGetExtensionsStringARB
+@get_c_fun "libGL" wglMakeContextCurrentARB wglMakeContextCurrentARB(hDrawDC::HDC, hReadDC::HDC, hglrc::HGLRC)::Cint32
+export wglMakeContextCurrentARB
+@get_c_fun "libGL" wglGetCurrentReadDCARB wglGetCurrentReadDCARB()::Ptr{Void}
+export wglGetCurrentReadDCARB
+@get_c_fun "libGL" wglCreatePbufferARB wglCreatePbufferARB(hDC::HDC, iPixelFormat::Cint, iWidth::int, iHeight::int, piAttribList::Ptr{int})::Ptr{Void}
+export wglCreatePbufferARB
+@get_c_fun "libGL" wglGetPbufferDCARB wglGetPbufferDCARB(hPbuffer::HPBUFFERARB)::Ptr{Void}
+export wglGetPbufferDCARB
+@get_c_fun "libGL" wglReleasePbufferDCARB wglReleasePbufferDCARB(hPbuffer::HPBUFFERARB, hDC::HDC)::Int
+export wglReleasePbufferDCARB
+@get_c_fun "libGL" wglDestroyPbufferARB wglDestroyPbufferARB(hPbuffer::HPBUFFERARB)::Cint32
+export wglDestroyPbufferARB
+@get_c_fun "libGL" wglQueryPbufferARB wglQueryPbufferARB(hPbuffer::HPBUFFERARB, iAttribute::Cint, piValue::Ptr{int})::int32
+export wglQueryPbufferARB
+@get_c_fun "libGL" wglGetPixelFormatAttribivARB wglGetPixelFormatAttribivARB(hdc::HDC, iPixelFormat::Cint, iLayerPlane::int, nAttributes::UINT, piAttributes::Ptr{int}, piValues::Ptr{int})::int32
+export wglGetPixelFormatAttribivARB
+@get_c_fun "libGL" wglGetPixelFormatAttribfvARB wglGetPixelFormatAttribfvARB(hdc::HDC, iPixelFormat::Cint, iLayerPlane::int, nAttributes::UINT, piAttributes::Ptr{int}, pfValues::Ptr{FLOAT})::int32
+export wglGetPixelFormatAttribfvARB
+@get_c_fun "libGL" wglChoosePixelFormatARB wglChoosePixelFormatARB(hdc::HDC, piAttribIList::Ptr{Cint}, pfAttribFList::Ptr{FLOAT}, nMaxFormats::UINT, piFormats::Ptr{int}, nNumFormats::Ptr{UINT})::int32
+export wglChoosePixelFormatARB
+@get_c_fun "libGL" wglBindTexImageARB wglBindTexImageARB(hPbuffer::HPBUFFERARB, iBuffer::Cint)::int32
+export wglBindTexImageARB
+@get_c_fun "libGL" wglReleaseTexImageARB wglReleaseTexImageARB(hPbuffer::HPBUFFERARB, iBuffer::Cint)::int32
+export wglReleaseTexImageARB
+@get_c_fun "libGL" wglSetPbufferAttribARB wglSetPbufferAttribARB(hPbuffer::HPBUFFERARB, piAttribList::Ptr{Cint})::int32
+export wglSetPbufferAttribARB
+@get_c_fun "libGL" wglCreateDisplayColorTableEXT wglCreateDisplayColorTableEXT(id::GLushort)::Bool
+export wglCreateDisplayColorTableEXT
+@get_c_fun "libGL" wglLoadDisplayColorTableEXT wglLoadDisplayColorTableEXT(table::Ptr{GLushort}, length::GLuCint)::Bool
+export wglLoadDisplayColorTableEXT
+@get_c_fun "libGL" wglBindDisplayColorTableEXT wglBindDisplayColorTableEXT(id::GLushort)::Bool
+export wglBindDisplayColorTableEXT
+@get_c_fun "libGL" wglGetExtensionsStringEXT wglGetExtensionsStringEXT()::*byte
+export wglGetExtensionsStringEXT
+@get_c_fun "libGL" wglMakeContextCurrentEXT wglMakeContextCurrentEXT(hDrawDC::HDC, hReadDC::HDC, hglrc::HGLRC)::Cint32
+export wglMakeContextCurrentEXT
+@get_c_fun "libGL" wglGetCurrentReadDCEXT wglGetCurrentReadDCEXT()::Ptr{Void}
+export wglGetCurrentReadDCEXT
+@get_c_fun "libGL" wglCreatePbufferEXT wglCreatePbufferEXT(hDC::HDC, iPixelFormat::Cint, iWidth::int, iHeight::int, piAttribList::Ptr{int})::Ptr{Void}
+export wglCreatePbufferEXT
+@get_c_fun "libGL" wglGetPbufferDCEXT wglGetPbufferDCEXT(hPbuffer::HPBUFFEREXT)::Ptr{Void}
+export wglGetPbufferDCEXT
+@get_c_fun "libGL" wglReleasePbufferDCEXT wglReleasePbufferDCEXT(hPbuffer::HPBUFFEREXT, hDC::HDC)::Int
+export wglReleasePbufferDCEXT
+@get_c_fun "libGL" wglDestroyPbufferEXT wglDestroyPbufferEXT(hPbuffer::HPBUFFEREXT)::Cint32
+export wglDestroyPbufferEXT
+@get_c_fun "libGL" wglQueryPbufferEXT wglQueryPbufferEXT(hPbuffer::HPBUFFEREXT, iAttribute::Cint, piValue::Ptr{int})::int32
+export wglQueryPbufferEXT
+@get_c_fun "libGL" wglGetPixelFormatAttribivEXT wglGetPixelFormatAttribivEXT(hdc::HDC, iPixelFormat::Cint, iLayerPlane::int, nAttributes::UINT, piAttributes::Ptr{int}, piValues::Ptr{int})::int32
+export wglGetPixelFormatAttribivEXT
+@get_c_fun "libGL" wglGetPixelFormatAttribfvEXT wglGetPixelFormatAttribfvEXT(hdc::HDC, iPixelFormat::Cint, iLayerPlane::int, nAttributes::UINT, piAttributes::Ptr{int}, pfValues::Ptr{FLOAT})::int32
+export wglGetPixelFormatAttribfvEXT
+@get_c_fun "libGL" wglChoosePixelFormatEXT wglChoosePixelFormatEXT(hdc::HDC, piAttribIList::Ptr{Cint}, pfAttribFList::Ptr{FLOAT}, nMaxFormats::UINT, piFormats::Ptr{int}, nNumFormats::Ptr{UINT})::int32
+export wglChoosePixelFormatEXT
 @get_c_fun "libGL" wglswapCintervalext wglSwapIntervalEXT glSwapIntervalEXT(interval::int)::int32
 export wglswapCintervalext
 @get_c_fun "libGL" wglgetswapCintervalext wglGetSwapIntervalEXT glGetSwapIntervalEXT()::Int
 export wglgetswapCintervalext
-@get_c_fun "libGL" wglgetdigitalvideoparametersi3d wglGetDigitalVideoParametersI3D glGetDigitalVideoParametersI3D(hDC::HDC, iAttribute::Cint, piValue::Ptr{int})::int32
-export wglgetdigitalvideoparametersi3d
-@get_c_fun "libGL" wglsetdigitalvideoparametersi3d wglSetDigitalVideoParametersI3D glSetDigitalVideoParametersI3D(hDC::HDC, iAttribute::Cint, piValue::Ptr{int})::int32
-export wglsetdigitalvideoparametersi3d
-@get_c_fun "libGL" wglgetgammatableparametersi3d wglGetGammaTableParametersI3D glGetGammaTableParametersI3D(hDC::HDC, iAttribute::Cint, piValue::Ptr{int})::int32
-export wglgetgammatableparametersi3d
-@get_c_fun "libGL" wglsetgammatableparametersi3d wglSetGammaTableParametersI3D glSetGammaTableParametersI3D(hDC::HDC, iAttribute::Cint, piValue::Ptr{int})::int32
-export wglsetgammatableparametersi3d
-@get_c_fun "libGL" wglgetgammatablei3d wglGetGammaTableI3D glGetGammaTableI3D(hDC::HDC, iEntries::Cint, puRed::Ptr{USHORT}, puGreen::Ptr{USHORT}, puBlue::Ptr{USHORT})::int32
-export wglgetgammatablei3d
-@get_c_fun "libGL" wglsetgammatablei3d wglSetGammaTableI3D glSetGammaTableI3D(hDC::HDC, iEntries::Cint, puRed::Ptr{USHORT}, puGreen::Ptr{USHORT}, puBlue::Ptr{USHORT})::int32
-export wglsetgammatablei3d
-@get_c_fun "libGL" wglenablegenlocki3d wglEnableGenlockI3D glEnableGenlockI3D(hDC::HDC)::Cint32
-export wglenablegenlocki3d
-@get_c_fun "libGL" wgldisablegenlocki3d wglDisableGenlockI3D glDisableGenlockI3D(hDC::HDC)::Cint32
-export wgldisablegenlocki3d
-@get_c_fun "libGL" wglisenabledgenlocki3d wglIsEnabledGenlockI3D glIsEnabledGenlockI3D(hDC::HDC, pFlag::Ptr{BOOL})::Cint32
-export wglisenabledgenlocki3d
-@get_c_fun "libGL" wglgenlocksourcei3d wglGenlockSourceI3D glGenlockSourceI3D(hDC::HDC, uSource::UINT)::Cint32
-export wglgenlocksourcei3d
-@get_c_fun "libGL" wglgetgenlocksourcei3d wglGetGenlockSourceI3D glGetGenlockSourceI3D(hDC::HDC, uSource::Ptr{UINT})::Cint32
-export wglgetgenlocksourcei3d
-@get_c_fun "libGL" wglgenlocksourceedgei3d wglGenlockSourceEdgeI3D glGenlockSourceEdgeI3D(hDC::HDC, uEdge::UINT)::Cint32
-export wglgenlocksourceedgei3d
-@get_c_fun "libGL" wglgetgenlocksourceedgei3d wglGetGenlockSourceEdgeI3D glGetGenlockSourceEdgeI3D(hDC::HDC, uEdge::Ptr{UINT})::Cint32
-export wglgetgenlocksourceedgei3d
-@get_c_fun "libGL" wglgenlocksampleratei3d wglGenlockSampleRateI3D glGenlockSampleRateI3D(hDC::HDC, uRate::UINT)::Cint32
-export wglgenlocksampleratei3d
-@get_c_fun "libGL" wglgetgenlocksampleratei3d wglGetGenlockSampleRateI3D glGetGenlockSampleRateI3D(hDC::HDC, uRate::Ptr{UINT})::Cint32
-export wglgetgenlocksampleratei3d
-@get_c_fun "libGL" wglgenlocksourcedelayi3d wglGenlockSourceDelayI3D glGenlockSourceDelayI3D(hDC::HDC, uDelay::UINT)::Cint32
-export wglgenlocksourcedelayi3d
-@get_c_fun "libGL" wglgetgenlocksourcedelayi3d wglGetGenlockSourceDelayI3D glGetGenlockSourceDelayI3D(hDC::HDC, uDelay::Ptr{UINT})::Cint32
-export wglgetgenlocksourcedelayi3d
-@get_c_fun "libGL" wglquerygenlockmaxsourcedelayi3d wglQueryGenlockMaxSourceDelayI3D glQueryGenlockMaxSourceDelayI3D(hDC::HDC, uMaxLineDelay::Ptr{UINT}, uMaxPixelDelay::Ptr{UINT})::Cint32
-export wglquerygenlockmaxsourcedelayi3d
-@get_c_fun "libGL" wglcreateimagebufferi3d wglCreateImageBufferI3D glCreateImageBufferI3D(hDC::HDC, dwSize::DWORD, uFlags::UINT)::Ptr{Void}
-export wglcreateimagebufferi3d
-@get_c_fun "libGL" wgldestroyimagebufferi3d wglDestroyImageBufferI3D glDestroyImageBufferI3D(hDC::HDC, pAddress::LPVOID)::Cint32
-export wgldestroyimagebufferi3d
-@get_c_fun "libGL" wglassociateimagebuffereventsi3d wglAssociateImageBufferEventsI3D glAssociateImageBufferEventsI3D(hDC::HDC, pEvent::HANDLE, pAddress::LPVOID, pSize::Ptr{DWORD}, count::UINT)::Cint32
-export wglassociateimagebuffereventsi3d
-@get_c_fun "libGL" wglreleaseimagebuffereventsi3d wglReleaseImageBufferEventsI3D glReleaseImageBufferEventsI3D(hDC::HDC, pAddress::LPVOID, count::UINT)::Cint32
-export wglreleaseimagebuffereventsi3d
-@get_c_fun "libGL" wglenableframelocki3d wglEnableFrameLockI3D glEnableFrameLockI3D()::Cint32
-export wglenableframelocki3d
-@get_c_fun "libGL" wgldisableframelocki3d wglDisableFrameLockI3D glDisableFrameLockI3D()::Cint32
-export wgldisableframelocki3d
-@get_c_fun "libGL" wglisenabledframelocki3d wglIsEnabledFrameLockI3D glIsEnabledFrameLockI3D(pFlag::Ptr{BOOL})::Cint32
-export wglisenabledframelocki3d
-@get_c_fun "libGL" wglqueryframelockmasteri3d wglQueryFrameLockMasterI3D glQueryFrameLockMasterI3D(pFlag::Ptr{BOOL})::Cint32
-export wglqueryframelockmasteri3d
-@get_c_fun "libGL" wglgetframeusagei3d wglGetFrameUsageI3D glGetFrameUsageI3D(pUsage::Ptr{float32})::Cint32
-export wglgetframeusagei3d
-@get_c_fun "libGL" wglbeginframetrackingi3d wglBeginFrameTrackingI3D glBeginFrameTrackingI3D()::Cint32
-export wglbeginframetrackingi3d
-@get_c_fun "libGL" wglendframetrackingi3d wglEndFrameTrackingI3D glEndFrameTrackingI3D()::Cint32
-export wglendframetrackingi3d
-@get_c_fun "libGL" wglqueryframetrackingi3d wglQueryFrameTrackingI3D glQueryFrameTrackingI3D(pFrameCount::Ptr{DWORD}, pMissedFrames::Ptr{DWORD}, pLastMissedUsage::Ptr{float32})::Cint32
-export wglqueryframetrackingi3d
-@get_c_fun "libGL" wgldxsetresourcesharehandlenv wglDXSetResourceShareHandleNV glDXSetResourceShareHandleNV(dxObject::Ptr{Void}, shareHandle::HANDLE)::Cint32
-export wgldxsetresourcesharehandlenv
-@get_c_fun "libGL" wgldxopendevicenv wglDXOpenDeviceNV glDXOpenDeviceNV(dxDevice::Ptr{Void})::Ptr{Void}
-export wgldxopendevicenv
-@get_c_fun "libGL" wgldxclosedevicenv wglDXCloseDeviceNV glDXCloseDeviceNV(hDevice::HANDLE)::Cint32
-export wgldxclosedevicenv
-@get_c_fun "libGL" wgldxregisterobjectnv wglDXRegisterObjectNV glDXRegisterObjectNV(hDevice::HANDLE, dxObject::Ptr{Void}, name::GLuCint, type_::GLenum, access::GLenum)::Ptr{Void}
-export wgldxregisterobjectnv
-@get_c_fun "libGL" wgldxunregisterobjectnv wglDXUnregisterObjectNV glDXUnregisterObjectNV(hDevice::HANDLE, hObject::HANDLE)::Cint32
-export wgldxunregisterobjectnv
-@get_c_fun "libGL" wgldxobjectaccessnv wglDXObjectAccessNV glDXObjectAccessNV(hObject::HANDLE, access::GLenum)::Cint32
-export wgldxobjectaccessnv
-@get_c_fun "libGL" wgldxlockobjectsnv wglDXLockObjectsNV glDXLockObjectsNV(hDevice::HANDLE, count::GLCint, hObjects::HANDLE)::int32
-export wgldxlockobjectsnv
-@get_c_fun "libGL" wgldxunlockobjectsnv wglDXUnlockObjectsNV glDXUnlockObjectsNV(hDevice::HANDLE, count::GLCint, hObjects::HANDLE)::int32
-export wgldxunlockobjectsnv
-@get_c_fun "libGL" wglcopyimagesubdatanv wglCopyImageSubDataNV glCopyImageSubDataNV(hSrcRC::HGLRC, srcName::GLuCint, srcTarget::GLenum, srcLevel::GLint, srcX::GLint, srcY::GLint, srcZ::GLint, hDstRC::HGLRC, dstName::GLCuint, dstTarget::GLenum, dstLevel::GLint, dstX::GLint, dstY::GLint, dstZ::GLint, width::GLsizei, height::GLsizei, depth::GLsizei)::int32
-export wglcopyimagesubdatanv
-@get_c_fun "libGL" wglenumgpusnv wglCuCintGpusNV glEnumGpusNV(iGpuIndex::UINT, phGpu::HGPUNV)::int32
-export wglenumgpusnv
-@get_c_fun "libGL" wglenumgpudevicesnv wglCuCintGpuDevicesNV glEnumGpuDevicesNV(hGpu::HGPUNV, iDeviceIndex::UINT, lpGpuDevice::PGPU_DEVICE)::int32
-export wglenumgpudevicesnv
-@get_c_fun "libGL" wglcreateaffinitydcnv wglCreateAffinityDCNV glCreateAffinityDCNV(phGpuList::HGPUNV)::Ptr{Void}
-export wglcreateaffinitydcnv
-@get_c_fun "libGL" wglenumgpusfromaffinitydcnv wglCuCintGpusFromAffinityDCNV glEnumGpusFromAffinityDCNV(hAffinityDC::HDC, iGpuIndex::UINT, hGpu::HGPUNV)::int32
-export wglenumgpusfromaffinitydcnv
-@get_c_fun "libGL" wgldeletedcnv wglDeleteDCNV glDeleteDCNV(hdc::HDC)::Cint32
-export wgldeletedcnv
-@get_c_fun "libGL" wglenumeratevideodevicesnv wglCuCinterateVideoDevicesNV glEnumerateVideoDevicesNV(hDC::HDC, phDeviceList::HVIDEOOUTPUTDEVICENV)::Int
-export wglenumeratevideodevicesnv
-@get_c_fun "libGL" wglbindvideodevicenv wglBindVideoDeviceNV glBindVideoDeviceNV(hDC::HDC, uVideoSlot::uCint32, hVideoDevice::HVIDEOOUTPUTDEVICENV, piAttribList::Ptr{int})::int32
-export wglbindvideodevicenv
-@get_c_fun "libGL" wglquerycurrentcontextnv wglQueryCurrentContextNV glQueryCurrentContextNV(iAttribute::Cint, piValue::Ptr{int})::int32
-export wglquerycurrentcontextnv
-@get_c_fun "libGL" wgljoinswapgroupnv wglJoinSwapGroupNV glJoinSwapGroupNV(hDC::HDC, group::GLuCint)::int32
-export wgljoinswapgroupnv
-@get_c_fun "libGL" wglbindswapbarriernv wglBindSwapBarrierNV glBindSwapBarrierNV(group::GLuCint, barrier::GLCuint)::int32
-export wglbindswapbarriernv
-@get_c_fun "libGL" wglqueryswapgroupnv wglQuerySwapGroupNV glQuerySwapGroupNV(hDC::HDC, group::Ptr{GLuCint}, barrier::Ptr{GLCuint})::int32
-export wglqueryswapgroupnv
-@get_c_fun "libGL" wglquerymaxswapgroupsnv wglQueryMaxSwapGroupsNV glQueryMaxSwapGroupsNV(hDC::HDC, maxGroups::Ptr{GLuCint}, maxBarriers::Ptr{GLCuint})::int32
-export wglquerymaxswapgroupsnv
-@get_c_fun "libGL" wglqueryframecountnv wglQueryFrameCountNV glQueryFrameCountNV(hDC::HDC, count::Ptr{GLuCint})::int32
-export wglqueryframecountnv
-@get_c_fun "libGL" wglresetframecountnv wglResetFrameCountNV glResetFrameCountNV(hDC::HDC)::Cint32
-export wglresetframecountnv
-@get_c_fun "libGL" wglallocatememorynv wglAllocateMemoryNV glAllocateMemoryNV(size::GLsizei, readfreq::GLfloat, writefreq::GLfloat, priority::GLfloat)::Ptr{Void}
-export wglallocatememorynv
-@get_c_fun "libGL" wglbindvideocapturedevicenv wglBindVideoCaptureDeviceNV glBindVideoCaptureDeviceNV(uVideoSlot::UINT, hDevice::HVIDEOINPUTDEVICENV)::Cint32
-export wglbindvideocapturedevicenv
-@get_c_fun "libGL" wglenumeratevideocapturedevicesnv wglCuCinterateVideoCaptureDevicesNV glEnumerateVideoCaptureDevicesNV(hDc::HDC, phDeviceList::HVIDEOINPUTDEVICENV)::CCuint
-export wglenumeratevideocapturedevicesnv
-@get_c_fun "libGL" wgllockvideocapturedevicenv wglLockVideoCaptureDeviceNV glLockVideoCaptureDeviceNV(hDc::HDC, hDevice::HVIDEOINPUTDEVICENV)::Cint32
-export wgllockvideocapturedevicenv
-@get_c_fun "libGL" wglqueryvideocapturedevicenv wglQueryVideoCaptureDeviceNV glQueryVideoCaptureDeviceNV(hDc::HDC, hDevice::HVIDEOINPUTDEVICENV, iAttribute::Cint, piValue::Ptr{int})::int32
-export wglqueryvideocapturedevicenv
-@get_c_fun "libGL" wglreleasevideocapturedevicenv wglReleaseVideoCaptureDeviceNV glReleaseVideoCaptureDeviceNV(hDc::HDC, hDevice::HVIDEOINPUTDEVICENV)::Cint32
-export wglreleasevideocapturedevicenv
-@get_c_fun "libGL" wglgetvideodevicenv wglGetVideoDeviceNV glGetVideoDeviceNV(hDC::HDC, numDevices::Cint, hVideoDevice::HPVIDEODEV)::int32
-export wglgetvideodevicenv
-@get_c_fun "libGL" wglreleasevideodevicenv wglReleaseVideoDeviceNV glReleaseVideoDeviceNV(hVideoDevice::HPVIDEODEV)::Cint32
-export wglreleasevideodevicenv
-@get_c_fun "libGL" wglbindvideoimagenv wglBindVideoImageNV glBindVideoImageNV(hVideoDevice::HPVIDEODEV, hPbuffer::HPBUFFERARB, iVideoBuffer::Cint)::int32
-export wglbindvideoimagenv
-@get_c_fun "libGL" wglreleasevideoimagenv wglReleaseVideoImageNV glReleaseVideoImageNV(hPbuffer::HPBUFFERARB, iVideoBuffer::Cint)::int32
-export wglreleasevideoimagenv
-@get_c_fun "libGL" wglsendpbuffertovideonv wglSendPbufferToVideoNV glSendPbufferToVideoNV(hPbuffer::HPBUFFERARB, iBufferType::Cint, pulCounterPbuffer::Ptr{Culong}, bBlock::BOOL)::int32
-export wglsendpbuffertovideonv
-@get_c_fun "libGL" wglgetvideoinfonv wglGetVideoInfoNV glGetVideoInfoNV(hpVideoDevice::HPVIDEODEV, pulCounterOutputPbuffer::Ptr{Culong}, pulCounterOutputVideo::Ptr{unsigned_long})::Cint32
-export wglgetvideoinfonv
-@get_c_fun "libGL" wglgetsyncvaluesoml wglGetSyncValuesOML glGetSyncValuesOML(hdc::HDC, ust::Ptr{Clonglong}, msc::Ptr{INT64}, sbc::Ptr{INT64})::Cint32
-export wglgetsyncvaluesoml
-@get_c_fun "libGL" wglgetmscrateoml wglGetMscRateOML glGetMscRateOML(hdc::HDC, numerator::Ptr{INT32}, denominator::Ptr{INT32})::Cint32
-export wglgetmscrateoml
-@get_c_fun "libGL" wglswapbuffersmscoml wglSwapBuffersMscOML glSwapBuffersMscOML(hdc::HDC, target_msc::Clonglong, divisor::INT64, remainder::INT64)::Clonglong
-export wglswapbuffersmscoml
-@get_c_fun "libGL" wglswaplayerbuffersmscoml wglSwapLayerBuffersMscOML glSwapLayerBuffersMscOML(hdc::HDC, fuPlanes::Cint, target_msc::Clonglong, divisor::INT64, remainder::INT64)::Clonglong
-export wglswaplayerbuffersmscoml
-@get_c_fun "libGL" wglwaitformscoml wglWaitForMscOML glWaitForMscOML(hdc::HDC, target_msc::Clonglong, divisor::INT64, remainder::INT64, ust::Ptr{INT64}, msc::Ptr{INT64}, sbc::Ptr{INT64})::Cint32
-export wglwaitformscoml
-@get_c_fun "libGL" wglwaitforsbcoml wglWaitForSbcOML glWaitForSbcOML(hdc::HDC, target_sbc::Clonglong, ust::Ptr{INT64}, msc::Ptr{INT64}, sbc::Ptr{INT64})::Cint32
-export wglwaitforsbcoml
-@get_c_fun "libGL" wglcreatecontext wglCreateContext glCreateContext(hDc::HDC)::Ptr{Void}
-export wglcreatecontext
-@get_c_fun "libGL" wgldeletecontext wglDeleteContext glDeleteContext(oldContext::HGLRC)::Cint32
-export wgldeletecontext
-@get_c_fun "libGL" wglgetcurrentcontext wglGetCurrentContext glGetCurrentContext()::Ptr{Void}
-export wglgetcurrentcontext
-@get_c_fun "libGL" wglmakecurrent wglMakeCurrent glMakeCurrent(hDc::HDC, newContext::HGLRC)::Cint32
-export wglmakecurrent
-@get_c_fun "libGL" wglcopycontext wglCopyContext glCopyContext(hglrcSrc::HGLRC, hglrcDst::HGLRC, mask::UINT)::Cint32
-export wglcopycontext
-@get_c_fun "libGL" wglchoosepixelformat wglChoosePixelFormat glChoosePixelFormat(hDc::HDC, pPfd::PIXELFORMATDESCRIPTOR)::Int
-export wglchoosepixelformat
-@get_c_fun "libGL" wglgetcurrentdc wglGetCurrentDC glGetCurrentDC()::Ptr{Void}
-export wglgetcurrentdc
-@get_c_fun "libGL" wglgetdefaultprocaddress wglGetDefaultProcAddress glGetDefaultProcAddress(lpszProc::LPCSTR)::Ptr{Void}
-export wglgetdefaultprocaddress
-@get_c_fun "libGL" wglgetprocaddress wglGetProcAddress glGetProcAddress(lpszProc::LPCSTR)::Ptr{Void}
-export wglgetprocaddress
-@get_c_fun "libGL" wglgetpixelformat wglGetPixelFormat glGetPixelFormat(hdc::HDC)::Int
-export wglgetpixelformat
-@get_c_fun "libGL" wglsetpixelformat wglSetPixelFormat glSetPixelFormat(hdc::HDC, ipfd::Cint, ppfd::PIXELFORMATDESCRIPTOR)::int32
-export wglsetpixelformat
-@get_c_fun "libGL" wglswapbuffers wglSwapBuffers glSwapBuffers(hdc::HDC)::Cint32
-export wglswapbuffers
-@get_c_fun "libGL" wglsharelists wglShareLists glShareLists(hrcSrvShare::HGLRC, hrcSrvSource::HGLRC)::Cint32
-export wglsharelists
-@get_c_fun "libGL" wglcreatelayercontext wglCreateLayerContext glCreateLayerContext(hDc::HDC, level::Cint)::Ptr{Void}
-export wglcreatelayercontext
-@get_c_fun "libGL" wgldescribelayerplane wglDescribeLayerPlane glDescribeLayerPlane(hDc::HDC, pixelFormat::Cint, layerPlane::int, nBytes::UINT, plpd::LAYERPLANEDESCRIPTOR)::int32
-export wgldescribelayerplane
-@get_c_fun "libGL" wglsetlayerpaletteentries wglSetLayerPaletteEntries glSetLayerPaletteEntries(hdc::HDC, iLayerPlane::Cint, iStart::int, cEntries::int, pcr::COLORREF)::Int
-export wglsetlayerpaletteentries
-@get_c_fun "libGL" wglgetlayerpaletteentries wglGetLayerPaletteEntries glGetLayerPaletteEntries(hdc::HDC, iLayerPlane::Cint, iStart::int, cEntries::int, pcr::COLORREF)::Int
-export wglgetlayerpaletteentries
-@get_c_fun "libGL" wglrealizelayerpalette wglRealizeLayerPalette glRealizeLayerPalette(hdc::HDC, iLayerPlane::Cint, bRealize::BOOL)::int32
-export wglrealizelayerpalette
-@get_c_fun "libGL" wglswaplayerbuffers wglSwapLayerBuffers glSwapLayerBuffers(hdc::HDC, fuFlags::UINT)::Cint32
-export wglswaplayerbuffers
-@get_c_fun "libGL" wglusefontbitmapsa wglUseFontBitmapsA glUseFontBitmapsA(hDC::HDC, first::DWORD, count::DWORD, listBase::DWORD)::Cint32
-export wglusefontbitmapsa
-@get_c_fun "libGL" wglusefontbitmapsw wglUseFontBitmapsW glUseFontBitmapsW(hDC::HDC, first::DWORD, count::DWORD, listBase::DWORD)::Cint32
-export wglusefontbitmapsw
+@get_c_fun "libGL" wglGetDigitalVideoParametersI3D wglGetDigitalVideoParametersI3D(hDC::HDC, iAttribute::Cint, piValue::Ptr{int})::int32
+export wglGetDigitalVideoParametersI3D
+@get_c_fun "libGL" wglSetDigitalVideoParametersI3D wglSetDigitalVideoParametersI3D(hDC::HDC, iAttribute::Cint, piValue::Ptr{int})::int32
+export wglSetDigitalVideoParametersI3D
+@get_c_fun "libGL" wglGetGammaTableParametersI3D wglGetGammaTableParametersI3D(hDC::HDC, iAttribute::Cint, piValue::Ptr{int})::int32
+export wglGetGammaTableParametersI3D
+@get_c_fun "libGL" wglSetGammaTableParametersI3D wglSetGammaTableParametersI3D(hDC::HDC, iAttribute::Cint, piValue::Ptr{int})::int32
+export wglSetGammaTableParametersI3D
+@get_c_fun "libGL" wglGetGammaTableI3D wglGetGammaTableI3D(hDC::HDC, iEntries::Cint, puRed::Ptr{USHORT}, puGreen::Ptr{USHORT}, puBlue::Ptr{USHORT})::int32
+export wglGetGammaTableI3D
+@get_c_fun "libGL" wglSetGammaTableI3D wglSetGammaTableI3D(hDC::HDC, iEntries::Cint, puRed::Ptr{USHORT}, puGreen::Ptr{USHORT}, puBlue::Ptr{USHORT})::int32
+export wglSetGammaTableI3D
+@get_c_fun "libGL" wglEnableGenlockI3D wglEnableGenlockI3D(hDC::HDC)::Cint32
+export wglEnableGenlockI3D
+@get_c_fun "libGL" wglDisableGenlockI3D wglDisableGenlockI3D(hDC::HDC)::Cint32
+export wglDisableGenlockI3D
+@get_c_fun "libGL" wglIsEnabledGenlockI3D wglIsEnabledGenlockI3D(hDC::HDC, pFlag::Ptr{BOOL})::Cint32
+export wglIsEnabledGenlockI3D
+@get_c_fun "libGL" wglGenlockSourceI3D wglGenlockSourceI3D(hDC::HDC, uSource::UINT)::Cint32
+export wglGenlockSourceI3D
+@get_c_fun "libGL" wglGetGenlockSourceI3D wglGetGenlockSourceI3D(hDC::HDC, uSource::Ptr{UINT})::Cint32
+export wglGetGenlockSourceI3D
+@get_c_fun "libGL" wglGenlockSourceEdgeI3D wglGenlockSourceEdgeI3D(hDC::HDC, uEdge::UINT)::Cint32
+export wglGenlockSourceEdgeI3D
+@get_c_fun "libGL" wglGetGenlockSourceEdgeI3D wglGetGenlockSourceEdgeI3D(hDC::HDC, uEdge::Ptr{UINT})::Cint32
+export wglGetGenlockSourceEdgeI3D
+@get_c_fun "libGL" wglGenlockSampleRateI3D wglGenlockSampleRateI3D(hDC::HDC, uRate::UINT)::Cint32
+export wglGenlockSampleRateI3D
+@get_c_fun "libGL" wglGetGenlockSampleRateI3D wglGetGenlockSampleRateI3D(hDC::HDC, uRate::Ptr{UINT})::Cint32
+export wglGetGenlockSampleRateI3D
+@get_c_fun "libGL" wglGenlockSourceDelayI3D wglGenlockSourceDelayI3D(hDC::HDC, uDelay::UINT)::Cint32
+export wglGenlockSourceDelayI3D
+@get_c_fun "libGL" wglGetGenlockSourceDelayI3D wglGetGenlockSourceDelayI3D(hDC::HDC, uDelay::Ptr{UINT})::Cint32
+export wglGetGenlockSourceDelayI3D
+@get_c_fun "libGL" wglQueryGenlockMaxSourceDelayI3D wglQueryGenlockMaxSourceDelayI3D(hDC::HDC, uMaxLineDelay::Ptr{UINT}, uMaxPixelDelay::Ptr{UINT})::Cint32
+export wglQueryGenlockMaxSourceDelayI3D
+@get_c_fun "libGL" wglCreateImageBufferI3D wglCreateImageBufferI3D(hDC::HDC, dwSize::DWORD, uFlags::UINT)::Ptr{Void}
+export wglCreateImageBufferI3D
+@get_c_fun "libGL" wglDestroyImageBufferI3D wglDestroyImageBufferI3D(hDC::HDC, pAddress::LPVOID)::Cint32
+export wglDestroyImageBufferI3D
+@get_c_fun "libGL" wglAssociateImageBufferEventsI3D wglAssociateImageBufferEventsI3D(hDC::HDC, pEvent::HANDLE, pAddress::LPVOID, pSize::Ptr{DWORD}, count::UINT)::Cint32
+export wglAssociateImageBufferEventsI3D
+@get_c_fun "libGL" wglReleaseImageBufferEventsI3D wglReleaseImageBufferEventsI3D(hDC::HDC, pAddress::LPVOID, count::UINT)::Cint32
+export wglReleaseImageBufferEventsI3D
+@get_c_fun "libGL" wglEnableFrameLockI3D wglEnableFrameLockI3D()::Cint32
+export wglEnableFrameLockI3D
+@get_c_fun "libGL" wglDisableFrameLockI3D wglDisableFrameLockI3D()::Cint32
+export wglDisableFrameLockI3D
+@get_c_fun "libGL" wglIsEnabledFrameLockI3D wglIsEnabledFrameLockI3D(pFlag::Ptr{BOOL})::Cint32
+export wglIsEnabledFrameLockI3D
+@get_c_fun "libGL" wglQueryFrameLockMasterI3D wglQueryFrameLockMasterI3D(pFlag::Ptr{BOOL})::Cint32
+export wglQueryFrameLockMasterI3D
+@get_c_fun "libGL" wglGetFrameUsageI3D wglGetFrameUsageI3D(pUsage::Ptr{float32})::Cint32
+export wglGetFrameUsageI3D
+@get_c_fun "libGL" wglBeginFrameTrackingI3D wglBeginFrameTrackingI3D()::Cint32
+export wglBeginFrameTrackingI3D
+@get_c_fun "libGL" wglEndFrameTrackingI3D wglEndFrameTrackingI3D()::Cint32
+export wglEndFrameTrackingI3D
+@get_c_fun "libGL" wglQueryFrameTrackingI3D wglQueryFrameTrackingI3D(pFrameCount::Ptr{DWORD}, pMissedFrames::Ptr{DWORD}, pLastMissedUsage::Ptr{float32})::Cint32
+export wglQueryFrameTrackingI3D
+@get_c_fun "libGL" wglDXSetResourceShareHandleNV wglDXSetResourceShareHandleNV(dxObject::Ptr{Void}, shareHandle::HANDLE)::Cint32
+export wglDXSetResourceShareHandleNV
+@get_c_fun "libGL" wglDXOpenDeviceNV wglDXOpenDeviceNV(dxDevice::Ptr{Void})::Ptr{Void}
+export wglDXOpenDeviceNV
+@get_c_fun "libGL" wglDXCloseDeviceNV wglDXCloseDeviceNV(hDevice::HANDLE)::Cint32
+export wglDXCloseDeviceNV
+@get_c_fun "libGL" wglDXRegisterObjectNV wglDXRegisterObjectNV(hDevice::HANDLE, dxObject::Ptr{Void}, name::GLuCint, type_::GLenum, access::GLenum)::Ptr{Void}
+export wglDXRegisterObjectNV
+@get_c_fun "libGL" wglDXUnregisterObjectNV wglDXUnregisterObjectNV(hDevice::HANDLE, hObject::HANDLE)::Cint32
+export wglDXUnregisterObjectNV
+@get_c_fun "libGL" wglDXObjectAccessNV wglDXObjectAccessNV(hObject::HANDLE, access::GLenum)::Cint32
+export wglDXObjectAccessNV
+@get_c_fun "libGL" wglDXLockObjectsNV wglDXLockObjectsNV(hDevice::HANDLE, count::GLCint, hObjects::HANDLE)::int32
+export wglDXLockObjectsNV
+@get_c_fun "libGL" wglDXUnlockObjectsNV wglDXUnlockObjectsNV(hDevice::HANDLE, count::GLCint, hObjects::HANDLE)::int32
+export wglDXUnlockObjectsNV
+@get_c_fun "libGL" wglCopyImageSubDataNV wglCopyImageSubDataNV(hSrcRC::HGLRC, srcName::GLuCint, srcTarget::GLenum, srcLevel::GLint, srcX::GLint, srcY::GLint, srcZ::GLint, hDstRC::HGLRC, dstName::GLCuint, dstTarget::GLenum, dstLevel::GLint, dstX::GLint, dstY::GLint, dstZ::GLint, width::GLsizei, height::GLsizei, depth::GLsizei)::int32
+export wglCopyImageSubDataNV
+@get_c_fun "libGL" wglCuCintGpusNV wglCuCintGpusNV(iGpuIndex::UINT, phGpu::HGPUNV)::int32
+export wglCuCintGpusNV
+@get_c_fun "libGL" wglCuCintGpuDevicesNV wglCuCintGpuDevicesNV(hGpu::HGPUNV, iDeviceIndex::UINT, lpGpuDevice::PGPU_DEVICE)::int32
+export wglCuCintGpuDevicesNV
+@get_c_fun "libGL" wglCreateAffinityDCNV wglCreateAffinityDCNV(phGpuList::HGPUNV)::Ptr{Void}
+export wglCreateAffinityDCNV
+@get_c_fun "libGL" wglCuCintGpusFromAffinityDCNV wglCuCintGpusFromAffinityDCNV(hAffinityDC::HDC, iGpuIndex::UINT, hGpu::HGPUNV)::int32
+export wglCuCintGpusFromAffinityDCNV
+@get_c_fun "libGL" wglDeleteDCNV wglDeleteDCNV(hdc::HDC)::Cint32
+export wglDeleteDCNV
+@get_c_fun "libGL" wglCuCinterateVideoDevicesNV wglCuCinterateVideoDevicesNV(hDC::HDC, phDeviceList::HVIDEOOUTPUTDEVICENV)::Int
+export wglCuCinterateVideoDevicesNV
+@get_c_fun "libGL" wglBindVideoDeviceNV wglBindVideoDeviceNV(hDC::HDC, uVideoSlot::uCint32, hVideoDevice::HVIDEOOUTPUTDEVICENV, piAttribList::Ptr{int})::int32
+export wglBindVideoDeviceNV
+@get_c_fun "libGL" wglQueryCurrentContextNV wglQueryCurrentContextNV(iAttribute::Cint, piValue::Ptr{int})::int32
+export wglQueryCurrentContextNV
+@get_c_fun "libGL" wglJoinSwapGroupNV wglJoinSwapGroupNV(hDC::HDC, group::GLuCint)::int32
+export wglJoinSwapGroupNV
+@get_c_fun "libGL" wglBindSwapBarrierNV wglBindSwapBarrierNV(group::GLuCint, barrier::GLCuint)::int32
+export wglBindSwapBarrierNV
+@get_c_fun "libGL" wglQuerySwapGroupNV wglQuerySwapGroupNV(hDC::HDC, group::Ptr{GLuCint}, barrier::Ptr{GLCuint})::int32
+export wglQuerySwapGroupNV
+@get_c_fun "libGL" wglQueryMaxSwapGroupsNV wglQueryMaxSwapGroupsNV(hDC::HDC, maxGroups::Ptr{GLuCint}, maxBarriers::Ptr{GLCuint})::int32
+export wglQueryMaxSwapGroupsNV
+@get_c_fun "libGL" wglQueryFrameCountNV wglQueryFrameCountNV(hDC::HDC, count::Ptr{GLuCint})::int32
+export wglQueryFrameCountNV
+@get_c_fun "libGL" wglResetFrameCountNV wglResetFrameCountNV(hDC::HDC)::Cint32
+export wglResetFrameCountNV
+@get_c_fun "libGL" wglAllocateMemoryNV wglAllocateMemoryNV(size::GLsizei, readfreq::GLfloat, writefreq::GLfloat, priority::GLfloat)::Ptr{Void}
+export wglAllocateMemoryNV
+@get_c_fun "libGL" wglBindVideoCaptureDeviceNV wglBindVideoCaptureDeviceNV(uVideoSlot::UINT, hDevice::HVIDEOINPUTDEVICENV)::Cint32
+export wglBindVideoCaptureDeviceNV
+@get_c_fun "libGL" wglCuCinterateVideoCaptureDevicesNV wglCuCinterateVideoCaptureDevicesNV(hDc::HDC, phDeviceList::HVIDEOINPUTDEVICENV)::CCuint
+export wglCuCinterateVideoCaptureDevicesNV
+@get_c_fun "libGL" wglLockVideoCaptureDeviceNV wglLockVideoCaptureDeviceNV(hDc::HDC, hDevice::HVIDEOINPUTDEVICENV)::Cint32
+export wglLockVideoCaptureDeviceNV
+@get_c_fun "libGL" wglQueryVideoCaptureDeviceNV wglQueryVideoCaptureDeviceNV(hDc::HDC, hDevice::HVIDEOINPUTDEVICENV, iAttribute::Cint, piValue::Ptr{int})::int32
+export wglQueryVideoCaptureDeviceNV
+@get_c_fun "libGL" wglReleaseVideoCaptureDeviceNV wglReleaseVideoCaptureDeviceNV(hDc::HDC, hDevice::HVIDEOINPUTDEVICENV)::Cint32
+export wglReleaseVideoCaptureDeviceNV
+@get_c_fun "libGL" wglGetVideoDeviceNV wglGetVideoDeviceNV(hDC::HDC, numDevices::Cint, hVideoDevice::HPVIDEODEV)::int32
+export wglGetVideoDeviceNV
+@get_c_fun "libGL" wglReleaseVideoDeviceNV wglReleaseVideoDeviceNV(hVideoDevice::HPVIDEODEV)::Cint32
+export wglReleaseVideoDeviceNV
+@get_c_fun "libGL" wglBindVideoImageNV wglBindVideoImageNV(hVideoDevice::HPVIDEODEV, hPbuffer::HPBUFFERARB, iVideoBuffer::Cint)::int32
+export wglBindVideoImageNV
+@get_c_fun "libGL" wglReleaseVideoImageNV wglReleaseVideoImageNV(hPbuffer::HPBUFFERARB, iVideoBuffer::Cint)::int32
+export wglReleaseVideoImageNV
+@get_c_fun "libGL" wglSendPbufferToVideoNV wglSendPbufferToVideoNV(hPbuffer::HPBUFFERARB, iBufferType::Cint, pulCounterPbuffer::Ptr{Culong}, bBlock::BOOL)::int32
+export wglSendPbufferToVideoNV
+@get_c_fun "libGL" wglGetVideoInfoNV wglGetVideoInfoNV(hpVideoDevice::HPVIDEODEV, pulCounterOutputPbuffer::Ptr{Culong}, pulCounterOutputVideo::Ptr{unsigned_long})::Cint32
+export wglGetVideoInfoNV
+@get_c_fun "libGL" wglGetSyncValuesOML wglGetSyncValuesOML(hdc::HDC, ust::Ptr{Clonglong}, msc::Ptr{INT64}, sbc::Ptr{INT64})::Cint32
+export wglGetSyncValuesOML
+@get_c_fun "libGL" wglGetMscRateOML wglGetMscRateOML(hdc::HDC, numerator::Ptr{INT32}, denominator::Ptr{INT32})::Cint32
+export wglGetMscRateOML
+@get_c_fun "libGL" wglSwapBuffersMscOML wglSwapBuffersMscOML(hdc::HDC, target_msc::Clonglong, divisor::INT64, remainder::INT64)::Clonglong
+export wglSwapBuffersMscOML
+@get_c_fun "libGL" wglSwapLayerBuffersMscOML wglSwapLayerBuffersMscOML(hdc::HDC, fuPlanes::Cint, target_msc::Clonglong, divisor::INT64, remainder::INT64)::Clonglong
+export wglSwapLayerBuffersMscOML
+@get_c_fun "libGL" wglWaitForMscOML wglWaitForMscOML(hdc::HDC, target_msc::Clonglong, divisor::INT64, remainder::INT64, ust::Ptr{INT64}, msc::Ptr{INT64}, sbc::Ptr{INT64})::Cint32
+export wglWaitForMscOML
+@get_c_fun "libGL" wglWaitForSbcOML wglWaitForSbcOML(hdc::HDC, target_sbc::Clonglong, ust::Ptr{INT64}, msc::Ptr{INT64}, sbc::Ptr{INT64})::Cint32
+export wglWaitForSbcOML
+@get_c_fun "libGL" wglCreateContext wglCreateContext(hDc::HDC)::Ptr{Void}
+export wglCreateContext
+@get_c_fun "libGL" wglDeleteContext wglDeleteContext(oldContext::HGLRC)::Cint32
+export wglDeleteContext
+@get_c_fun "libGL" wglGetCurrentContext wglGetCurrentContext()::Ptr{Void}
+export wglGetCurrentContext
+@get_c_fun "libGL" wglMakeCurrent wglMakeCurrent(hDc::HDC, newContext::HGLRC)::Cint32
+export wglMakeCurrent
+@get_c_fun "libGL" wglCopyContext wglCopyContext(hglrcSrc::HGLRC, hglrcDst::HGLRC, mask::UINT)::Cint32
+export wglCopyContext
+@get_c_fun "libGL" wglChoosePixelFormat wglChoosePixelFormat(hDc::HDC, pPfd::PIXELFORMATDESCRIPTOR)::Int
+export wglChoosePixelFormat
+@get_c_fun "libGL" wglGetCurrentDC wglGetCurrentDC()::Ptr{Void}
+export wglGetCurrentDC
+@get_c_fun "libGL" wglGetDefaultProcAddress wglGetDefaultProcAddress(lpszProc::LPCSTR)::Ptr{Void}
+export wglGetDefaultProcAddress
+@get_c_fun "libGL" wglGetProcAddress wglGetProcAddress(lpszProc::LPCSTR)::Ptr{Void}
+export wglGetProcAddress
+@get_c_fun "libGL" wglGetPixelFormat wglGetPixelFormat(hdc::HDC)::Int
+export wglGetPixelFormat
+@get_c_fun "libGL" wglSetPixelFormat wglSetPixelFormat(hdc::HDC, ipfd::Cint, ppfd::PIXELFORMATDESCRIPTOR)::int32
+export wglSetPixelFormat
+@get_c_fun "libGL" wglSwapBuffers wglSwapBuffers(hdc::HDC)::Cint32
+export wglSwapBuffers
+@get_c_fun "libGL" wglShareLists wglShareLists(hrcSrvShare::HGLRC, hrcSrvSource::HGLRC)::Cint32
+export wglShareLists
+@get_c_fun "libGL" wglCreateLayerContext wglCreateLayerContext(hDc::HDC, level::Cint)::Ptr{Void}
+export wglCreateLayerContext
+@get_c_fun "libGL" wglDescribeLayerPlane wglDescribeLayerPlane(hDc::HDC, pixelFormat::Cint, layerPlane::int, nBytes::UINT, plpd::LAYERPLANEDESCRIPTOR)::int32
+export wglDescribeLayerPlane
+@get_c_fun "libGL" wglSetLayerPaletteEntries wglSetLayerPaletteEntries(hdc::HDC, iLayerPlane::Cint, iStart::int, cEntries::int, pcr::COLORREF)::Int
+export wglSetLayerPaletteEntries
+@get_c_fun "libGL" wglGetLayerPaletteEntries wglGetLayerPaletteEntries(hdc::HDC, iLayerPlane::Cint, iStart::int, cEntries::int, pcr::COLORREF)::Int
+export wglGetLayerPaletteEntries
+@get_c_fun "libGL" wglRealizeLayerPalette wglRealizeLayerPalette(hdc::HDC, iLayerPlane::Cint, bRealize::BOOL)::int32
+export wglRealizeLayerPalette
+@get_c_fun "libGL" wglSwapLayerBuffers wglSwapLayerBuffers(hdc::HDC, fuFlags::UINT)::Cint32
+export wglSwapLayerBuffers
+@get_c_fun "libGL" wglUseFontBitmapsA wglUseFontBitmapsA(hDC::HDC, first::DWORD, count::DWORD, listBase::DWORD)::Cint32
+export wglUseFontBitmapsA
+@get_c_fun "libGL" wglUseFontBitmapsW wglUseFontBitmapsW(hDC::HDC, first::DWORD, count::DWORD, listBase::DWORD)::Cint32
+export wglUseFontBitmapsW
 
 end #module WGL

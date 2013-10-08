@@ -139,24 +139,24 @@ export GLint64
 export GLuint64 
 export GLvdpauSurfaceNV 
 export GLeglImageOES 
-@get_c_fun "libGLU" gluperspective gluPerspective(fovy::GLdouble,aspect::GLdouble,znear::GLdouble,zfar::GLdouble)::Void
-export gluperspective
-@get_c_fun "libGLU" glubuild2dmipmaps gluBuild2DMipmaps(target::GLenum,internalFormat::GLint,width::GLsizei,height::GLsizei,format::GLenum,thetype::GLenum,data::Ptr{Uint8})::GLint
-export glubuild2dmipmaps
-@get_c_fun "libGLU" glunewquadric gluNewQuadric()::Ptr{Void}
-export glunewquadric
-@get_c_fun "libGLU" gluquadricnormals gluQuadricNormals(quad::Ptr{Void},normal::GLenum)::Void
-export gluquadricnormals
-@get_c_fun "libGLU" gluquadrictexture gluQuadricTexture(quad::Ptr{Void},texture::GLboolean)::Void
-export gluquadrictexture
-@get_c_fun "libGLU" glucylinder gluCylinder(quad::Ptr{Void},base::GLdouble,top::GLdouble,height::GLdouble,slices::GLint,stacks::GLint)::Void
-export glucylinder
-@get_c_fun "libGLU" gludisk gluDisk(quad::Ptr{Void},inner::GLdouble,outer::GLdouble,slices::GLint,stacks::GLint)::Void
-export gludisk
-@get_c_fun "libGLU" glusphere gluSphere(quad::Ptr{Void},radius::GLdouble,slices::GLint,stacks::GLint)::Void
-export glusphere
-@get_c_fun "libGLU" glupartialdisk gluPartialDisk(quad::Ptr{Void},inner::GLdouble,outer::GLdouble,slices::GLint,loops::GLint,start::GLdouble,sweep::GLdouble)::Void
-export glupartialdisk
+@get_c_fun "libGLU" gluPerspective gluPerspective(fovy::GLdouble,aspect::GLdouble,znear::GLdouble,zfar::GLdouble)::Void
+export gluPerspective
+@get_c_fun "libGLU" gluBuild2DMipmaps gluBuild2DMipmaps(target::GLenum,internalFormat::GLint,width::GLsizei,height::GLsizei,format::GLenum,thetype::GLenum,data::Ptr{Uint8})::GLint
+export gluBuild2DMipmaps
+@get_c_fun "libGLU" gluNewQuadric gluNewQuadric()::Ptr{Void}
+export gluNewQuadric
+@get_c_fun "libGLU" gluQuadricNormals gluQuadricNormals(quad::Ptr{Void},normal::GLenum)::Void
+export gluQuadricNormals
+@get_c_fun "libGLU" gluQuadricTexture gluQuadricTexture(quad::Ptr{Void},texture::GLboolean)::Void
+export gluQuadricTexture
+@get_c_fun "libGLU" gluCylinder gluCylinder(quad::Ptr{Void},base::GLdouble,top::GLdouble,height::GLdouble,slices::GLint,stacks::GLint)::Void
+export gluCylinder
+@get_c_fun "libGLU" gluDisk gluDisk(quad::Ptr{Void},inner::GLdouble,outer::GLdouble,slices::GLint,stacks::GLint)::Void
+export gluDisk
+@get_c_fun "libGLU" gluSphere gluSphere(quad::Ptr{Void},radius::GLdouble,slices::GLint,stacks::GLint)::Void
+export gluSphere
+@get_c_fun "libGLU" gluPartialDisk gluPartialDisk(quad::Ptr{Void},inner::GLdouble,outer::GLdouble,slices::GLint,loops::GLint,start::GLdouble,sweep::GLdouble)::Void
+export gluPartialDisk
 const GLU_EXT_object_space_tess       = 1
 const GLU_EXT_nurbs_tessellator       = 1
 const GLU_FALSE                       = 0

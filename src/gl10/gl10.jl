@@ -35,914 +35,914 @@ typealias GLdouble Float64
 export GLdouble
 typealias GLclampd Float64
 export GLclampd
-@get_c_fun "libGL" glclearindex glClearIndex(c::GLfloat)::Void
-export glclearindex
-@get_c_fun "libGL" glclearcolor glClearColor(red::GLclampf,green::GLclampf,blue::GLclampf,alpha::GLclampf)::Void
-export glclearcolor
-@get_c_fun "libGL" glclear glClear(mask::GLbitfield)::Void
-export glclear
-@get_c_fun "libGL" glindexmask glIndexMask(mask::GLuint)::Void
-export glindexmask
-@get_c_fun "libGL" glcolormask glColorMask(red::GLboolean,green::GLboolean,blue::GLboolean,alpha::GLboolean)::Void
-export glcolormask
-@get_c_fun "libGL" glalphafunc glAlphaFunc(func::GLenum,ref::GLclampf)::Void
-export glalphafunc
-@get_c_fun "libGL" glblendfunc glBlendFunc(sfactor::GLenum,dfactor::GLenum)::Void
-export glblendfunc
-@get_c_fun "libGL" gllogicop glLogicOp(opcode::GLenum)::Void
-export gllogicop
-@get_c_fun "libGL" glcullface glCullFace(mode::GLenum)::Void
-export glcullface
-@get_c_fun "libGL" glfrontface glFrontFace(mode::GLenum)::Void
-export glfrontface
-@get_c_fun "libGL" glpointsize glPointSize(size::GLfloat)::Void
-export glpointsize
-@get_c_fun "libGL" gllinewidth glLineWidth(width::GLfloat)::Void
-export gllinewidth
-@get_c_fun "libGL" gllinestipple glLineStipple(factor::GLint,pattern::GLushort)::Void
-export gllinestipple
-@get_c_fun "libGL" glpolygonmode glPolygonMode(face::GLenum,mode::GLenum)::Void
-export glpolygonmode
-@get_c_fun "libGL" glpolygonoffset glPolygonOffset(factor::GLfloat,units::GLfloat)::Void
-export glpolygonoffset
-@get_c_fun "libGL" glpolygonstipple glPolygonStipple(mask::Ptr)::Void
-export glpolygonstipple
-@get_c_fun "libGL" glgetpolygonstipple glGetPolygonStipple(mask::Ptr)::Void
-export glgetpolygonstipple
-@get_c_fun "libGL" gledgeflag glEdgeFlag(flag::GLboolean)::Void
-export gledgeflag
-@get_c_fun "libGL" gledgeflagv glEdgeFlagv(flag::Ptr)::Void
-export gledgeflagv
-@get_c_fun "libGL" glscissor glScissor(x::GLint,y::GLint,width::GLsizei,height::GLsizei)::Void
-export glscissor
-@get_c_fun "libGL" glclipplane glClipPlane(plane::GLenum,equation::Ptr)::Void
-export glclipplane
-@get_c_fun "libGL" glgetclipplane glGetClipPlane(plane::GLenum,equation::Ptr)::Void
-export glgetclipplane
-@get_c_fun "libGL" gldrawbuffer glDrawBuffer(mode::GLenum)::Void
-export gldrawbuffer
-@get_c_fun "libGL" glreadbuffer glReadBuffer(mode::GLenum)::Void
-export glreadbuffer
-@get_c_fun "libGL" glenable glEnable(cap::GLenum)::Void
-export glenable
-@get_c_fun "libGL" gldisable glDisable(cap::GLenum)::Void
-export gldisable
-@get_c_fun "libGL" glisenabled glIsEnabled(cap::GLenum)::GLboolean
-export glisenabled
-@get_c_fun "libGL" glenableclientstate glEnableClientState(cap::GLenum)::Void
-export glenableclientstate
-@get_c_fun "libGL" gldisableclientstate glDisableClientState(cap::GLenum)::Void
-export gldisableclientstate
-@get_c_fun "libGL" glgetbooleanv glGetBooleanv(pname::GLenum,params::Ptr)::Void
-export glgetbooleanv
-@get_c_fun "libGL" glgetdoublev glGetDoublev(pname::GLenum,params::Ptr)::Void
-export glgetdoublev
-@get_c_fun "libGL" glgetfloatv glGetFloatv(pname::GLenum,params::Ptr)::Void
-export glgetfloatv
-@get_c_fun "libGL" glgetintegerv glGetIntegerv(pname::GLenum,params::Ptr)::Void
-export glgetintegerv
-@get_c_fun "libGL" glpushattrib glPushAttrib(mask::GLbitfield)::Void
-export glpushattrib
-@get_c_fun "libGL" glpopattrib glPopAttrib()::Void
-export glpopattrib
-@get_c_fun "libGL" glpushclientattrib glPushClientAttrib(mask::GLbitfield)::Void
-export glpushclientattrib
-@get_c_fun "libGL" glpopclientattrib glPopClientAttrib()::Void
-export glpopclientattrib
-@get_c_fun "libGL" glrendermode glRenderMode(mode::GLenum)::GLint
-export glrendermode
-@get_c_fun "libGL" glgeterror glGetError()::GLenum
-export glgeterror
-@get_c_fun "libGL" glgetstring glGetString(name::GLenum)::GLubyte
-export glgetstring
-@get_c_fun "libGL" glfinish glFinish()::Void
-export glfinish
-@get_c_fun "libGL" glflush glFlush()::Void
-export glflush
-@get_c_fun "libGL" glhint glHint(target::GLenum,mode::GLenum)::Void
-export glhint
-@get_c_fun "libGL" glcleardepth glClearDepth(depth::GLclampd)::Void
-export glcleardepth
-@get_c_fun "libGL" gldepthfunc glDepthFunc(func::GLenum)::Void
-export gldepthfunc
-@get_c_fun "libGL" gldepthmask glDepthMask(flag::GLboolean)::Void
-export gldepthmask
-@get_c_fun "libGL" gldepthrange glDepthRange(near_val::GLclampd,far_val::GLclampd)::Void
-export gldepthrange
-@get_c_fun "libGL" glclearaccum glClearAccum(red::GLfloat,green::GLfloat,blue::GLfloat,alpha::GLfloat)::Void
-export glclearaccum
-@get_c_fun "libGL" glaccum glAccum(op::GLenum,value::GLfloat)::Void
-export glaccum
-@get_c_fun "libGL" glmatrixmode glMatrixMode(mode::GLenum)::Void
-export glmatrixmode
-@get_c_fun "libGL" glortho glOrtho(left::GLdouble,right::GLdouble,bottom::GLdouble,top::GLdouble,near_val::GLdouble,far_val::GLdouble)::Void
-export glortho
-@get_c_fun "libGL" glfrustum glFrustum(left::GLdouble,right::GLdouble,bottom::GLdouble,top::GLdouble,near_val::GLdouble,far_val::GLdouble)::Void
-export glfrustum
-@get_c_fun "libGL" glviewport glViewport(x::GLint,y::GLint,width::GLsizei,height::GLsizei)::Void
-export glviewport
-@get_c_fun "libGL" glpushmatrix glPushMatrix()::Void
-export glpushmatrix
-@get_c_fun "libGL" glpopmatrix glPopMatrix()::Void
-export glpopmatrix
-@get_c_fun "libGL" glloadidentity glLoadIdentity()::Void
-export glloadidentity
-@get_c_fun "libGL" glloadmatrixd glLoadMatrixd(m::Ptr)::Void
-export glloadmatrixd
-@get_c_fun "libGL" glloadmatrixf glLoadMatrixf(m::Ptr)::Void
-export glloadmatrixf
-@get_c_fun "libGL" glmultmatrixd glMultMatrixd(m::Ptr)::Void
-export glmultmatrixd
-@get_c_fun "libGL" glmultmatrixf glMultMatrixf(m::Ptr)::Void
-export glmultmatrixf
-@get_c_fun "libGL" glrotated glRotated(angle::GLdouble,x::GLdouble,y::GLdouble,z::GLdouble)::Void
-export glrotated
-@get_c_fun "libGL" glrotatef glRotatef(angle::GLfloat,x::GLfloat,y::GLfloat,z::GLfloat)::Void
-export glrotatef
-@get_c_fun "libGL" glscaled glScaled(x::GLdouble,y::GLdouble,z::GLdouble)::Void
-export glscaled
-@get_c_fun "libGL" glscalef glScalef(x::GLfloat,y::GLfloat,z::GLfloat)::Void
-export glscalef
-@get_c_fun "libGL" gltranslated glTranslated(x::GLdouble,y::GLdouble,z::GLdouble)::Void
-export gltranslated
-@get_c_fun "libGL" gltranslatef glTranslatef(x::GLfloat,y::GLfloat,z::GLfloat)::Void
-export gltranslatef
-@get_c_fun "libGL" glislist glIsList(list::GLuint)::GLboolean
-export glislist
-@get_c_fun "libGL" gldeletelists glDeleteLists(list::GLuint,range::GLsizei)::Void
-export gldeletelists
-@get_c_fun "libGL" glgenlists glGenLists(range::GLsizei)::GLuint
-export glgenlists
-@get_c_fun "libGL" glnewlist glNewList(list::GLuint,mode::GLenum)::Void
-export glnewlist
-@get_c_fun "libGL" glendlist glEndList()::Void
-export glendlist
-@get_c_fun "libGL" glcalllist glCallList(list::GLuint)::Void
-export glcalllist
-@get_c_fun "libGL" glcalllists glCallLists(n::GLsizei,_type::GLenum,lists::Ptr{Uint8})::Void
-export glcalllists
-@get_c_fun "libGL" gllistbase glListBase(base::GLuint)::Void
-export gllistbase
-@get_c_fun "libGL" glbegin glBegin(mode::GLenum)::Void
-export glbegin
-@get_c_fun "libGL" glend glEnd()::Void
-export glend
-@get_c_fun "libGL" glvertex2d glVertex2d(x::GLdouble,y::GLdouble)::Void
-export glvertex2d
-@get_c_fun "libGL" glvertex2f glVertex2f(x::GLfloat,y::GLfloat)::Void
-export glvertex2f
-@get_c_fun "libGL" glvertex2i glVertex2i(x::GLint,y::GLint)::Void
-export glvertex2i
-@get_c_fun "libGL" glvertex2s glVertex2s(x::GLshort,y::GLshort)::Void
-export glvertex2s
-@get_c_fun "libGL" glvertex3d glVertex3d(x::GLdouble,y::GLdouble,z::GLdouble)::Void
-export glvertex3d
-@get_c_fun "libGL" glvertex3f glVertex3f(x::GLfloat,y::GLfloat,z::GLfloat)::Void
-export glvertex3f
-@get_c_fun "libGL" glvertex3i glVertex3i(x::GLint,y::GLint,z::GLint)::Void
-export glvertex3i
-@get_c_fun "libGL" glvertex3s glVertex3s(x::GLshort,y::GLshort,z::GLshort)::Void
-export glvertex3s
-@get_c_fun "libGL" glvertex4d glVertex4d(x::GLdouble,y::GLdouble,z::GLdouble,w::GLdouble)::Void
-export glvertex4d
-@get_c_fun "libGL" glvertex4f glVertex4f(x::GLfloat,y::GLfloat,z::GLfloat,w::GLfloat)::Void
-export glvertex4f
-@get_c_fun "libGL" glvertex4i glVertex4i(x::GLint,y::GLint,z::GLint,w::GLint)::Void
-export glvertex4i
-@get_c_fun "libGL" glvertex4s glVertex4s(x::GLshort,y::GLshort,z::GLshort,w::GLshort)::Void
-export glvertex4s
-@get_c_fun "libGL" glvertex2dv glVertex2dv(v::Ptr)::Void
-export glvertex2dv
-@get_c_fun "libGL" glvertex2fv glVertex2fv(v::Ptr)::Void
-export glvertex2fv
-@get_c_fun "libGL" glvertex2iv glVertex2iv(v::Ptr)::Void
-export glvertex2iv
-@get_c_fun "libGL" glvertex2sv glVertex2sv(v::Ptr)::Void
-export glvertex2sv
-@get_c_fun "libGL" glvertex3dv glVertex3dv(v::Ptr)::Void
-export glvertex3dv
-@get_c_fun "libGL" glvertex3fv glVertex3fv(v::Ptr)::Void
-export glvertex3fv
-@get_c_fun "libGL" glvertex3iv glVertex3iv(v::Ptr)::Void
-export glvertex3iv
-@get_c_fun "libGL" glvertex3sv glVertex3sv(v::Ptr)::Void
-export glvertex3sv
-@get_c_fun "libGL" glvertex4dv glVertex4dv(v::Ptr)::Void
-export glvertex4dv
-@get_c_fun "libGL" glvertex4fv glVertex4fv(v::Ptr)::Void
-export glvertex4fv
-@get_c_fun "libGL" glvertex4iv glVertex4iv(v::Ptr)::Void
-export glvertex4iv
-@get_c_fun "libGL" glvertex4sv glVertex4sv(v::Ptr)::Void
-export glvertex4sv
-@get_c_fun "libGL" glnormal3b glNormal3b(nx::GLbyte,ny::GLbyte,nz::GLbyte)::Void
-export glnormal3b
-@get_c_fun "libGL" glnormal3d glNormal3d(nx::GLdouble,ny::GLdouble,nz::GLdouble)::Void
-export glnormal3d
-@get_c_fun "libGL" glnormal3f glNormal3f(nx::GLfloat,ny::GLfloat,nz::GLfloat)::Void
-export glnormal3f
-@get_c_fun "libGL" glnormal3i glNormal3i(nx::GLint,ny::GLint,nz::GLint)::Void
-export glnormal3i
-@get_c_fun "libGL" glnormal3s glNormal3s(nx::GLshort,ny::GLshort,nz::GLshort)::Void
-export glnormal3s
-@get_c_fun "libGL" glnormal3bv glNormal3bv(v::Ptr)::Void
-export glnormal3bv
-@get_c_fun "libGL" glnormal3dv glNormal3dv(v::Ptr)::Void
-export glnormal3dv
-@get_c_fun "libGL" glnormal3fv glNormal3fv(v::Ptr)::Void
-export glnormal3fv
-@get_c_fun "libGL" glnormal3iv glNormal3iv(v::Ptr)::Void
-export glnormal3iv
-@get_c_fun "libGL" glnormal3sv glNormal3sv(v::Ptr)::Void
-export glnormal3sv
-@get_c_fun "libGL" glindexd glIndexd(c::GLdouble)::Void
-export glindexd
-@get_c_fun "libGL" glindexf glIndexf(c::GLfloat)::Void
-export glindexf
-@get_c_fun "libGL" glindexi glIndexi(c::GLint)::Void
-export glindexi
-@get_c_fun "libGL" glindexs glIndexs(c::GLshort)::Void
-export glindexs
-@get_c_fun "libGL" glindexub glIndexub(c::GLubyte)::Void
-export glindexub
-@get_c_fun "libGL" glindexdv glIndexdv(c::Ptr)::Void
-export glindexdv
-@get_c_fun "libGL" glindexfv glIndexfv(c::Ptr)::Void
-export glindexfv
-@get_c_fun "libGL" glindexiv glIndexiv(c::Ptr)::Void
-export glindexiv
-@get_c_fun "libGL" glindexsv glIndexsv(c::Ptr)::Void
-export glindexsv
-@get_c_fun "libGL" glindexubv glIndexubv(c::Ptr)::Void
-export glindexubv
-@get_c_fun "libGL" glcolor3b glColor3b(red::GLbyte,green::GLbyte,blue::GLbyte)::Void
-export glcolor3b
-@get_c_fun "libGL" glcolor3d glColor3d(red::GLdouble,green::GLdouble,blue::GLdouble)::Void
-export glcolor3d
-@get_c_fun "libGL" glcolor3f glColor3f(red::GLfloat,green::GLfloat,blue::GLfloat)::Void
-export glcolor3f
-@get_c_fun "libGL" glcolor3i glColor3i(red::GLint,green::GLint,blue::GLint)::Void
-export glcolor3i
-@get_c_fun "libGL" glcolor3s glColor3s(red::GLshort,green::GLshort,blue::GLshort)::Void
-export glcolor3s
-@get_c_fun "libGL" glcolor3ub glColor3ub(red::GLubyte,green::GLubyte,blue::GLubyte)::Void
-export glcolor3ub
-@get_c_fun "libGL" glcolor3ui glColor3ui(red::GLuint,green::GLuint,blue::GLuint)::Void
-export glcolor3ui
-@get_c_fun "libGL" glcolor3us glColor3us(red::GLushort,green::GLushort,blue::GLushort)::Void
-export glcolor3us
-@get_c_fun "libGL" glcolor4b glColor4b(red::GLbyte,green::GLbyte,blue::GLbyte,alpha::GLbyte)::Void
-export glcolor4b
-@get_c_fun "libGL" glcolor4d glColor4d(red::GLdouble,green::GLdouble,blue::GLdouble,alpha::GLdouble)::Void
-export glcolor4d
-@get_c_fun "libGL" glcolor4f glColor4f(red::GLfloat,green::GLfloat,blue::GLfloat,alpha::GLfloat)::Void
-export glcolor4f
-@get_c_fun "libGL" glcolor4i glColor4i(red::GLint,green::GLint,blue::GLint,alpha::GLint)::Void
-export glcolor4i
-@get_c_fun "libGL" glcolor4s glColor4s(red::GLshort,green::GLshort,blue::GLshort,alpha::GLshort)::Void
-export glcolor4s
-@get_c_fun "libGL" glcolor4ub glColor4ub(red::GLubyte,green::GLubyte,blue::GLubyte,alpha::GLubyte)::Void
-export glcolor4ub
-@get_c_fun "libGL" glcolor4ui glColor4ui(red::GLuint,green::GLuint,blue::GLuint,alpha::GLuint)::Void
-export glcolor4ui
-@get_c_fun "libGL" glcolor4us glColor4us(red::GLushort,green::GLushort,blue::GLushort,alpha::GLushort)::Void
-export glcolor4us
-@get_c_fun "libGL" glcolor3bv glColor3bv(v::Ptr)::Void
-export glcolor3bv
-@get_c_fun "libGL" glcolor3dv glColor3dv(v::Ptr)::Void
-export glcolor3dv
-@get_c_fun "libGL" glcolor3fv glColor3fv(v::Ptr)::Void
-export glcolor3fv
-@get_c_fun "libGL" glcolor3iv glColor3iv(v::Ptr)::Void
-export glcolor3iv
-@get_c_fun "libGL" glcolor3sv glColor3sv(v::Ptr)::Void
-export glcolor3sv
-@get_c_fun "libGL" glcolor3ubv glColor3ubv(v::Ptr)::Void
-export glcolor3ubv
-@get_c_fun "libGL" glcolor3uiv glColor3uiv(v::Ptr)::Void
-export glcolor3uiv
-@get_c_fun "libGL" glcolor3usv glColor3usv(v::Ptr)::Void
-export glcolor3usv
-@get_c_fun "libGL" glcolor4bv glColor4bv(v::Ptr)::Void
-export glcolor4bv
-@get_c_fun "libGL" glcolor4dv glColor4dv(v::Ptr)::Void
-export glcolor4dv
-@get_c_fun "libGL" glcolor4fv glColor4fv(v::Ptr)::Void
-export glcolor4fv
-@get_c_fun "libGL" glcolor4iv glColor4iv(v::Ptr)::Void
-export glcolor4iv
-@get_c_fun "libGL" glcolor4sv glColor4sv(v::Ptr)::Void
-export glcolor4sv
-@get_c_fun "libGL" glcolor4ubv glColor4ubv(v::Ptr)::Void
-export glcolor4ubv
-@get_c_fun "libGL" glcolor4uiv glColor4uiv(v::Ptr)::Void
-export glcolor4uiv
-@get_c_fun "libGL" glcolor4usv glColor4usv(v::Ptr)::Void
-export glcolor4usv
-@get_c_fun "libGL" gltexcoord1d glTexCoord1d(s::GLdouble)::Void
-export gltexcoord1d
-@get_c_fun "libGL" gltexcoord1f glTexCoord1f(s::GLfloat)::Void
-export gltexcoord1f
-@get_c_fun "libGL" gltexcoord1i glTexCoord1i(s::GLint)::Void
-export gltexcoord1i
-@get_c_fun "libGL" gltexcoord1s glTexCoord1s(s::GLshort)::Void
-export gltexcoord1s
-@get_c_fun "libGL" gltexcoord2d glTexCoord2d(s::GLdouble,t::GLdouble)::Void
-export gltexcoord2d
-@get_c_fun "libGL" gltexcoord2f glTexCoord2f(s::GLfloat,t::GLfloat)::Void
-export gltexcoord2f
-@get_c_fun "libGL" gltexcoord2i glTexCoord2i(s::GLint,t::GLint)::Void
-export gltexcoord2i
-@get_c_fun "libGL" gltexcoord2s glTexCoord2s(s::GLshort,t::GLshort)::Void
-export gltexcoord2s
-@get_c_fun "libGL" gltexcoord3d glTexCoord3d(s::GLdouble,t::GLdouble,r::GLdouble)::Void
-export gltexcoord3d
-@get_c_fun "libGL" gltexcoord3f glTexCoord3f(s::GLfloat,t::GLfloat,r::GLfloat)::Void
-export gltexcoord3f
-@get_c_fun "libGL" gltexcoord3i glTexCoord3i(s::GLint,t::GLint,r::GLint)::Void
-export gltexcoord3i
-@get_c_fun "libGL" gltexcoord3s glTexCoord3s(s::GLshort,t::GLshort,r::GLshort)::Void
-export gltexcoord3s
-@get_c_fun "libGL" gltexcoord4d glTexCoord4d(s::GLdouble,t::GLdouble,r::GLdouble,q::GLdouble)::Void
-export gltexcoord4d
-@get_c_fun "libGL" gltexcoord4f glTexCoord4f(s::GLfloat,t::GLfloat,r::GLfloat,q::GLfloat)::Void
-export gltexcoord4f
-@get_c_fun "libGL" gltexcoord4i glTexCoord4i(s::GLint,t::GLint,r::GLint,q::GLint)::Void
-export gltexcoord4i
-@get_c_fun "libGL" gltexcoord4s glTexCoord4s(s::GLshort,t::GLshort,r::GLshort,q::GLshort)::Void
-export gltexcoord4s
-@get_c_fun "libGL" gltexcoord1dv glTexCoord1dv(v::Ptr)::Void
-export gltexcoord1dv
-@get_c_fun "libGL" gltexcoord1fv glTexCoord1fv(v::Ptr)::Void
-export gltexcoord1fv
-@get_c_fun "libGL" gltexcoord1iv glTexCoord1iv(v::Ptr)::Void
-export gltexcoord1iv
-@get_c_fun "libGL" gltexcoord1sv glTexCoord1sv(v::Ptr)::Void
-export gltexcoord1sv
-@get_c_fun "libGL" gltexcoord2dv glTexCoord2dv(v::Ptr)::Void
-export gltexcoord2dv
-@get_c_fun "libGL" gltexcoord2fv glTexCoord2fv(v::Ptr)::Void
-export gltexcoord2fv
-@get_c_fun "libGL" gltexcoord2iv glTexCoord2iv(v::Ptr)::Void
-export gltexcoord2iv
-@get_c_fun "libGL" gltexcoord2sv glTexCoord2sv(v::Ptr)::Void
-export gltexcoord2sv
-@get_c_fun "libGL" gltexcoord3dv glTexCoord3dv(v::Ptr)::Void
-export gltexcoord3dv
-@get_c_fun "libGL" gltexcoord3fv glTexCoord3fv(v::Ptr)::Void
-export gltexcoord3fv
-@get_c_fun "libGL" gltexcoord3iv glTexCoord3iv(v::Ptr)::Void
-export gltexcoord3iv
-@get_c_fun "libGL" gltexcoord3sv glTexCoord3sv(v::Ptr)::Void
-export gltexcoord3sv
-@get_c_fun "libGL" gltexcoord4dv glTexCoord4dv(v::Ptr)::Void
-export gltexcoord4dv
-@get_c_fun "libGL" gltexcoord4fv glTexCoord4fv(v::Ptr)::Void
-export gltexcoord4fv
-@get_c_fun "libGL" gltexcoord4iv glTexCoord4iv(v::Ptr)::Void
-export gltexcoord4iv
-@get_c_fun "libGL" gltexcoord4sv glTexCoord4sv(v::Ptr)::Void
-export gltexcoord4sv
-@get_c_fun "libGL" glrasterpos2d glRasterPos2d(x::GLdouble,y::GLdouble)::Void
-export glrasterpos2d
-@get_c_fun "libGL" glrasterpos2f glRasterPos2f(x::GLfloat,y::GLfloat)::Void
-export glrasterpos2f
-@get_c_fun "libGL" glrasterpos2i glRasterPos2i(x::GLint,y::GLint)::Void
-export glrasterpos2i
-@get_c_fun "libGL" glrasterpos2s glRasterPos2s(x::GLshort,y::GLshort)::Void
-export glrasterpos2s
-@get_c_fun "libGL" glrasterpos3d glRasterPos3d(x::GLdouble,y::GLdouble,z::GLdouble)::Void
-export glrasterpos3d
-@get_c_fun "libGL" glrasterpos3f glRasterPos3f(x::GLfloat,y::GLfloat,z::GLfloat)::Void
-export glrasterpos3f
-@get_c_fun "libGL" glrasterpos3i glRasterPos3i(x::GLint,y::GLint,z::GLint)::Void
-export glrasterpos3i
-@get_c_fun "libGL" glrasterpos3s glRasterPos3s(x::GLshort,y::GLshort,z::GLshort)::Void
-export glrasterpos3s
-@get_c_fun "libGL" glrasterpos4d glRasterPos4d(x::GLdouble,y::GLdouble,z::GLdouble,w::GLdouble)::Void
-export glrasterpos4d
-@get_c_fun "libGL" glrasterpos4f glRasterPos4f(x::GLfloat,y::GLfloat,z::GLfloat,w::GLfloat)::Void
-export glrasterpos4f
-@get_c_fun "libGL" glrasterpos4i glRasterPos4i(x::GLint,y::GLint,z::GLint,w::GLint)::Void
-export glrasterpos4i
-@get_c_fun "libGL" glrasterpos4s glRasterPos4s(x::GLshort,y::GLshort,z::GLshort,w::GLshort)::Void
-export glrasterpos4s
-@get_c_fun "libGL" glrasterpos2dv glRasterPos2dv(v::Ptr)::Void
-export glrasterpos2dv
-@get_c_fun "libGL" glrasterpos2fv glRasterPos2fv(v::Ptr)::Void
-export glrasterpos2fv
-@get_c_fun "libGL" glrasterpos2iv glRasterPos2iv(v::Ptr)::Void
-export glrasterpos2iv
-@get_c_fun "libGL" glrasterpos2sv glRasterPos2sv(v::Ptr)::Void
-export glrasterpos2sv
-@get_c_fun "libGL" glrasterpos3dv glRasterPos3dv(v::Ptr)::Void
-export glrasterpos3dv
-@get_c_fun "libGL" glrasterpos3fv glRasterPos3fv(v::Ptr)::Void
-export glrasterpos3fv
-@get_c_fun "libGL" glrasterpos3iv glRasterPos3iv(v::Ptr)::Void
-export glrasterpos3iv
-@get_c_fun "libGL" glrasterpos3sv glRasterPos3sv(v::Ptr)::Void
-export glrasterpos3sv
-@get_c_fun "libGL" glrasterpos4dv glRasterPos4dv(v::Ptr)::Void
-export glrasterpos4dv
-@get_c_fun "libGL" glrasterpos4fv glRasterPos4fv(v::Ptr)::Void
-export glrasterpos4fv
-@get_c_fun "libGL" glrasterpos4iv glRasterPos4iv(v::Ptr)::Void
-export glrasterpos4iv
-@get_c_fun "libGL" glrasterpos4sv glRasterPos4sv(v::Ptr)::Void
-export glrasterpos4sv
-@get_c_fun "libGL" glrectd glRectd(x1::GLdouble,y1::GLdouble,x2::GLdouble,y2::GLdouble)::Void
-export glrectd
-@get_c_fun "libGL" glrectf glRectf(x1::GLfloat,y1::GLfloat,x2::GLfloat,y2::GLfloat)::Void
-export glrectf
-@get_c_fun "libGL" glrecti glRecti(x1::GLint,y1::GLint,x2::GLint,y2::GLint)::Void
-export glrecti
-@get_c_fun "libGL" glrects glRects(x1::GLshort,y1::GLshort,x2::GLshort,y2::GLshort)::Void
-export glrects
-@get_c_fun "libGL" glrectdv glRectdv(v1::Ptr,v2::Ptr)::Void
-export glrectdv
-@get_c_fun "libGL" glrectfv glRectfv(v1::Ptr,v2::Ptr)::Void
-export glrectfv
-@get_c_fun "libGL" glrectiv glRectiv(v1::Ptr,v2::Ptr)::Void
-export glrectiv
-@get_c_fun "libGL" glrectsv glRectsv(v1::Ptr,v2::Ptr)::Void
-export glrectsv
-@get_c_fun "libGL" glvertexpointer glVertexPointer(size::GLint,_type::GLenum,stride::GLsizei,ptr::Ptr)::Void
-export glvertexpointer
-@get_c_fun "libGL" glnormalpointer glNormalPointer(_type::GLenum,stride::GLsizei,ptr::Ptr)::Void
-export glnormalpointer
-@get_c_fun "libGL" glcolorpointer glColorPointer(size::GLint,_type::GLenum,stride::GLsizei,ptr::Ptr)::Void
-export glcolorpointer
-@get_c_fun "libGL" glindexpointer glIndexPointer(_type::GLenum,stride::GLsizei,ptr::Ptr)::Void
-export glindexpointer
-@get_c_fun "libGL" gltexcoordpointer glTexCoordPointer(size::GLint,_type::GLenum,stride::GLsizei,ptr::Ptr)::Void
-export gltexcoordpointer
-@get_c_fun "libGL" gledgeflagpointer glEdgeFlagPointer(stride::GLsizei,ptr::Ptr)::Void
-export gledgeflagpointer
-@get_c_fun "libGL" glgetpointerv glGetPointerv(pname::GLenum,params::Ptr)::Void
-export glgetpointerv
-@get_c_fun "libGL" glarrayelement glArrayElement(i::GLint)::Void
-export glarrayelement
-@get_c_fun "libGL" gldrawarrays glDrawArrays(mode::GLenum,first::GLint,count::GLsizei)::Void
-export gldrawarrays
-@get_c_fun "libGL" gldrawelements glDrawElements(mode::GLenum,count::GLsizei,_type::GLenum,indices::Ptr)::Void
-export gldrawelements
-@get_c_fun "libGL" glinterleavedarrays glInterleavedArrays(format::GLenum,stride::GLsizei,pointer::Ptr)::Void
-export glinterleavedarrays
-@get_c_fun "libGL" glshademodel glShadeModel(mode::GLenum)::Void
-export glshademodel
-@get_c_fun "libGL" gllightf glLightf(light::GLenum,pname::GLenum,param::GLfloat)::Void
-export gllightf
-@get_c_fun "libGL" gllighti glLighti(light::GLenum,pname::GLenum,param::GLint)::Void
-export gllighti
-@get_c_fun "libGL" gllightfv glLightfv(light::GLenum,pname::GLenum,params::Ptr{Float32})::Void
-export gllightfv
-@get_c_fun "libGL" gllightiv glLightiv(light::GLenum,pname::GLenum,params::Ptr)::Void
-export gllightiv
-@get_c_fun "libGL" glgetlightfv glGetLightfv(light::GLenum,pname::GLenum,params::Ptr)::Void
-export glgetlightfv
-@get_c_fun "libGL" glgetlightiv glGetLightiv(light::GLenum,pname::GLenum,params::Ptr)::Void
-export glgetlightiv
-@get_c_fun "libGL" gllightmodelf glLightModelf(pname::GLenum,param::GLfloat)::Void
-export gllightmodelf
-@get_c_fun "libGL" gllightmodeli glLightModeli(pname::GLenum,param::GLint)::Void
-export gllightmodeli
-@get_c_fun "libGL" gllightmodelfv glLightModelfv(pname::GLenum,params::Ptr)::Void
-export gllightmodelfv
-@get_c_fun "libGL" gllightmodeliv glLightModeliv(pname::GLenum,params::Ptr)::Void
-export gllightmodeliv
-@get_c_fun "libGL" glmaterialf glMaterialf(face::GLenum,pname::GLenum,param::GLfloat)::Void
-export glmaterialf
-@get_c_fun "libGL" glmateriali glMateriali(face::GLenum,pname::GLenum,param::GLint)::Void
-export glmateriali
-@get_c_fun "libGL" glmaterialfv glMaterialfv(face::GLenum,pname::GLenum,params::Ptr)::Void
-export glmaterialfv
-@get_c_fun "libGL" glmaterialiv glMaterialiv(face::GLenum,pname::GLenum,params::Ptr)::Void
-export glmaterialiv
-@get_c_fun "libGL" glgetmaterialfv glGetMaterialfv(face::GLenum,pname::GLenum,params::Ptr)::Void
-export glgetmaterialfv
-@get_c_fun "libGL" glgetmaterialiv glGetMaterialiv(face::GLenum,pname::GLenum,params::Ptr)::Void
-export glgetmaterialiv
-@get_c_fun "libGL" glcolormaterial glColorMaterial(face::GLenum,mode::GLenum)::Void
-export glcolormaterial
-@get_c_fun "libGL" glpixelzoom glPixelZoom(xfactor::GLfloat,yfactor::GLfloat)::Void
-export glpixelzoom
-@get_c_fun "libGL" glpixelstoref glPixelStoref(pname::GLenum,param::GLfloat)::Void
-export glpixelstoref
-@get_c_fun "libGL" glpixelstorei glPixelStorei(pname::GLenum,param::GLint)::Void
-export glpixelstorei
-@get_c_fun "libGL" glpixeltransferf glPixelTransferf(pname::GLenum,param::GLfloat)::Void
-export glpixeltransferf
-@get_c_fun "libGL" glpixeltransferi glPixelTransferi(pname::GLenum,param::GLint)::Void
-export glpixeltransferi
-@get_c_fun "libGL" glpixelmapfv glPixelMapfv(map::GLenum,mapsize::GLsizei,values::Ptr)::Void
-export glpixelmapfv
-@get_c_fun "libGL" glpixelmapuiv glPixelMapuiv(map::GLenum,mapsize::GLsizei,values::Ptr)::Void
-export glpixelmapuiv
-@get_c_fun "libGL" glpixelmapusv glPixelMapusv(map::GLenum,mapsize::GLsizei,values::Ptr)::Void
-export glpixelmapusv
-@get_c_fun "libGL" glgetpixelmapfv glGetPixelMapfv(map::GLenum,values::Ptr)::Void
-export glgetpixelmapfv
-@get_c_fun "libGL" glgetpixelmapuiv glGetPixelMapuiv(map::GLenum,values::Ptr)::Void
-export glgetpixelmapuiv
-@get_c_fun "libGL" glgetpixelmapusv glGetPixelMapusv(map::GLenum,values::Ptr)::Void
-export glgetpixelmapusv
-@get_c_fun "libGL" glbitmap glBitmap(width::GLsizei,height::GLsizei,xorig::GLfloat,yorig::GLfloat,xmove::GLfloat,ymove::GLfloat,bitmap::Ptr)::Void
-export glbitmap
-@get_c_fun "libGL" glreadpixels glReadPixels(x::GLint,y::GLint,width::GLsizei,height::GLsizei,format::GLenum,_type::GLenum,pixels::Ptr)::Void
-export glreadpixels
-@get_c_fun "libGL" gldrawpixels glDrawPixels(width::GLsizei,height::GLsizei,format::GLenum,_type::GLenum,pixels::Ptr{Float64})::Void
-export gldrawpixels
-@get_c_fun "libGL" glcopypixels glCopyPixels(x::GLint,y::GLint,width::GLsizei,height::GLsizei,_type::GLenum)::Void
-export glcopypixels
-@get_c_fun "libGL" glstencilfunc glStencilFunc(func::GLenum,ref::GLint,mask::GLuint)::Void
-export glstencilfunc
-@get_c_fun "libGL" glstencilmask glStencilMask(mask::GLuint)::Void
-export glstencilmask
-@get_c_fun "libGL" glstencilop glStencilOp(fail::GLenum,zfail::GLenum,zpass::GLenum)::Void
-export glstencilop
-@get_c_fun "libGL" glclearstencil glClearStencil(s::GLint)::Void
-export glclearstencil
-@get_c_fun "libGL" gltexgend glTexGend(coord::GLenum,pname::GLenum,param::GLdouble)::Void
-export gltexgend
-@get_c_fun "libGL" gltexgenf glTexGenf(coord::GLenum,pname::GLenum,param::GLfloat)::Void
-export gltexgenf
-@get_c_fun "libGL" gltexgeni glTexGeni(coord::GLenum,pname::GLenum,param::GLint)::Void
-export gltexgeni
-@get_c_fun "libGL" gltexgendv glTexGendv(coord::GLenum,pname::GLenum,params::Ptr)::Void
-export gltexgendv
-@get_c_fun "libGL" gltexgenfv glTexGenfv(coord::GLenum,pname::GLenum,params::Ptr)::Void
-export gltexgenfv
-@get_c_fun "libGL" gltexgeniv glTexGeniv(coord::GLenum,pname::GLenum,params::Ptr)::Void
-export gltexgeniv
-@get_c_fun "libGL" glgettexgendv glGetTexGendv(coord::GLenum,pname::GLenum,params::Ptr)::Void
-export glgettexgendv
-@get_c_fun "libGL" glgettexgenfv glGetTexGenfv(coord::GLenum,pname::GLenum,params::Ptr)::Void
-export glgettexgenfv
-@get_c_fun "libGL" glgettexgeniv glGetTexGeniv(coord::GLenum,pname::GLenum,params::Ptr)::Void
-export glgettexgeniv
-@get_c_fun "libGL" gltexenvf glTexEnvf(target::GLenum,pname::GLenum,param::GLfloat)::Void
-export gltexenvf
-@get_c_fun "libGL" gltexenvi glTexEnvi(target::GLenum,pname::GLenum,param::GLint)::Void
-export gltexenvi
-@get_c_fun "libGL" gltexenvfv glTexEnvfv(target::GLenum,pname::GLenum,params::Ptr)::Void
-export gltexenvfv
-@get_c_fun "libGL" gltexenviv glTexEnviv(target::GLenum,pname::GLenum,params::Ptr)::Void
-export gltexenviv
-@get_c_fun "libGL" glgettexenvfv glGetTexEnvfv(target::GLenum,pname::GLenum,params::Ptr)::Void
-export glgettexenvfv
-@get_c_fun "libGL" glgettexenviv glGetTexEnviv(target::GLenum,pname::GLenum,params::Ptr)::Void
-export glgettexenviv
-@get_c_fun "libGL" gltexparameterf glTexParameterf(target::GLenum,pname::GLenum,param::GLfloat)::Void
-export gltexparameterf
-@get_c_fun "libGL" gltexparameteri glTexParameteri(target::GLenum,pname::GLenum,param::GLint)::Void
-export gltexparameteri
-@get_c_fun "libGL" gltexparameterfv glTexParameterfv(target::GLenum,pname::GLenum,params::Ptr)::Void
-export gltexparameterfv
-@get_c_fun "libGL" gltexparameteriv glTexParameteriv(target::GLenum,pname::GLenum,params::Ptr)::Void
-export gltexparameteriv
-@get_c_fun "libGL" glgettexparameterfv glGetTexParameterfv(target::GLenum,pname::GLenum,params::Ptr)::Void
-export glgettexparameterfv
-@get_c_fun "libGL" glgettexparameteriv glGetTexParameteriv(target::GLenum,pname::GLenum,params::Ptr)::Void
-export glgettexparameteriv
-@get_c_fun "libGL" glgettexlevelparameterfv glGetTexLevelParameterfv(target::GLenum,level::GLint,pname::GLenum,params::Ptr)::Void
-export glgettexlevelparameterfv
-@get_c_fun "libGL" glgettexlevelparameteriv glGetTexLevelParameteriv(target::GLenum,level::GLint,pname::GLenum,params::Ptr)::Void
-export glgettexlevelparameteriv
-@get_c_fun "libGL" glteximage1d glTexImage1D(target::GLenum,level::GLint,internalformat::GLint,width::GLsizei,border::GLint,format::GLenum,_type::GLenum,pixels::Ptr)::Void
-export glteximage1d
-@get_c_fun "libGL" glteximage2d glTexImage2D(target::GLenum,level::GLint,internalformat::GLint,width::GLsizei,height::GLsizei,border::GLint,format::GLenum,_type::GLenum,pixels::Ptr{Uint8})::Void
-export glteximage2d
-@get_c_fun "libGL" glgetteximage glGetTexImage(target::GLenum,level::GLint,format::GLenum,_type::GLenum,pixels::Ptr)::Void
-export glgetteximage
-@get_c_fun "libGL" glgentextures glGenTextures(n::GLsizei,textures::Ptr{Uint32})::Void
-export glgentextures
-@get_c_fun "libGL" gldeletetextures glDeleteTextures(n::GLsizei,textures::Ptr{Uint32})::Void
-export gldeletetextures
-@get_c_fun "libGL" glbindtexture glBindTexture(target::GLenum,texture::GLuint)::Void
-export glbindtexture
-@get_c_fun "libGL" glprioritizetextures glPrioritizeTextures(n::GLsizei,textures::Ptr,priorities::Ptr)::Void
-export glprioritizetextures
-@get_c_fun "libGL" glaretexturesresident glAreTexturesResident(n::GLsizei,textures::Ptr,residences::Ptr)::GLboolean
-export glaretexturesresident
-@get_c_fun "libGL" glistexture glIsTexture(texture::GLuint)::GLboolean
-export glistexture
-@get_c_fun "libGL" gltexsubimage1d glTexSubImage1D(target::GLenum,level::GLint,xoffset::GLint,width::GLsizei,format::GLenum,_type::GLenum,pixels::Ptr)::Void
-export gltexsubimage1d
-@get_c_fun "libGL" gltexsubimage2d glTexSubImage2D(target::GLenum,level::GLint,xoffset::GLint,yoffset::GLint,width::GLsizei,height::GLsizei,format::GLenum,_type::GLenum,pixels::Ptr)::Void
-export gltexsubimage2d
-@get_c_fun "libGL" glcopyteximage1d glCopyTexImage1D(target::GLenum,level::GLint,internalformat::GLenum,x::GLint,y::GLint,width::GLsizei,border::GLint)::Void
-export glcopyteximage1d
-@get_c_fun "libGL" glcopyteximage2d glCopyTexImage2D(target::GLenum,level::GLint,internalformat::GLenum,x::GLint,y::GLint,width::GLsizei,height::GLsizei,border::GLint)::Void
-export glcopyteximage2d
-@get_c_fun "libGL" glcopytexsubimage1d glCopyTexSubImage1D(target::GLenum,level::GLint,xoffset::GLint,x::GLint,y::GLint,width::GLsizei)::Void
-export glcopytexsubimage1d
-@get_c_fun "libGL" glcopytexsubimage2d glCopyTexSubImage2D(target::GLenum,level::GLint,xoffset::GLint,yoffset::GLint,x::GLint,y::GLint,width::GLsizei,height::GLsizei)::Void
-export glcopytexsubimage2d
-@get_c_fun "libGL" glmap1d glMap1d(target::GLenum,u1::GLdouble,u2::GLdouble,stride::GLint,order::GLint,points::Ptr)::Void
-export glmap1d
-@get_c_fun "libGL" glmap1f glMap1f(target::GLenum,u1::GLfloat,u2::GLfloat,stride::GLint,order::GLint,points::Ptr)::Void
-export glmap1f
-@get_c_fun "libGL" glmap2d glMap2d(target::GLenum,u1::GLdouble,u2::GLdouble,ustride::GLint,uorder::GLint,v1::GLdouble,v2::GLdouble,vstride::GLint,vorder::GLint,points::Ptr)::Void
-export glmap2d
-@get_c_fun "libGL" glmap2f glMap2f(target::GLenum,u1::GLfloat,u2::GLfloat,ustride::GLint,uorder::GLint,v1::GLfloat,v2::GLfloat,vstride::GLint,vorder::GLint,points::Ptr)::Void
-export glmap2f
-@get_c_fun "libGL" glgetmapdv glGetMapdv(target::GLenum,query::GLenum,v::Ptr)::Void
-export glgetmapdv
-@get_c_fun "libGL" glgetmapfv glGetMapfv(target::GLenum,query::GLenum,v::Ptr)::Void
-export glgetmapfv
-@get_c_fun "libGL" glgetmapiv glGetMapiv(target::GLenum,query::GLenum,v::Ptr)::Void
-export glgetmapiv
-@get_c_fun "libGL" glevalcoord1d glEvalCoord1d(u::GLdouble)::Void
-export glevalcoord1d
-@get_c_fun "libGL" glevalcoord1f glEvalCoord1f(u::GLfloat)::Void
-export glevalcoord1f
-@get_c_fun "libGL" glevalcoord1dv glEvalCoord1dv(u::Ptr)::Void
-export glevalcoord1dv
-@get_c_fun "libGL" glevalcoord1fv glEvalCoord1fv(u::Ptr)::Void
-export glevalcoord1fv
-@get_c_fun "libGL" glevalcoord2d glEvalCoord2d(u::GLdouble,v::GLdouble)::Void
-export glevalcoord2d
-@get_c_fun "libGL" glevalcoord2f glEvalCoord2f(u::GLfloat,v::GLfloat)::Void
-export glevalcoord2f
-@get_c_fun "libGL" glevalcoord2dv glEvalCoord2dv(u::Ptr)::Void
-export glevalcoord2dv
-@get_c_fun "libGL" glevalcoord2fv glEvalCoord2fv(u::Ptr)::Void
-export glevalcoord2fv
-@get_c_fun "libGL" glmapgrid1d glMapGrid1d(un::GLint,u1::GLdouble,u2::GLdouble)::Void
-export glmapgrid1d
-@get_c_fun "libGL" glmapgrid1f glMapGrid1f(un::GLint,u1::GLfloat,u2::GLfloat)::Void
-export glmapgrid1f
-@get_c_fun "libGL" glmapgrid2d glMapGrid2d(un::GLint,u1::GLdouble,u2::GLdouble,vn::GLint,v1::GLdouble,v2::GLdouble)::Void
-export glmapgrid2d
-@get_c_fun "libGL" glmapgrid2f glMapGrid2f(un::GLint,u1::GLfloat,u2::GLfloat,vn::GLint,v1::GLfloat,v2::GLfloat)::Void
-export glmapgrid2f
-@get_c_fun "libGL" glevalpoint1 glEvalPoint1(i::GLint)::Void
-export glevalpoint1
-@get_c_fun "libGL" glevalpoint2 glEvalPoint2(i::GLint,j::GLint)::Void
-export glevalpoint2
-@get_c_fun "libGL" glevalmesh1 glEvalMesh1(mode::GLenum,i1::GLint,i2::GLint)::Void
-export glevalmesh1
-@get_c_fun "libGL" glevalmesh2 glEvalMesh2(mode::GLenum,i1::GLint,i2::GLint,j1::GLint,j2::GLint)::Void
-export glevalmesh2
-@get_c_fun "libGL" glfogf glFogf(pname::GLenum,param::GLfloat)::Void
-export glfogf
-@get_c_fun "libGL" glfogi glFogi(pname::GLenum,param::GLint)::Void
-export glfogi
-@get_c_fun "libGL" glfogfv glFogfv(pname::GLenum,params::Ptr{Float64})::Void
-export glfogfv
-@get_c_fun "libGL" glfogiv glFogiv(pname::GLenum,params::Ptr)::Void
-export glfogiv
-@get_c_fun "libGL" glfeedbackbuffer glFeedbackBuffer(size::GLsizei,_type::GLenum,buffer::Ptr)::Void
-export glfeedbackbuffer
-@get_c_fun "libGL" glpassthrough glPassThrough(token::GLfloat)::Void
-export glpassthrough
-@get_c_fun "libGL" glselectbuffer glSelectBuffer(size::GLsizei,buffer::Ptr)::Void
-export glselectbuffer
-@get_c_fun "libGL" glinitnames glInitNames()::Void
-export glinitnames
-@get_c_fun "libGL" glloadname glLoadName(name::GLuint)::Void
-export glloadname
-@get_c_fun "libGL" glpushname glPushName(name::GLuint)::Void
-export glpushname
-@get_c_fun "libGL" glpopname glPopName()::Void
-export glpopname
-@get_c_fun "libGL" gldrawrangeelements glDrawRangeElements(mode::GLenum,start::GLuint,_end::GLuint,count::GLsizei,_type::GLenum,indices::Ptr)::Void
-export gldrawrangeelements
-@get_c_fun "libGL" glteximage3d glTexImage3D(target::GLenum,level::GLint,internalformat::GLint,width::GLsizei,height::GLsizei,depth::GLsizei,border::GLint,format::GLenum,_type::GLenum,pixels::Ptr)::Void
-export glteximage3d
-@get_c_fun "libGL" gltexsubimage3d glTexSubImage3D(target::GLenum,level::GLint,xoffset::GLint,yoffset::GLint,zoffset::GLint,width::GLsizei,height::GLsizei,depth::GLsizei,format::GLenum,_type::GLenum,pixels::Ptr)::Void
-export gltexsubimage3d
-@get_c_fun "libGL" glcopytexsubimage3d glCopyTexSubImage3D(target::GLenum,level::GLint,xoffset::GLint,yoffset::GLint,zoffset::GLint,x::GLint,y::GLint,width::GLsizei,height::GLsizei)::Void
-export glcopytexsubimage3d
-@get_c_fun "libGL" glcolortable glColorTable(target::GLenum,internalformat::GLenum,width::GLsizei,format::GLenum,_type::GLenum,table::Ptr)::Void
-export glcolortable
-@get_c_fun "libGL" glcolorsubtable glColorSubTable(target::GLenum,start::GLsizei,count::GLsizei,format::GLenum,_type::GLenum,data::Ptr)::Void
-export glcolorsubtable
-@get_c_fun "libGL" glcolortableparameteriv glColorTableParameteriv(target::GLenum,pname::GLenum,params::Ptr)::Void
-export glcolortableparameteriv
-@get_c_fun "libGL" glcolortableparameterfv glColorTableParameterfv(target::GLenum,pname::GLenum,params::Ptr)::Void
-export glcolortableparameterfv
-@get_c_fun "libGL" glcopycolorsubtable glCopyColorSubTable(target::GLenum,start::GLsizei,x::GLint,y::GLint,width::GLsizei)::Void
-export glcopycolorsubtable
-@get_c_fun "libGL" glcopycolortable glCopyColorTable(target::GLenum,internalformat::GLenum,x::GLint,y::GLint,width::GLsizei)::Void
-export glcopycolortable
-@get_c_fun "libGL" glgetcolortable glGetColorTable(target::GLenum,format::GLenum,_type::GLenum,table::Ptr)::Void
-export glgetcolortable
-@get_c_fun "libGL" glgetcolortableparameterfv glGetColorTableParameterfv(target::GLenum,pname::GLenum,params::Ptr)::Void
-export glgetcolortableparameterfv
-@get_c_fun "libGL" glgetcolortableparameteriv glGetColorTableParameteriv(target::GLenum,pname::GLenum,params::Ptr)::Void
-export glgetcolortableparameteriv
-@get_c_fun "libGL" glblendequation glBlendEquation(mode::GLenum)::Void
-export glblendequation
-@get_c_fun "libGL" glblendcolor glBlendColor(red::GLclampf,green::GLclampf,blue::GLclampf,alpha::GLclampf)::Void
-export glblendcolor
-@get_c_fun "libGL" glhistogram glHistogram(target::GLenum,width::GLsizei,internalformat::GLenum,sink::GLboolean)::Void
-export glhistogram
-@get_c_fun "libGL" glresethistogram glResetHistogram(target::GLenum)::Void
-export glresethistogram
-@get_c_fun "libGL" glgethistogram glGetHistogram(target::GLenum,reset::GLboolean,format::GLenum,_type::GLenum,values::Ptr)::Void
-export glgethistogram
-@get_c_fun "libGL" glgethistogramparameterfv glGetHistogramParameterfv(target::GLenum,pname::GLenum,params::Ptr)::Void
-export glgethistogramparameterfv
-@get_c_fun "libGL" glgethistogramparameteriv glGetHistogramParameteriv(target::GLenum,pname::GLenum,params::Ptr)::Void
-export glgethistogramparameteriv
-@get_c_fun "libGL" glminmax glMinmax(target::GLenum,internalformat::GLenum,sink::GLboolean)::Void
-export glminmax
-@get_c_fun "libGL" glresetminmax glResetMinmax(target::GLenum)::Void
-export glresetminmax
-@get_c_fun "libGL" glgetminmax glGetMinmax(target::GLenum,reset::GLboolean,format::GLenum,types::GLenum,values::Ptr)::Void
-export glgetminmax
-@get_c_fun "libGL" glgetminmaxparameterfv glGetMinmaxParameterfv(target::GLenum,pname::GLenum,params::Ptr)::Void
-export glgetminmaxparameterfv
-@get_c_fun "libGL" glgetminmaxparameteriv glGetMinmaxParameteriv(target::GLenum,pname::GLenum,params::Ptr)::Void
-export glgetminmaxparameteriv
-@get_c_fun "libGL" glconvolutionfilter1d glConvolutionFilter1D(target::GLenum,internalformat::GLenum,width::GLsizei,format::GLenum,_type::GLenum,image::Ptr)::Void
-export glconvolutionfilter1d
-@get_c_fun "libGL" glconvolutionfilter2d glConvolutionFilter2D(target::GLenum,internalformat::GLenum,width::GLsizei,height::GLsizei,format::GLenum,_type::GLenum,image::Ptr)::Void
-export glconvolutionfilter2d
-@get_c_fun "libGL" glconvolutionparameterf glConvolutionParameterf(target::GLenum,pname::GLenum,params::GLfloat)::Void
-export glconvolutionparameterf
-@get_c_fun "libGL" glconvolutionparameterfv glConvolutionParameterfv(target::GLenum,pname::GLenum,params::Ptr)::Void
-export glconvolutionparameterfv
-@get_c_fun "libGL" glconvolutionparameteri glConvolutionParameteri(target::GLenum,pname::GLenum,params::GLint)::Void
-export glconvolutionparameteri
-@get_c_fun "libGL" glconvolutionparameteriv glConvolutionParameteriv(target::GLenum,pname::GLenum,params::Ptr)::Void
-export glconvolutionparameteriv
-@get_c_fun "libGL" glcopyconvolutionfilter1d glCopyConvolutionFilter1D(target::GLenum,internalformat::GLenum,x::GLint,y::GLint,width::GLsizei)::Void
-export glcopyconvolutionfilter1d
-@get_c_fun "libGL" glcopyconvolutionfilter2d glCopyConvolutionFilter2D(target::GLenum,internalformat::GLenum,x::GLint,y::GLint,width::GLsizei,height::GLsizei)::Void
-export glcopyconvolutionfilter2d
-@get_c_fun "libGL" glgetconvolutionfilter glGetConvolutionFilter(target::GLenum,format::GLenum,_type::GLenum,image::Ptr)::Void
-export glgetconvolutionfilter
-@get_c_fun "libGL" glgetconvolutionparameterfv glGetConvolutionParameterfv(target::GLenum,pname::GLenum,params::Ptr)::Void
-export glgetconvolutionparameterfv
-@get_c_fun "libGL" glgetconvolutionparameteriv glGetConvolutionParameteriv(target::GLenum,pname::GLenum,params::Ptr)::Void
-export glgetconvolutionparameteriv
-@get_c_fun "libGL" glseparablefilter2d glSeparableFilter2D(target::GLenum,internalformat::GLenum,width::GLsizei,height::GLsizei,format::GLenum,_type::GLenum,row::Ptr,column::Ptr)::Void
-export glseparablefilter2d
-@get_c_fun "libGL" glgetseparablefilter glGetSeparableFilter(target::GLenum,format::GLenum,_type::GLenum,row::Ptr,column::Ptr,span::Ptr)::Void
-export glgetseparablefilter
-@get_c_fun "libGL" glactivetexture glActiveTexture(texture::GLenum)::Void
-export glactivetexture
-@get_c_fun "libGL" glclientactivetexture glClientActiveTexture(texture::GLenum)::Void
-export glclientactivetexture
-@get_c_fun "libGL" glcompressedteximage1d glCompressedTexImage1D(target::GLenum,level::GLint,internalformat::GLenum,width::GLsizei,border::GLint,imagesize::GLsizei,data::Ptr)::Void
-export glcompressedteximage1d
-@get_c_fun "libGL" glcompressedteximage2d glCompressedTexImage2D(target::GLenum,level::GLint,internalformat::GLenum,width::GLsizei,height::GLsizei,border::GLint,imagesize::GLsizei,data::Ptr)::Void
-export glcompressedteximage2d
-@get_c_fun "libGL" glcompressedteximage3d glCompressedTexImage3D(target::GLenum,level::GLint,internalformat::GLenum,width::GLsizei,height::GLsizei,depth::GLsizei,border::GLint,imagesize::GLsizei,data::Ptr)::Void
-export glcompressedteximage3d
-@get_c_fun "libGL" glcompressedtexsubimage1d glCompressedTexSubImage1D(target::GLenum,level::GLint,xoffset::GLint,width::GLsizei,format::GLenum,imagesize::GLsizei,data::Ptr)::Void
-export glcompressedtexsubimage1d
-@get_c_fun "libGL" glcompressedtexsubimage2d glCompressedTexSubImage2D(target::GLenum,level::GLint,xoffset::GLint,yoffset::GLint,width::GLsizei,height::GLsizei,format::GLenum,imagesize::GLsizei,data::Ptr)::Void
-export glcompressedtexsubimage2d
-@get_c_fun "libGL" glcompressedtexsubimage3d glCompressedTexSubImage3D(target::GLenum,level::GLint,xoffset::GLint,yoffset::GLint,zoffset::GLint,width::GLsizei,height::GLsizei,depth::GLsizei,format::GLenum,imagesize::GLsizei,data::Ptr)::Void
-export glcompressedtexsubimage3d
-@get_c_fun "libGL" glgetcompressedteximage glGetCompressedTexImage(target::GLenum,lod::GLint,img::Ptr)::Void
-export glgetcompressedteximage
-@get_c_fun "libGL" glmultitexcoord1d glMultiTexCoord1d(target::GLenum,s::GLdouble)::Void
-export glmultitexcoord1d
-@get_c_fun "libGL" glmultitexcoord1dv glMultiTexCoord1dv(target::GLenum,v::Ptr)::Void
-export glmultitexcoord1dv
-@get_c_fun "libGL" glmultitexcoord1f glMultiTexCoord1f(target::GLenum,s::GLfloat)::Void
-export glmultitexcoord1f
-@get_c_fun "libGL" glmultitexcoord1fv glMultiTexCoord1fv(target::GLenum,v::Ptr)::Void
-export glmultitexcoord1fv
-@get_c_fun "libGL" glmultitexcoord1i glMultiTexCoord1i(target::GLenum,s::GLint)::Void
-export glmultitexcoord1i
-@get_c_fun "libGL" glmultitexcoord1iv glMultiTexCoord1iv(target::GLenum,v::Ptr)::Void
-export glmultitexcoord1iv
-@get_c_fun "libGL" glmultitexcoord1s glMultiTexCoord1s(target::GLenum,s::GLshort)::Void
-export glmultitexcoord1s
-@get_c_fun "libGL" glmultitexcoord1sv glMultiTexCoord1sv(target::GLenum,v::Ptr)::Void
-export glmultitexcoord1sv
-@get_c_fun "libGL" glmultitexcoord2d glMultiTexCoord2d(target::GLenum,s::GLdouble,t::GLdouble)::Void
-export glmultitexcoord2d
-@get_c_fun "libGL" glmultitexcoord2dv glMultiTexCoord2dv(target::GLenum,v::Ptr)::Void
-export glmultitexcoord2dv
-@get_c_fun "libGL" glmultitexcoord2f glMultiTexCoord2f(target::GLenum,s::GLfloat,t::GLfloat)::Void
-export glmultitexcoord2f
-@get_c_fun "libGL" glmultitexcoord2fv glMultiTexCoord2fv(target::GLenum,v::Ptr)::Void
-export glmultitexcoord2fv
-@get_c_fun "libGL" glmultitexcoord2i glMultiTexCoord2i(target::GLenum,s::GLint,t::GLint)::Void
-export glmultitexcoord2i
-@get_c_fun "libGL" glmultitexcoord2iv glMultiTexCoord2iv(target::GLenum,v::Ptr)::Void
-export glmultitexcoord2iv
-@get_c_fun "libGL" glmultitexcoord2s glMultiTexCoord2s(target::GLenum,s::GLshort,t::GLshort)::Void
-export glmultitexcoord2s
-@get_c_fun "libGL" glmultitexcoord2sv glMultiTexCoord2sv(target::GLenum,v::Ptr)::Void
-export glmultitexcoord2sv
-@get_c_fun "libGL" glmultitexcoord3d glMultiTexCoord3d(target::GLenum,s::GLdouble,t::GLdouble,r::GLdouble)::Void
-export glmultitexcoord3d
-@get_c_fun "libGL" glmultitexcoord3dv glMultiTexCoord3dv(target::GLenum,v::Ptr)::Void
-export glmultitexcoord3dv
-@get_c_fun "libGL" glmultitexcoord3f glMultiTexCoord3f(target::GLenum,s::GLfloat,t::GLfloat,r::GLfloat)::Void
-export glmultitexcoord3f
-@get_c_fun "libGL" glmultitexcoord3fv glMultiTexCoord3fv(target::GLenum,v::Ptr)::Void
-export glmultitexcoord3fv
-@get_c_fun "libGL" glmultitexcoord3i glMultiTexCoord3i(target::GLenum,s::GLint,t::GLint,r::GLint)::Void
-export glmultitexcoord3i
-@get_c_fun "libGL" glmultitexcoord3iv glMultiTexCoord3iv(target::GLenum,v::Ptr)::Void
-export glmultitexcoord3iv
-@get_c_fun "libGL" glmultitexcoord3s glMultiTexCoord3s(target::GLenum,s::GLshort,t::GLshort,r::GLshort)::Void
-export glmultitexcoord3s
-@get_c_fun "libGL" glmultitexcoord3sv glMultiTexCoord3sv(target::GLenum,v::Ptr)::Void
-export glmultitexcoord3sv
-@get_c_fun "libGL" glmultitexcoord4d glMultiTexCoord4d(target::GLenum,s::GLdouble,t::GLdouble,r::GLdouble,q::GLdouble)::Void
-export glmultitexcoord4d
-@get_c_fun "libGL" glmultitexcoord4dv glMultiTexCoord4dv(target::GLenum,v::Ptr)::Void
-export glmultitexcoord4dv
-@get_c_fun "libGL" glmultitexcoord4f glMultiTexCoord4f(target::GLenum,s::GLfloat,t::GLfloat,r::GLfloat,q::GLfloat)::Void
-export glmultitexcoord4f
-@get_c_fun "libGL" glmultitexcoord4fv glMultiTexCoord4fv(target::GLenum,v::Ptr)::Void
-export glmultitexcoord4fv
-@get_c_fun "libGL" glmultitexcoord4i glMultiTexCoord4i(target::GLenum,s::GLint,t::GLint,r::GLint,q::GLint)::Void
-export glmultitexcoord4i
-@get_c_fun "libGL" glmultitexcoord4iv glMultiTexCoord4iv(target::GLenum,v::Ptr)::Void
-export glmultitexcoord4iv
-@get_c_fun "libGL" glmultitexcoord4s glMultiTexCoord4s(target::GLenum,s::GLshort,t::GLshort,r::GLshort,q::GLshort)::Void
-export glmultitexcoord4s
-@get_c_fun "libGL" glmultitexcoord4sv glMultiTexCoord4sv(target::GLenum,v::Ptr)::Void
-export glmultitexcoord4sv
-@get_c_fun "libGL" glloadtransposematrixd glLoadTransposeMatrixd(m::GLdouble)::Void
-export glloadtransposematrixd
-@get_c_fun "libGL" glloadtransposematrixf glLoadTransposeMatrixf(m::GLfloat)::Void
-export glloadtransposematrixf
-@get_c_fun "libGL" glmulttransposematrixd glMultTransposeMatrixd(m::GLdouble)::Void
-export glmulttransposematrixd
-@get_c_fun "libGL" glmulttransposematrixf glMultTransposeMatrixf(m::GLfloat)::Void
-export glmulttransposematrixf
-@get_c_fun "libGL" glsamplecoverage glSampleCoverage(value::GLclampf,invert::GLboolean)::Void
-export glsamplecoverage
-@get_c_fun "libGL" glactivetexturearb glActiveTextureARB(texture::GLenum)::Void
-export glactivetexturearb
-@get_c_fun "libGL" glclientactivetexturearb glClientActiveTextureARB(texture::GLenum)::Void
-export glclientactivetexturearb
-@get_c_fun "libGL" glmultitexcoord1darb glMultiTexCoord1dARB(target::GLenum,s::GLdouble)::Void
-export glmultitexcoord1darb
-@get_c_fun "libGL" glmultitexcoord1dvarb glMultiTexCoord1dvARB(target::GLenum,v::Ptr)::Void
-export glmultitexcoord1dvarb
-@get_c_fun "libGL" glmultitexcoord1farb glMultiTexCoord1fARB(target::GLenum,s::GLfloat)::Void
-export glmultitexcoord1farb
-@get_c_fun "libGL" glmultitexcoord1fvarb glMultiTexCoord1fvARB(target::GLenum,v::Ptr)::Void
-export glmultitexcoord1fvarb
-@get_c_fun "libGL" glmultitexcoord1iarb glMultiTexCoord1iARB(target::GLenum,s::GLint)::Void
-export glmultitexcoord1iarb
-@get_c_fun "libGL" glmultitexcoord1ivarb glMultiTexCoord1ivARB(target::GLenum,v::Ptr)::Void
-export glmultitexcoord1ivarb
-@get_c_fun "libGL" glmultitexcoord1sarb glMultiTexCoord1sARB(target::GLenum,s::GLshort)::Void
-export glmultitexcoord1sarb
-@get_c_fun "libGL" glmultitexcoord1svarb glMultiTexCoord1svARB(target::GLenum,v::Ptr)::Void
-export glmultitexcoord1svarb
-@get_c_fun "libGL" glmultitexcoord2darb glMultiTexCoord2dARB(target::GLenum,s::GLdouble,t::GLdouble)::Void
-export glmultitexcoord2darb
-@get_c_fun "libGL" glmultitexcoord2dvarb glMultiTexCoord2dvARB(target::GLenum,v::Ptr)::Void
-export glmultitexcoord2dvarb
-@get_c_fun "libGL" glmultitexcoord2farb glMultiTexCoord2fARB(target::GLenum,s::GLfloat,t::GLfloat)::Void
-export glmultitexcoord2farb
-@get_c_fun "libGL" glmultitexcoord2fvarb glMultiTexCoord2fvARB(target::GLenum,v::Ptr)::Void
-export glmultitexcoord2fvarb
-@get_c_fun "libGL" glmultitexcoord2iarb glMultiTexCoord2iARB(target::GLenum,s::GLint,t::GLint)::Void
-export glmultitexcoord2iarb
-@get_c_fun "libGL" glmultitexcoord2ivarb glMultiTexCoord2ivARB(target::GLenum,v::Ptr)::Void
-export glmultitexcoord2ivarb
-@get_c_fun "libGL" glmultitexcoord2sarb glMultiTexCoord2sARB(target::GLenum,s::GLshort,t::GLshort)::Void
-export glmultitexcoord2sarb
-@get_c_fun "libGL" glmultitexcoord2svarb glMultiTexCoord2svARB(target::GLenum,v::Ptr)::Void
-export glmultitexcoord2svarb
-@get_c_fun "libGL" glmultitexcoord3darb glMultiTexCoord3dARB(target::GLenum,s::GLdouble,t::GLdouble,r::GLdouble)::Void
-export glmultitexcoord3darb
-@get_c_fun "libGL" glmultitexcoord3dvarb glMultiTexCoord3dvARB(target::GLenum,v::Ptr)::Void
-export glmultitexcoord3dvarb
-@get_c_fun "libGL" glmultitexcoord3farb glMultiTexCoord3fARB(target::GLenum,s::GLfloat,t::GLfloat,r::GLfloat)::Void
-export glmultitexcoord3farb
-@get_c_fun "libGL" glmultitexcoord3fvarb glMultiTexCoord3fvARB(target::GLenum,v::Ptr)::Void
-export glmultitexcoord3fvarb
-@get_c_fun "libGL" glmultitexcoord3iarb glMultiTexCoord3iARB(target::GLenum,s::GLint,t::GLint,r::GLint)::Void
-export glmultitexcoord3iarb
-@get_c_fun "libGL" glmultitexcoord3ivarb glMultiTexCoord3ivARB(target::GLenum,v::Ptr)::Void
-export glmultitexcoord3ivarb
-@get_c_fun "libGL" glmultitexcoord3sarb glMultiTexCoord3sARB(target::GLenum,s::GLshort,t::GLshort,r::GLshort)::Void
-export glmultitexcoord3sarb
-@get_c_fun "libGL" glmultitexcoord3svarb glMultiTexCoord3svARB(target::GLenum,v::Ptr)::Void
-export glmultitexcoord3svarb
-@get_c_fun "libGL" glmultitexcoord4darb glMultiTexCoord4dARB(target::GLenum,s::GLdouble,t::GLdouble,r::GLdouble,q::GLdouble)::Void
-export glmultitexcoord4darb
-@get_c_fun "libGL" glmultitexcoord4dvarb glMultiTexCoord4dvARB(target::GLenum,v::Ptr)::Void
-export glmultitexcoord4dvarb
-@get_c_fun "libGL" glmultitexcoord4farb glMultiTexCoord4fARB(target::GLenum,s::GLfloat,t::GLfloat,r::GLfloat,q::GLfloat)::Void
-export glmultitexcoord4farb
-@get_c_fun "libGL" glmultitexcoord4fvarb glMultiTexCoord4fvARB(target::GLenum,v::Ptr)::Void
-export glmultitexcoord4fvarb
-@get_c_fun "libGL" glmultitexcoord4iarb glMultiTexCoord4iARB(target::GLenum,s::GLint,t::GLint,r::GLint,q::GLint)::Void
-export glmultitexcoord4iarb
-@get_c_fun "libGL" glmultitexcoord4ivarb glMultiTexCoord4ivARB(target::GLenum,v::Ptr)::Void
-export glmultitexcoord4ivarb
-@get_c_fun "libGL" glmultitexcoord4sarb glMultiTexCoord4sARB(target::GLenum,s::GLshort,t::GLshort,r::GLshort,q::GLshort)::Void
-export glmultitexcoord4sarb
-@get_c_fun "libGL" glmultitexcoord4svarb glMultiTexCoord4svARB(target::GLenum,v::Ptr)::Void
-export glmultitexcoord4svarb
+@get_c_fun "libGL" glClearIndex glClearIndex(c::GLfloat)::Void
+export glClearIndex
+@get_c_fun "libGL" glClearColor glClearColor(red::GLclampf,green::GLclampf,blue::GLclampf,alpha::GLclampf)::Void
+export glClearColor
+@get_c_fun "libGL" glClear glClear(mask::GLbitfield)::Void
+export glClear
+@get_c_fun "libGL" glIndexMask glIndexMask(mask::GLuint)::Void
+export glIndexMask
+@get_c_fun "libGL" glColorMask glColorMask(red::GLboolean,green::GLboolean,blue::GLboolean,alpha::GLboolean)::Void
+export glColorMask
+@get_c_fun "libGL" glAlphaFunc glAlphaFunc(func::GLenum,ref::GLclampf)::Void
+export glAlphaFunc
+@get_c_fun "libGL" glBlendFunc glBlendFunc(sfactor::GLenum,dfactor::GLenum)::Void
+export glBlendFunc
+@get_c_fun "libGL" glLogicOp glLogicOp(opcode::GLenum)::Void
+export glLogicOp
+@get_c_fun "libGL" glCullFace glCullFace(mode::GLenum)::Void
+export glCullFace
+@get_c_fun "libGL" glFrontFace glFrontFace(mode::GLenum)::Void
+export glFrontFace
+@get_c_fun "libGL" glPointSize glPointSize(size::GLfloat)::Void
+export glPointSize
+@get_c_fun "libGL" glLineWidth glLineWidth(width::GLfloat)::Void
+export glLineWidth
+@get_c_fun "libGL" glLineStipple glLineStipple(factor::GLint,pattern::GLushort)::Void
+export glLineStipple
+@get_c_fun "libGL" glPolygonMode glPolygonMode(face::GLenum,mode::GLenum)::Void
+export glPolygonMode
+@get_c_fun "libGL" glPolygonOffset glPolygonOffset(factor::GLfloat,units::GLfloat)::Void
+export glPolygonOffset
+@get_c_fun "libGL" glPolygonStipple glPolygonStipple(mask::Ptr)::Void
+export glPolygonStipple
+@get_c_fun "libGL" glGetPolygonStipple glGetPolygonStipple(mask::Ptr)::Void
+export glGetPolygonStipple
+@get_c_fun "libGL" glEdgeFlag glEdgeFlag(flag::GLboolean)::Void
+export glEdgeFlag
+@get_c_fun "libGL" glEdgeFlagv glEdgeFlagv(flag::Ptr)::Void
+export glEdgeFlagv
+@get_c_fun "libGL" glScissor glScissor(x::GLint,y::GLint,width::GLsizei,height::GLsizei)::Void
+export glScissor
+@get_c_fun "libGL" glClipPlane glClipPlane(plane::GLenum,equation::Ptr)::Void
+export glClipPlane
+@get_c_fun "libGL" glGetClipPlane glGetClipPlane(plane::GLenum,equation::Ptr)::Void
+export glGetClipPlane
+@get_c_fun "libGL" glDrawBuffer glDrawBuffer(mode::GLenum)::Void
+export glDrawBuffer
+@get_c_fun "libGL" glReadBuffer glReadBuffer(mode::GLenum)::Void
+export glReadBuffer
+@get_c_fun "libGL" glEnable glEnable(cap::GLenum)::Void
+export glEnable
+@get_c_fun "libGL" glDisable glDisable(cap::GLenum)::Void
+export glDisable
+@get_c_fun "libGL" glIsEnabled glIsEnabled(cap::GLenum)::GLboolean
+export glIsEnabled
+@get_c_fun "libGL" glEnableClientState glEnableClientState(cap::GLenum)::Void
+export glEnableClientState
+@get_c_fun "libGL" glDisableClientState glDisableClientState(cap::GLenum)::Void
+export glDisableClientState
+@get_c_fun "libGL" glGetBooleanv glGetBooleanv(pname::GLenum,params::Ptr)::Void
+export glGetBooleanv
+@get_c_fun "libGL" glGetDoublev glGetDoublev(pname::GLenum,params::Ptr)::Void
+export glGetDoublev
+@get_c_fun "libGL" glGetFloatv glGetFloatv(pname::GLenum,params::Ptr)::Void
+export glGetFloatv
+@get_c_fun "libGL" glGetIntegerv glGetIntegerv(pname::GLenum,params::Ptr)::Void
+export glGetIntegerv
+@get_c_fun "libGL" glPushAttrib glPushAttrib(mask::GLbitfield)::Void
+export glPushAttrib
+@get_c_fun "libGL" glPopAttrib glPopAttrib()::Void
+export glPopAttrib
+@get_c_fun "libGL" glPushClientAttrib glPushClientAttrib(mask::GLbitfield)::Void
+export glPushClientAttrib
+@get_c_fun "libGL" glPopClientAttrib glPopClientAttrib()::Void
+export glPopClientAttrib
+@get_c_fun "libGL" glRenderMode glRenderMode(mode::GLenum)::GLint
+export glRenderMode
+@get_c_fun "libGL" glGetError glGetError()::GLenum
+export glGetError
+@get_c_fun "libGL" glGetString glGetString(name::GLenum)::GLubyte
+export glGetString
+@get_c_fun "libGL" glFinish glFinish()::Void
+export glFinish
+@get_c_fun "libGL" glFlush glFlush()::Void
+export glFlush
+@get_c_fun "libGL" glHint glHint(target::GLenum,mode::GLenum)::Void
+export glHint
+@get_c_fun "libGL" glClearDepth glClearDepth(depth::GLclampd)::Void
+export glClearDepth
+@get_c_fun "libGL" glDepthFunc glDepthFunc(func::GLenum)::Void
+export glDepthFunc
+@get_c_fun "libGL" glDepthMask glDepthMask(flag::GLboolean)::Void
+export glDepthMask
+@get_c_fun "libGL" glDepthRange glDepthRange(near_val::GLclampd,far_val::GLclampd)::Void
+export glDepthRange
+@get_c_fun "libGL" glClearAccum glClearAccum(red::GLfloat,green::GLfloat,blue::GLfloat,alpha::GLfloat)::Void
+export glClearAccum
+@get_c_fun "libGL" glAccum glAccum(op::GLenum,value::GLfloat)::Void
+export glAccum
+@get_c_fun "libGL" glMatrixMode glMatrixMode(mode::GLenum)::Void
+export glMatrixMode
+@get_c_fun "libGL" glOrtho glOrtho(left::GLdouble,right::GLdouble,bottom::GLdouble,top::GLdouble,near_val::GLdouble,far_val::GLdouble)::Void
+export glOrtho
+@get_c_fun "libGL" glFrustum glFrustum(left::GLdouble,right::GLdouble,bottom::GLdouble,top::GLdouble,near_val::GLdouble,far_val::GLdouble)::Void
+export glFrustum
+@get_c_fun "libGL" glViewport glViewport(x::GLint,y::GLint,width::GLsizei,height::GLsizei)::Void
+export glViewport
+@get_c_fun "libGL" glPushMatrix glPushMatrix()::Void
+export glPushMatrix
+@get_c_fun "libGL" glPopMatrix glPopMatrix()::Void
+export glPopMatrix
+@get_c_fun "libGL" glLoadIdentity glLoadIdentity()::Void
+export glLoadIdentity
+@get_c_fun "libGL" glLoadMatrixd glLoadMatrixd(m::Ptr)::Void
+export glLoadMatrixd
+@get_c_fun "libGL" glLoadMatrixf glLoadMatrixf(m::Ptr)::Void
+export glLoadMatrixf
+@get_c_fun "libGL" glMultMatrixd glMultMatrixd(m::Ptr)::Void
+export glMultMatrixd
+@get_c_fun "libGL" glMultMatrixf glMultMatrixf(m::Ptr)::Void
+export glMultMatrixf
+@get_c_fun "libGL" glRotated glRotated(angle::GLdouble,x::GLdouble,y::GLdouble,z::GLdouble)::Void
+export glRotated
+@get_c_fun "libGL" glRotatef glRotatef(angle::GLfloat,x::GLfloat,y::GLfloat,z::GLfloat)::Void
+export glRotatef
+@get_c_fun "libGL" glScaled glScaled(x::GLdouble,y::GLdouble,z::GLdouble)::Void
+export glScaled
+@get_c_fun "libGL" glScalef glScalef(x::GLfloat,y::GLfloat,z::GLfloat)::Void
+export glScalef
+@get_c_fun "libGL" glTranslated glTranslated(x::GLdouble,y::GLdouble,z::GLdouble)::Void
+export glTranslated
+@get_c_fun "libGL" glTranslatef glTranslatef(x::GLfloat,y::GLfloat,z::GLfloat)::Void
+export glTranslatef
+@get_c_fun "libGL" glIsList glIsList(list::GLuint)::GLboolean
+export glIsList
+@get_c_fun "libGL" glDeleteLists glDeleteLists(list::GLuint,range::GLsizei)::Void
+export glDeleteLists
+@get_c_fun "libGL" glGenLists glGenLists(range::GLsizei)::GLuint
+export glGenLists
+@get_c_fun "libGL" glNewList glNewList(list::GLuint,mode::GLenum)::Void
+export glNewList
+@get_c_fun "libGL" glEndList glEndList()::Void
+export glEndList
+@get_c_fun "libGL" glCallList glCallList(list::GLuint)::Void
+export glCallList
+@get_c_fun "libGL" glCallLists glCallLists(n::GLsizei,_type::GLenum,lists::Ptr{Uint8})::Void
+export glCallLists
+@get_c_fun "libGL" glListBase glListBase(base::GLuint)::Void
+export glListBase
+@get_c_fun "libGL" glBegin glBegin(mode::GLenum)::Void
+export glBegin
+@get_c_fun "libGL" glEnd glEnd()::Void
+export glEnd
+@get_c_fun "libGL" glVertex2d glVertex2d(x::GLdouble,y::GLdouble)::Void
+export glVertex2d
+@get_c_fun "libGL" glVertex2f glVertex2f(x::GLfloat,y::GLfloat)::Void
+export glVertex2f
+@get_c_fun "libGL" glVertex2i glVertex2i(x::GLint,y::GLint)::Void
+export glVertex2i
+@get_c_fun "libGL" glVertex2s glVertex2s(x::GLshort,y::GLshort)::Void
+export glVertex2s
+@get_c_fun "libGL" glVertex3d glVertex3d(x::GLdouble,y::GLdouble,z::GLdouble)::Void
+export glVertex3d
+@get_c_fun "libGL" glVertex3f glVertex3f(x::GLfloat,y::GLfloat,z::GLfloat)::Void
+export glVertex3f
+@get_c_fun "libGL" glVertex3i glVertex3i(x::GLint,y::GLint,z::GLint)::Void
+export glVertex3i
+@get_c_fun "libGL" glVertex3s glVertex3s(x::GLshort,y::GLshort,z::GLshort)::Void
+export glVertex3s
+@get_c_fun "libGL" glVertex4d glVertex4d(x::GLdouble,y::GLdouble,z::GLdouble,w::GLdouble)::Void
+export glVertex4d
+@get_c_fun "libGL" glVertex4f glVertex4f(x::GLfloat,y::GLfloat,z::GLfloat,w::GLfloat)::Void
+export glVertex4f
+@get_c_fun "libGL" glVertex4i glVertex4i(x::GLint,y::GLint,z::GLint,w::GLint)::Void
+export glVertex4i
+@get_c_fun "libGL" glVertex4s glVertex4s(x::GLshort,y::GLshort,z::GLshort,w::GLshort)::Void
+export glVertex4s
+@get_c_fun "libGL" glVertex2dv glVertex2dv(v::Ptr)::Void
+export glVertex2dv
+@get_c_fun "libGL" glVertex2fv glVertex2fv(v::Ptr)::Void
+export glVertex2fv
+@get_c_fun "libGL" glVertex2iv glVertex2iv(v::Ptr)::Void
+export glVertex2iv
+@get_c_fun "libGL" glVertex2sv glVertex2sv(v::Ptr)::Void
+export glVertex2sv
+@get_c_fun "libGL" glVertex3dv glVertex3dv(v::Ptr)::Void
+export glVertex3dv
+@get_c_fun "libGL" glVertex3fv glVertex3fv(v::Ptr)::Void
+export glVertex3fv
+@get_c_fun "libGL" glVertex3iv glVertex3iv(v::Ptr)::Void
+export glVertex3iv
+@get_c_fun "libGL" glVertex3sv glVertex3sv(v::Ptr)::Void
+export glVertex3sv
+@get_c_fun "libGL" glVertex4dv glVertex4dv(v::Ptr)::Void
+export glVertex4dv
+@get_c_fun "libGL" glVertex4fv glVertex4fv(v::Ptr)::Void
+export glVertex4fv
+@get_c_fun "libGL" glVertex4iv glVertex4iv(v::Ptr)::Void
+export glVertex4iv
+@get_c_fun "libGL" glVertex4sv glVertex4sv(v::Ptr)::Void
+export glVertex4sv
+@get_c_fun "libGL" glNormal3b glNormal3b(nx::GLbyte,ny::GLbyte,nz::GLbyte)::Void
+export glNormal3b
+@get_c_fun "libGL" glNormal3d glNormal3d(nx::GLdouble,ny::GLdouble,nz::GLdouble)::Void
+export glNormal3d
+@get_c_fun "libGL" glNormal3f glNormal3f(nx::GLfloat,ny::GLfloat,nz::GLfloat)::Void
+export glNormal3f
+@get_c_fun "libGL" glNormal3i glNormal3i(nx::GLint,ny::GLint,nz::GLint)::Void
+export glNormal3i
+@get_c_fun "libGL" glNormal3s glNormal3s(nx::GLshort,ny::GLshort,nz::GLshort)::Void
+export glNormal3s
+@get_c_fun "libGL" glNormal3bv glNormal3bv(v::Ptr)::Void
+export glNormal3bv
+@get_c_fun "libGL" glNormal3dv glNormal3dv(v::Ptr)::Void
+export glNormal3dv
+@get_c_fun "libGL" glNormal3fv glNormal3fv(v::Ptr)::Void
+export glNormal3fv
+@get_c_fun "libGL" glNormal3iv glNormal3iv(v::Ptr)::Void
+export glNormal3iv
+@get_c_fun "libGL" glNormal3sv glNormal3sv(v::Ptr)::Void
+export glNormal3sv
+@get_c_fun "libGL" glIndexd glIndexd(c::GLdouble)::Void
+export glIndexd
+@get_c_fun "libGL" glIndexf glIndexf(c::GLfloat)::Void
+export glIndexf
+@get_c_fun "libGL" glIndexi glIndexi(c::GLint)::Void
+export glIndexi
+@get_c_fun "libGL" glIndexs glIndexs(c::GLshort)::Void
+export glIndexs
+@get_c_fun "libGL" glIndexub glIndexub(c::GLubyte)::Void
+export glIndexub
+@get_c_fun "libGL" glIndexdv glIndexdv(c::Ptr)::Void
+export glIndexdv
+@get_c_fun "libGL" glIndexfv glIndexfv(c::Ptr)::Void
+export glIndexfv
+@get_c_fun "libGL" glIndexiv glIndexiv(c::Ptr)::Void
+export glIndexiv
+@get_c_fun "libGL" glIndexsv glIndexsv(c::Ptr)::Void
+export glIndexsv
+@get_c_fun "libGL" glIndexubv glIndexubv(c::Ptr)::Void
+export glIndexubv
+@get_c_fun "libGL" glColor3b glColor3b(red::GLbyte,green::GLbyte,blue::GLbyte)::Void
+export glColor3b
+@get_c_fun "libGL" glColor3d glColor3d(red::GLdouble,green::GLdouble,blue::GLdouble)::Void
+export glColor3d
+@get_c_fun "libGL" glColor3f glColor3f(red::GLfloat,green::GLfloat,blue::GLfloat)::Void
+export glColor3f
+@get_c_fun "libGL" glColor3i glColor3i(red::GLint,green::GLint,blue::GLint)::Void
+export glColor3i
+@get_c_fun "libGL" glColor3s glColor3s(red::GLshort,green::GLshort,blue::GLshort)::Void
+export glColor3s
+@get_c_fun "libGL" glColor3ub glColor3ub(red::GLubyte,green::GLubyte,blue::GLubyte)::Void
+export glColor3ub
+@get_c_fun "libGL" glColor3ui glColor3ui(red::GLuint,green::GLuint,blue::GLuint)::Void
+export glColor3ui
+@get_c_fun "libGL" glColor3us glColor3us(red::GLushort,green::GLushort,blue::GLushort)::Void
+export glColor3us
+@get_c_fun "libGL" glColor4b glColor4b(red::GLbyte,green::GLbyte,blue::GLbyte,alpha::GLbyte)::Void
+export glColor4b
+@get_c_fun "libGL" glColor4d glColor4d(red::GLdouble,green::GLdouble,blue::GLdouble,alpha::GLdouble)::Void
+export glColor4d
+@get_c_fun "libGL" glColor4f glColor4f(red::GLfloat,green::GLfloat,blue::GLfloat,alpha::GLfloat)::Void
+export glColor4f
+@get_c_fun "libGL" glColor4i glColor4i(red::GLint,green::GLint,blue::GLint,alpha::GLint)::Void
+export glColor4i
+@get_c_fun "libGL" glColor4s glColor4s(red::GLshort,green::GLshort,blue::GLshort,alpha::GLshort)::Void
+export glColor4s
+@get_c_fun "libGL" glColor4ub glColor4ub(red::GLubyte,green::GLubyte,blue::GLubyte,alpha::GLubyte)::Void
+export glColor4ub
+@get_c_fun "libGL" glColor4ui glColor4ui(red::GLuint,green::GLuint,blue::GLuint,alpha::GLuint)::Void
+export glColor4ui
+@get_c_fun "libGL" glColor4us glColor4us(red::GLushort,green::GLushort,blue::GLushort,alpha::GLushort)::Void
+export glColor4us
+@get_c_fun "libGL" glColor3bv glColor3bv(v::Ptr)::Void
+export glColor3bv
+@get_c_fun "libGL" glColor3dv glColor3dv(v::Ptr)::Void
+export glColor3dv
+@get_c_fun "libGL" glColor3fv glColor3fv(v::Ptr)::Void
+export glColor3fv
+@get_c_fun "libGL" glColor3iv glColor3iv(v::Ptr)::Void
+export glColor3iv
+@get_c_fun "libGL" glColor3sv glColor3sv(v::Ptr)::Void
+export glColor3sv
+@get_c_fun "libGL" glColor3ubv glColor3ubv(v::Ptr)::Void
+export glColor3ubv
+@get_c_fun "libGL" glColor3uiv glColor3uiv(v::Ptr)::Void
+export glColor3uiv
+@get_c_fun "libGL" glColor3usv glColor3usv(v::Ptr)::Void
+export glColor3usv
+@get_c_fun "libGL" glColor4bv glColor4bv(v::Ptr)::Void
+export glColor4bv
+@get_c_fun "libGL" glColor4dv glColor4dv(v::Ptr)::Void
+export glColor4dv
+@get_c_fun "libGL" glColor4fv glColor4fv(v::Ptr)::Void
+export glColor4fv
+@get_c_fun "libGL" glColor4iv glColor4iv(v::Ptr)::Void
+export glColor4iv
+@get_c_fun "libGL" glColor4sv glColor4sv(v::Ptr)::Void
+export glColor4sv
+@get_c_fun "libGL" glColor4ubv glColor4ubv(v::Ptr)::Void
+export glColor4ubv
+@get_c_fun "libGL" glColor4uiv glColor4uiv(v::Ptr)::Void
+export glColor4uiv
+@get_c_fun "libGL" glColor4usv glColor4usv(v::Ptr)::Void
+export glColor4usv
+@get_c_fun "libGL" glTexCoord1d glTexCoord1d(s::GLdouble)::Void
+export glTexCoord1d
+@get_c_fun "libGL" glTexCoord1f glTexCoord1f(s::GLfloat)::Void
+export glTexCoord1f
+@get_c_fun "libGL" glTexCoord1i glTexCoord1i(s::GLint)::Void
+export glTexCoord1i
+@get_c_fun "libGL" glTexCoord1s glTexCoord1s(s::GLshort)::Void
+export glTexCoord1s
+@get_c_fun "libGL" glTexCoord2d glTexCoord2d(s::GLdouble,t::GLdouble)::Void
+export glTexCoord2d
+@get_c_fun "libGL" glTexCoord2f glTexCoord2f(s::GLfloat,t::GLfloat)::Void
+export glTexCoord2f
+@get_c_fun "libGL" glTexCoord2i glTexCoord2i(s::GLint,t::GLint)::Void
+export glTexCoord2i
+@get_c_fun "libGL" glTexCoord2s glTexCoord2s(s::GLshort,t::GLshort)::Void
+export glTexCoord2s
+@get_c_fun "libGL" glTexCoord3d glTexCoord3d(s::GLdouble,t::GLdouble,r::GLdouble)::Void
+export glTexCoord3d
+@get_c_fun "libGL" glTexCoord3f glTexCoord3f(s::GLfloat,t::GLfloat,r::GLfloat)::Void
+export glTexCoord3f
+@get_c_fun "libGL" glTexCoord3i glTexCoord3i(s::GLint,t::GLint,r::GLint)::Void
+export glTexCoord3i
+@get_c_fun "libGL" glTexCoord3s glTexCoord3s(s::GLshort,t::GLshort,r::GLshort)::Void
+export glTexCoord3s
+@get_c_fun "libGL" glTexCoord4d glTexCoord4d(s::GLdouble,t::GLdouble,r::GLdouble,q::GLdouble)::Void
+export glTexCoord4d
+@get_c_fun "libGL" glTexCoord4f glTexCoord4f(s::GLfloat,t::GLfloat,r::GLfloat,q::GLfloat)::Void
+export glTexCoord4f
+@get_c_fun "libGL" glTexCoord4i glTexCoord4i(s::GLint,t::GLint,r::GLint,q::GLint)::Void
+export glTexCoord4i
+@get_c_fun "libGL" glTexCoord4s glTexCoord4s(s::GLshort,t::GLshort,r::GLshort,q::GLshort)::Void
+export glTexCoord4s
+@get_c_fun "libGL" glTexCoord1dv glTexCoord1dv(v::Ptr)::Void
+export glTexCoord1dv
+@get_c_fun "libGL" glTexCoord1fv glTexCoord1fv(v::Ptr)::Void
+export glTexCoord1fv
+@get_c_fun "libGL" glTexCoord1iv glTexCoord1iv(v::Ptr)::Void
+export glTexCoord1iv
+@get_c_fun "libGL" glTexCoord1sv glTexCoord1sv(v::Ptr)::Void
+export glTexCoord1sv
+@get_c_fun "libGL" glTexCoord2dv glTexCoord2dv(v::Ptr)::Void
+export glTexCoord2dv
+@get_c_fun "libGL" glTexCoord2fv glTexCoord2fv(v::Ptr)::Void
+export glTexCoord2fv
+@get_c_fun "libGL" glTexCoord2iv glTexCoord2iv(v::Ptr)::Void
+export glTexCoord2iv
+@get_c_fun "libGL" glTexCoord2sv glTexCoord2sv(v::Ptr)::Void
+export glTexCoord2sv
+@get_c_fun "libGL" glTexCoord3dv glTexCoord3dv(v::Ptr)::Void
+export glTexCoord3dv
+@get_c_fun "libGL" glTexCoord3fv glTexCoord3fv(v::Ptr)::Void
+export glTexCoord3fv
+@get_c_fun "libGL" glTexCoord3iv glTexCoord3iv(v::Ptr)::Void
+export glTexCoord3iv
+@get_c_fun "libGL" glTexCoord3sv glTexCoord3sv(v::Ptr)::Void
+export glTexCoord3sv
+@get_c_fun "libGL" glTexCoord4dv glTexCoord4dv(v::Ptr)::Void
+export glTexCoord4dv
+@get_c_fun "libGL" glTexCoord4fv glTexCoord4fv(v::Ptr)::Void
+export glTexCoord4fv
+@get_c_fun "libGL" glTexCoord4iv glTexCoord4iv(v::Ptr)::Void
+export glTexCoord4iv
+@get_c_fun "libGL" glTexCoord4sv glTexCoord4sv(v::Ptr)::Void
+export glTexCoord4sv
+@get_c_fun "libGL" glRasterPos2d glRasterPos2d(x::GLdouble,y::GLdouble)::Void
+export glRasterPos2d
+@get_c_fun "libGL" glRasterPos2f glRasterPos2f(x::GLfloat,y::GLfloat)::Void
+export glRasterPos2f
+@get_c_fun "libGL" glRasterPos2i glRasterPos2i(x::GLint,y::GLint)::Void
+export glRasterPos2i
+@get_c_fun "libGL" glRasterPos2s glRasterPos2s(x::GLshort,y::GLshort)::Void
+export glRasterPos2s
+@get_c_fun "libGL" glRasterPos3d glRasterPos3d(x::GLdouble,y::GLdouble,z::GLdouble)::Void
+export glRasterPos3d
+@get_c_fun "libGL" glRasterPos3f glRasterPos3f(x::GLfloat,y::GLfloat,z::GLfloat)::Void
+export glRasterPos3f
+@get_c_fun "libGL" glRasterPos3i glRasterPos3i(x::GLint,y::GLint,z::GLint)::Void
+export glRasterPos3i
+@get_c_fun "libGL" glRasterPos3s glRasterPos3s(x::GLshort,y::GLshort,z::GLshort)::Void
+export glRasterPos3s
+@get_c_fun "libGL" glRasterPos4d glRasterPos4d(x::GLdouble,y::GLdouble,z::GLdouble,w::GLdouble)::Void
+export glRasterPos4d
+@get_c_fun "libGL" glRasterPos4f glRasterPos4f(x::GLfloat,y::GLfloat,z::GLfloat,w::GLfloat)::Void
+export glRasterPos4f
+@get_c_fun "libGL" glRasterPos4i glRasterPos4i(x::GLint,y::GLint,z::GLint,w::GLint)::Void
+export glRasterPos4i
+@get_c_fun "libGL" glRasterPos4s glRasterPos4s(x::GLshort,y::GLshort,z::GLshort,w::GLshort)::Void
+export glRasterPos4s
+@get_c_fun "libGL" glRasterPos2dv glRasterPos2dv(v::Ptr)::Void
+export glRasterPos2dv
+@get_c_fun "libGL" glRasterPos2fv glRasterPos2fv(v::Ptr)::Void
+export glRasterPos2fv
+@get_c_fun "libGL" glRasterPos2iv glRasterPos2iv(v::Ptr)::Void
+export glRasterPos2iv
+@get_c_fun "libGL" glRasterPos2sv glRasterPos2sv(v::Ptr)::Void
+export glRasterPos2sv
+@get_c_fun "libGL" glRasterPos3dv glRasterPos3dv(v::Ptr)::Void
+export glRasterPos3dv
+@get_c_fun "libGL" glRasterPos3fv glRasterPos3fv(v::Ptr)::Void
+export glRasterPos3fv
+@get_c_fun "libGL" glRasterPos3iv glRasterPos3iv(v::Ptr)::Void
+export glRasterPos3iv
+@get_c_fun "libGL" glRasterPos3sv glRasterPos3sv(v::Ptr)::Void
+export glRasterPos3sv
+@get_c_fun "libGL" glRasterPos4dv glRasterPos4dv(v::Ptr)::Void
+export glRasterPos4dv
+@get_c_fun "libGL" glRasterPos4fv glRasterPos4fv(v::Ptr)::Void
+export glRasterPos4fv
+@get_c_fun "libGL" glRasterPos4iv glRasterPos4iv(v::Ptr)::Void
+export glRasterPos4iv
+@get_c_fun "libGL" glRasterPos4sv glRasterPos4sv(v::Ptr)::Void
+export glRasterPos4sv
+@get_c_fun "libGL" glRectd glRectd(x1::GLdouble,y1::GLdouble,x2::GLdouble,y2::GLdouble)::Void
+export glRectd
+@get_c_fun "libGL" glRectf glRectf(x1::GLfloat,y1::GLfloat,x2::GLfloat,y2::GLfloat)::Void
+export glRectf
+@get_c_fun "libGL" glRecti glRecti(x1::GLint,y1::GLint,x2::GLint,y2::GLint)::Void
+export glRecti
+@get_c_fun "libGL" glRects glRects(x1::GLshort,y1::GLshort,x2::GLshort,y2::GLshort)::Void
+export glRects
+@get_c_fun "libGL" glRectdv glRectdv(v1::Ptr,v2::Ptr)::Void
+export glRectdv
+@get_c_fun "libGL" glRectfv glRectfv(v1::Ptr,v2::Ptr)::Void
+export glRectfv
+@get_c_fun "libGL" glRectiv glRectiv(v1::Ptr,v2::Ptr)::Void
+export glRectiv
+@get_c_fun "libGL" glRectsv glRectsv(v1::Ptr,v2::Ptr)::Void
+export glRectsv
+@get_c_fun "libGL" glVertexPointer glVertexPointer(size::GLint,_type::GLenum,stride::GLsizei,ptr::Ptr)::Void
+export glVertexPointer
+@get_c_fun "libGL" glNormalPointer glNormalPointer(_type::GLenum,stride::GLsizei,ptr::Ptr)::Void
+export glNormalPointer
+@get_c_fun "libGL" glColorPointer glColorPointer(size::GLint,_type::GLenum,stride::GLsizei,ptr::Ptr)::Void
+export glColorPointer
+@get_c_fun "libGL" glIndexPointer glIndexPointer(_type::GLenum,stride::GLsizei,ptr::Ptr)::Void
+export glIndexPointer
+@get_c_fun "libGL" glTexCoordPointer glTexCoordPointer(size::GLint,_type::GLenum,stride::GLsizei,ptr::Ptr)::Void
+export glTexCoordPointer
+@get_c_fun "libGL" glEdgeFlagPointer glEdgeFlagPointer(stride::GLsizei,ptr::Ptr)::Void
+export glEdgeFlagPointer
+@get_c_fun "libGL" glGetPointerv glGetPointerv(pname::GLenum,params::Ptr)::Void
+export glGetPointerv
+@get_c_fun "libGL" glArrayElement glArrayElement(i::GLint)::Void
+export glArrayElement
+@get_c_fun "libGL" glDrawArrays glDrawArrays(mode::GLenum,first::GLint,count::GLsizei)::Void
+export glDrawArrays
+@get_c_fun "libGL" glDrawElements glDrawElements(mode::GLenum,count::GLsizei,_type::GLenum,indices::Ptr)::Void
+export glDrawElements
+@get_c_fun "libGL" glInterleavedArrays glInterleavedArrays(format::GLenum,stride::GLsizei,pointer::Ptr)::Void
+export glInterleavedArrays
+@get_c_fun "libGL" glShadeModel glShadeModel(mode::GLenum)::Void
+export glShadeModel
+@get_c_fun "libGL" glLightf glLightf(light::GLenum,pname::GLenum,param::GLfloat)::Void
+export glLightf
+@get_c_fun "libGL" glLighti glLighti(light::GLenum,pname::GLenum,param::GLint)::Void
+export glLighti
+@get_c_fun "libGL" glLightfv glLightfv(light::GLenum,pname::GLenum,params::Ptr{Float32})::Void
+export glLightfv
+@get_c_fun "libGL" glLightiv glLightiv(light::GLenum,pname::GLenum,params::Ptr)::Void
+export glLightiv
+@get_c_fun "libGL" glGetLightfv glGetLightfv(light::GLenum,pname::GLenum,params::Ptr)::Void
+export glGetLightfv
+@get_c_fun "libGL" glGetLightiv glGetLightiv(light::GLenum,pname::GLenum,params::Ptr)::Void
+export glGetLightiv
+@get_c_fun "libGL" glLightModelf glLightModelf(pname::GLenum,param::GLfloat)::Void
+export glLightModelf
+@get_c_fun "libGL" glLightModeli glLightModeli(pname::GLenum,param::GLint)::Void
+export glLightModeli
+@get_c_fun "libGL" glLightModelfv glLightModelfv(pname::GLenum,params::Ptr)::Void
+export glLightModelfv
+@get_c_fun "libGL" glLightModeliv glLightModeliv(pname::GLenum,params::Ptr)::Void
+export glLightModeliv
+@get_c_fun "libGL" glMaterialf glMaterialf(face::GLenum,pname::GLenum,param::GLfloat)::Void
+export glMaterialf
+@get_c_fun "libGL" glMateriali glMateriali(face::GLenum,pname::GLenum,param::GLint)::Void
+export glMateriali
+@get_c_fun "libGL" glMaterialfv glMaterialfv(face::GLenum,pname::GLenum,params::Ptr)::Void
+export glMaterialfv
+@get_c_fun "libGL" glMaterialiv glMaterialiv(face::GLenum,pname::GLenum,params::Ptr)::Void
+export glMaterialiv
+@get_c_fun "libGL" glGetMaterialfv glGetMaterialfv(face::GLenum,pname::GLenum,params::Ptr)::Void
+export glGetMaterialfv
+@get_c_fun "libGL" glGetMaterialiv glGetMaterialiv(face::GLenum,pname::GLenum,params::Ptr)::Void
+export glGetMaterialiv
+@get_c_fun "libGL" glColorMaterial glColorMaterial(face::GLenum,mode::GLenum)::Void
+export glColorMaterial
+@get_c_fun "libGL" glPixelZoom glPixelZoom(xfactor::GLfloat,yfactor::GLfloat)::Void
+export glPixelZoom
+@get_c_fun "libGL" glPixelStoref glPixelStoref(pname::GLenum,param::GLfloat)::Void
+export glPixelStoref
+@get_c_fun "libGL" glPixelStorei glPixelStorei(pname::GLenum,param::GLint)::Void
+export glPixelStorei
+@get_c_fun "libGL" glPixelTransferf glPixelTransferf(pname::GLenum,param::GLfloat)::Void
+export glPixelTransferf
+@get_c_fun "libGL" glPixelTransferi glPixelTransferi(pname::GLenum,param::GLint)::Void
+export glPixelTransferi
+@get_c_fun "libGL" glPixelMapfv glPixelMapfv(map::GLenum,mapsize::GLsizei,values::Ptr)::Void
+export glPixelMapfv
+@get_c_fun "libGL" glPixelMapuiv glPixelMapuiv(map::GLenum,mapsize::GLsizei,values::Ptr)::Void
+export glPixelMapuiv
+@get_c_fun "libGL" glPixelMapusv glPixelMapusv(map::GLenum,mapsize::GLsizei,values::Ptr)::Void
+export glPixelMapusv
+@get_c_fun "libGL" glGetPixelMapfv glGetPixelMapfv(map::GLenum,values::Ptr)::Void
+export glGetPixelMapfv
+@get_c_fun "libGL" glGetPixelMapuiv glGetPixelMapuiv(map::GLenum,values::Ptr)::Void
+export glGetPixelMapuiv
+@get_c_fun "libGL" glGetPixelMapusv glGetPixelMapusv(map::GLenum,values::Ptr)::Void
+export glGetPixelMapusv
+@get_c_fun "libGL" glBitmap glBitmap(width::GLsizei,height::GLsizei,xorig::GLfloat,yorig::GLfloat,xmove::GLfloat,ymove::GLfloat,bitmap::Ptr)::Void
+export glBitmap
+@get_c_fun "libGL" glReadPixels glReadPixels(x::GLint,y::GLint,width::GLsizei,height::GLsizei,format::GLenum,_type::GLenum,pixels::Ptr)::Void
+export glReadPixels
+@get_c_fun "libGL" glDrawPixels glDrawPixels(width::GLsizei,height::GLsizei,format::GLenum,_type::GLenum,pixels::Ptr{Float64})::Void
+export glDrawPixels
+@get_c_fun "libGL" glCopyPixels glCopyPixels(x::GLint,y::GLint,width::GLsizei,height::GLsizei,_type::GLenum)::Void
+export glCopyPixels
+@get_c_fun "libGL" glStencilFunc glStencilFunc(func::GLenum,ref::GLint,mask::GLuint)::Void
+export glStencilFunc
+@get_c_fun "libGL" glStencilMask glStencilMask(mask::GLuint)::Void
+export glStencilMask
+@get_c_fun "libGL" glStencilOp glStencilOp(fail::GLenum,zfail::GLenum,zpass::GLenum)::Void
+export glStencilOp
+@get_c_fun "libGL" glClearStencil glClearStencil(s::GLint)::Void
+export glClearStencil
+@get_c_fun "libGL" glTexGend glTexGend(coord::GLenum,pname::GLenum,param::GLdouble)::Void
+export glTexGend
+@get_c_fun "libGL" glTexGenf glTexGenf(coord::GLenum,pname::GLenum,param::GLfloat)::Void
+export glTexGenf
+@get_c_fun "libGL" glTexGeni glTexGeni(coord::GLenum,pname::GLenum,param::GLint)::Void
+export glTexGeni
+@get_c_fun "libGL" glTexGendv glTexGendv(coord::GLenum,pname::GLenum,params::Ptr)::Void
+export glTexGendv
+@get_c_fun "libGL" glTexGenfv glTexGenfv(coord::GLenum,pname::GLenum,params::Ptr)::Void
+export glTexGenfv
+@get_c_fun "libGL" glTexGeniv glTexGeniv(coord::GLenum,pname::GLenum,params::Ptr)::Void
+export glTexGeniv
+@get_c_fun "libGL" glGetTexGendv glGetTexGendv(coord::GLenum,pname::GLenum,params::Ptr)::Void
+export glGetTexGendv
+@get_c_fun "libGL" glGetTexGenfv glGetTexGenfv(coord::GLenum,pname::GLenum,params::Ptr)::Void
+export glGetTexGenfv
+@get_c_fun "libGL" glGetTexGeniv glGetTexGeniv(coord::GLenum,pname::GLenum,params::Ptr)::Void
+export glGetTexGeniv
+@get_c_fun "libGL" glTexEnvf glTexEnvf(target::GLenum,pname::GLenum,param::GLfloat)::Void
+export glTexEnvf
+@get_c_fun "libGL" glTexEnvi glTexEnvi(target::GLenum,pname::GLenum,param::GLint)::Void
+export glTexEnvi
+@get_c_fun "libGL" glTexEnvfv glTexEnvfv(target::GLenum,pname::GLenum,params::Ptr)::Void
+export glTexEnvfv
+@get_c_fun "libGL" glTexEnviv glTexEnviv(target::GLenum,pname::GLenum,params::Ptr)::Void
+export glTexEnviv
+@get_c_fun "libGL" glGetTexEnvfv glGetTexEnvfv(target::GLenum,pname::GLenum,params::Ptr)::Void
+export glGetTexEnvfv
+@get_c_fun "libGL" glGetTexEnviv glGetTexEnviv(target::GLenum,pname::GLenum,params::Ptr)::Void
+export glGetTexEnviv
+@get_c_fun "libGL" glTexParameterf glTexParameterf(target::GLenum,pname::GLenum,param::GLfloat)::Void
+export glTexParameterf
+@get_c_fun "libGL" glTexParameteri glTexParameteri(target::GLenum,pname::GLenum,param::GLint)::Void
+export glTexParameteri
+@get_c_fun "libGL" glTexParameterfv glTexParameterfv(target::GLenum,pname::GLenum,params::Ptr)::Void
+export glTexParameterfv
+@get_c_fun "libGL" glTexParameteriv glTexParameteriv(target::GLenum,pname::GLenum,params::Ptr)::Void
+export glTexParameteriv
+@get_c_fun "libGL" glGetTexParameterfv glGetTexParameterfv(target::GLenum,pname::GLenum,params::Ptr)::Void
+export glGetTexParameterfv
+@get_c_fun "libGL" glGetTexParameteriv glGetTexParameteriv(target::GLenum,pname::GLenum,params::Ptr)::Void
+export glGetTexParameteriv
+@get_c_fun "libGL" glGetTexLevelParameterfv glGetTexLevelParameterfv(target::GLenum,level::GLint,pname::GLenum,params::Ptr)::Void
+export glGetTexLevelParameterfv
+@get_c_fun "libGL" glGetTexLevelParameteriv glGetTexLevelParameteriv(target::GLenum,level::GLint,pname::GLenum,params::Ptr)::Void
+export glGetTexLevelParameteriv
+@get_c_fun "libGL" glTexImage1D glTexImage1D(target::GLenum,level::GLint,internalformat::GLint,width::GLsizei,border::GLint,format::GLenum,_type::GLenum,pixels::Ptr)::Void
+export glTexImage1D
+@get_c_fun "libGL" glTexImage2D glTexImage2D(target::GLenum,level::GLint,internalformat::GLint,width::GLsizei,height::GLsizei,border::GLint,format::GLenum,_type::GLenum,pixels::Ptr{Uint8})::Void
+export glTexImage2D
+@get_c_fun "libGL" glGetTexImage glGetTexImage(target::GLenum,level::GLint,format::GLenum,_type::GLenum,pixels::Ptr)::Void
+export glGetTexImage
+@get_c_fun "libGL" glGenTextures glGenTextures(n::GLsizei,textures::Ptr{Uint32})::Void
+export glGenTextures
+@get_c_fun "libGL" glDeleteTextures glDeleteTextures(n::GLsizei,textures::Ptr{Uint32})::Void
+export glDeleteTextures
+@get_c_fun "libGL" glBindTexture glBindTexture(target::GLenum,texture::GLuint)::Void
+export glBindTexture
+@get_c_fun "libGL" glPrioritizeTextures glPrioritizeTextures(n::GLsizei,textures::Ptr,priorities::Ptr)::Void
+export glPrioritizeTextures
+@get_c_fun "libGL" glAreTexturesResident glAreTexturesResident(n::GLsizei,textures::Ptr,residences::Ptr)::GLboolean
+export glAreTexturesResident
+@get_c_fun "libGL" glIsTexture glIsTexture(texture::GLuint)::GLboolean
+export glIsTexture
+@get_c_fun "libGL" glTexSubImage1D glTexSubImage1D(target::GLenum,level::GLint,xoffset::GLint,width::GLsizei,format::GLenum,_type::GLenum,pixels::Ptr)::Void
+export glTexSubImage1D
+@get_c_fun "libGL" glTexSubImage2D glTexSubImage2D(target::GLenum,level::GLint,xoffset::GLint,yoffset::GLint,width::GLsizei,height::GLsizei,format::GLenum,_type::GLenum,pixels::Ptr)::Void
+export glTexSubImage2D
+@get_c_fun "libGL" glCopyTexImage1D glCopyTexImage1D(target::GLenum,level::GLint,internalformat::GLenum,x::GLint,y::GLint,width::GLsizei,border::GLint)::Void
+export glCopyTexImage1D
+@get_c_fun "libGL" glCopyTexImage2D glCopyTexImage2D(target::GLenum,level::GLint,internalformat::GLenum,x::GLint,y::GLint,width::GLsizei,height::GLsizei,border::GLint)::Void
+export glCopyTexImage2D
+@get_c_fun "libGL" glCopyTexSubImage1D glCopyTexSubImage1D(target::GLenum,level::GLint,xoffset::GLint,x::GLint,y::GLint,width::GLsizei)::Void
+export glCopyTexSubImage1D
+@get_c_fun "libGL" glCopyTexSubImage2D glCopyTexSubImage2D(target::GLenum,level::GLint,xoffset::GLint,yoffset::GLint,x::GLint,y::GLint,width::GLsizei,height::GLsizei)::Void
+export glCopyTexSubImage2D
+@get_c_fun "libGL" glMap1d glMap1d(target::GLenum,u1::GLdouble,u2::GLdouble,stride::GLint,order::GLint,points::Ptr)::Void
+export glMap1d
+@get_c_fun "libGL" glMap1f glMap1f(target::GLenum,u1::GLfloat,u2::GLfloat,stride::GLint,order::GLint,points::Ptr)::Void
+export glMap1f
+@get_c_fun "libGL" glMap2d glMap2d(target::GLenum,u1::GLdouble,u2::GLdouble,ustride::GLint,uorder::GLint,v1::GLdouble,v2::GLdouble,vstride::GLint,vorder::GLint,points::Ptr)::Void
+export glMap2d
+@get_c_fun "libGL" glMap2f glMap2f(target::GLenum,u1::GLfloat,u2::GLfloat,ustride::GLint,uorder::GLint,v1::GLfloat,v2::GLfloat,vstride::GLint,vorder::GLint,points::Ptr)::Void
+export glMap2f
+@get_c_fun "libGL" glGetMapdv glGetMapdv(target::GLenum,query::GLenum,v::Ptr)::Void
+export glGetMapdv
+@get_c_fun "libGL" glGetMapfv glGetMapfv(target::GLenum,query::GLenum,v::Ptr)::Void
+export glGetMapfv
+@get_c_fun "libGL" glGetMapiv glGetMapiv(target::GLenum,query::GLenum,v::Ptr)::Void
+export glGetMapiv
+@get_c_fun "libGL" glEvalCoord1d glEvalCoord1d(u::GLdouble)::Void
+export glEvalCoord1d
+@get_c_fun "libGL" glEvalCoord1f glEvalCoord1f(u::GLfloat)::Void
+export glEvalCoord1f
+@get_c_fun "libGL" glEvalCoord1dv glEvalCoord1dv(u::Ptr)::Void
+export glEvalCoord1dv
+@get_c_fun "libGL" glEvalCoord1fv glEvalCoord1fv(u::Ptr)::Void
+export glEvalCoord1fv
+@get_c_fun "libGL" glEvalCoord2d glEvalCoord2d(u::GLdouble,v::GLdouble)::Void
+export glEvalCoord2d
+@get_c_fun "libGL" glEvalCoord2f glEvalCoord2f(u::GLfloat,v::GLfloat)::Void
+export glEvalCoord2f
+@get_c_fun "libGL" glEvalCoord2dv glEvalCoord2dv(u::Ptr)::Void
+export glEvalCoord2dv
+@get_c_fun "libGL" glEvalCoord2fv glEvalCoord2fv(u::Ptr)::Void
+export glEvalCoord2fv
+@get_c_fun "libGL" glMapGrid1d glMapGrid1d(un::GLint,u1::GLdouble,u2::GLdouble)::Void
+export glMapGrid1d
+@get_c_fun "libGL" glMapGrid1f glMapGrid1f(un::GLint,u1::GLfloat,u2::GLfloat)::Void
+export glMapGrid1f
+@get_c_fun "libGL" glMapGrid2d glMapGrid2d(un::GLint,u1::GLdouble,u2::GLdouble,vn::GLint,v1::GLdouble,v2::GLdouble)::Void
+export glMapGrid2d
+@get_c_fun "libGL" glMapGrid2f glMapGrid2f(un::GLint,u1::GLfloat,u2::GLfloat,vn::GLint,v1::GLfloat,v2::GLfloat)::Void
+export glMapGrid2f
+@get_c_fun "libGL" glEvalPoint1 glEvalPoint1(i::GLint)::Void
+export glEvalPoint1
+@get_c_fun "libGL" glEvalPoint2 glEvalPoint2(i::GLint,j::GLint)::Void
+export glEvalPoint2
+@get_c_fun "libGL" glEvalMesh1 glEvalMesh1(mode::GLenum,i1::GLint,i2::GLint)::Void
+export glEvalMesh1
+@get_c_fun "libGL" glEvalMesh2 glEvalMesh2(mode::GLenum,i1::GLint,i2::GLint,j1::GLint,j2::GLint)::Void
+export glEvalMesh2
+@get_c_fun "libGL" glFogf glFogf(pname::GLenum,param::GLfloat)::Void
+export glFogf
+@get_c_fun "libGL" glFogi glFogi(pname::GLenum,param::GLint)::Void
+export glFogi
+@get_c_fun "libGL" glFogfv glFogfv(pname::GLenum,params::Ptr{Float64})::Void
+export glFogfv
+@get_c_fun "libGL" glFogiv glFogiv(pname::GLenum,params::Ptr)::Void
+export glFogiv
+@get_c_fun "libGL" glFeedbackBuffer glFeedbackBuffer(size::GLsizei,_type::GLenum,buffer::Ptr)::Void
+export glFeedbackBuffer
+@get_c_fun "libGL" glPassThrough glPassThrough(token::GLfloat)::Void
+export glPassThrough
+@get_c_fun "libGL" glSelectBuffer glSelectBuffer(size::GLsizei,buffer::Ptr)::Void
+export glSelectBuffer
+@get_c_fun "libGL" glInitNames glInitNames()::Void
+export glInitNames
+@get_c_fun "libGL" glLoadName glLoadName(name::GLuint)::Void
+export glLoadName
+@get_c_fun "libGL" glPushName glPushName(name::GLuint)::Void
+export glPushName
+@get_c_fun "libGL" glPopName glPopName()::Void
+export glPopName
+@get_c_fun "libGL" glDrawRangeElements glDrawRangeElements(mode::GLenum,start::GLuint,_end::GLuint,count::GLsizei,_type::GLenum,indices::Ptr)::Void
+export glDrawRangeElements
+@get_c_fun "libGL" glTexImage3D glTexImage3D(target::GLenum,level::GLint,internalformat::GLint,width::GLsizei,height::GLsizei,depth::GLsizei,border::GLint,format::GLenum,_type::GLenum,pixels::Ptr)::Void
+export glTexImage3D
+@get_c_fun "libGL" glTexSubImage3D glTexSubImage3D(target::GLenum,level::GLint,xoffset::GLint,yoffset::GLint,zoffset::GLint,width::GLsizei,height::GLsizei,depth::GLsizei,format::GLenum,_type::GLenum,pixels::Ptr)::Void
+export glTexSubImage3D
+@get_c_fun "libGL" glCopyTexSubImage3D glCopyTexSubImage3D(target::GLenum,level::GLint,xoffset::GLint,yoffset::GLint,zoffset::GLint,x::GLint,y::GLint,width::GLsizei,height::GLsizei)::Void
+export glCopyTexSubImage3D
+@get_c_fun "libGL" glColorTable glColorTable(target::GLenum,internalformat::GLenum,width::GLsizei,format::GLenum,_type::GLenum,table::Ptr)::Void
+export glColorTable
+@get_c_fun "libGL" glColorSubTable glColorSubTable(target::GLenum,start::GLsizei,count::GLsizei,format::GLenum,_type::GLenum,data::Ptr)::Void
+export glColorSubTable
+@get_c_fun "libGL" glColorTableParameteriv glColorTableParameteriv(target::GLenum,pname::GLenum,params::Ptr)::Void
+export glColorTableParameteriv
+@get_c_fun "libGL" glColorTableParameterfv glColorTableParameterfv(target::GLenum,pname::GLenum,params::Ptr)::Void
+export glColorTableParameterfv
+@get_c_fun "libGL" glCopyColorSubTable glCopyColorSubTable(target::GLenum,start::GLsizei,x::GLint,y::GLint,width::GLsizei)::Void
+export glCopyColorSubTable
+@get_c_fun "libGL" glCopyColorTable glCopyColorTable(target::GLenum,internalformat::GLenum,x::GLint,y::GLint,width::GLsizei)::Void
+export glCopyColorTable
+@get_c_fun "libGL" glGetColorTable glGetColorTable(target::GLenum,format::GLenum,_type::GLenum,table::Ptr)::Void
+export glGetColorTable
+@get_c_fun "libGL" glGetColorTableParameterfv glGetColorTableParameterfv(target::GLenum,pname::GLenum,params::Ptr)::Void
+export glGetColorTableParameterfv
+@get_c_fun "libGL" glGetColorTableParameteriv glGetColorTableParameteriv(target::GLenum,pname::GLenum,params::Ptr)::Void
+export glGetColorTableParameteriv
+@get_c_fun "libGL" glBlendEquation glBlendEquation(mode::GLenum)::Void
+export glBlendEquation
+@get_c_fun "libGL" glBlendColor glBlendColor(red::GLclampf,green::GLclampf,blue::GLclampf,alpha::GLclampf)::Void
+export glBlendColor
+@get_c_fun "libGL" glHistogram glHistogram(target::GLenum,width::GLsizei,internalformat::GLenum,sink::GLboolean)::Void
+export glHistogram
+@get_c_fun "libGL" glResetHistogram glResetHistogram(target::GLenum)::Void
+export glResetHistogram
+@get_c_fun "libGL" glGetHistogram glGetHistogram(target::GLenum,reset::GLboolean,format::GLenum,_type::GLenum,values::Ptr)::Void
+export glGetHistogram
+@get_c_fun "libGL" glGetHistogramParameterfv glGetHistogramParameterfv(target::GLenum,pname::GLenum,params::Ptr)::Void
+export glGetHistogramParameterfv
+@get_c_fun "libGL" glGetHistogramParameteriv glGetHistogramParameteriv(target::GLenum,pname::GLenum,params::Ptr)::Void
+export glGetHistogramParameteriv
+@get_c_fun "libGL" glMinmax glMinmax(target::GLenum,internalformat::GLenum,sink::GLboolean)::Void
+export glMinmax
+@get_c_fun "libGL" glResetMinmax glResetMinmax(target::GLenum)::Void
+export glResetMinmax
+@get_c_fun "libGL" glGetMinmax glGetMinmax(target::GLenum,reset::GLboolean,format::GLenum,types::GLenum,values::Ptr)::Void
+export glGetMinmax
+@get_c_fun "libGL" glGetMinmaxParameterfv glGetMinmaxParameterfv(target::GLenum,pname::GLenum,params::Ptr)::Void
+export glGetMinmaxParameterfv
+@get_c_fun "libGL" glGetMinmaxParameteriv glGetMinmaxParameteriv(target::GLenum,pname::GLenum,params::Ptr)::Void
+export glGetMinmaxParameteriv
+@get_c_fun "libGL" glConvolutionFilter1D glConvolutionFilter1D(target::GLenum,internalformat::GLenum,width::GLsizei,format::GLenum,_type::GLenum,image::Ptr)::Void
+export glConvolutionFilter1D
+@get_c_fun "libGL" glConvolutionFilter2D glConvolutionFilter2D(target::GLenum,internalformat::GLenum,width::GLsizei,height::GLsizei,format::GLenum,_type::GLenum,image::Ptr)::Void
+export glConvolutionFilter2D
+@get_c_fun "libGL" glConvolutionParameterf glConvolutionParameterf(target::GLenum,pname::GLenum,params::GLfloat)::Void
+export glConvolutionParameterf
+@get_c_fun "libGL" glConvolutionParameterfv glConvolutionParameterfv(target::GLenum,pname::GLenum,params::Ptr)::Void
+export glConvolutionParameterfv
+@get_c_fun "libGL" glConvolutionParameteri glConvolutionParameteri(target::GLenum,pname::GLenum,params::GLint)::Void
+export glConvolutionParameteri
+@get_c_fun "libGL" glConvolutionParameteriv glConvolutionParameteriv(target::GLenum,pname::GLenum,params::Ptr)::Void
+export glConvolutionParameteriv
+@get_c_fun "libGL" glCopyConvolutionFilter1D glCopyConvolutionFilter1D(target::GLenum,internalformat::GLenum,x::GLint,y::GLint,width::GLsizei)::Void
+export glCopyConvolutionFilter1D
+@get_c_fun "libGL" glCopyConvolutionFilter2D glCopyConvolutionFilter2D(target::GLenum,internalformat::GLenum,x::GLint,y::GLint,width::GLsizei,height::GLsizei)::Void
+export glCopyConvolutionFilter2D
+@get_c_fun "libGL" glGetConvolutionFilter glGetConvolutionFilter(target::GLenum,format::GLenum,_type::GLenum,image::Ptr)::Void
+export glGetConvolutionFilter
+@get_c_fun "libGL" glGetConvolutionParameterfv glGetConvolutionParameterfv(target::GLenum,pname::GLenum,params::Ptr)::Void
+export glGetConvolutionParameterfv
+@get_c_fun "libGL" glGetConvolutionParameteriv glGetConvolutionParameteriv(target::GLenum,pname::GLenum,params::Ptr)::Void
+export glGetConvolutionParameteriv
+@get_c_fun "libGL" glSeparableFilter2D glSeparableFilter2D(target::GLenum,internalformat::GLenum,width::GLsizei,height::GLsizei,format::GLenum,_type::GLenum,row::Ptr,column::Ptr)::Void
+export glSeparableFilter2D
+@get_c_fun "libGL" glGetSeparableFilter glGetSeparableFilter(target::GLenum,format::GLenum,_type::GLenum,row::Ptr,column::Ptr,span::Ptr)::Void
+export glGetSeparableFilter
+@get_c_fun "libGL" glActiveTexture glActiveTexture(texture::GLenum)::Void
+export glActiveTexture
+@get_c_fun "libGL" glClientActiveTexture glClientActiveTexture(texture::GLenum)::Void
+export glClientActiveTexture
+@get_c_fun "libGL" glCompressedTexImage1D glCompressedTexImage1D(target::GLenum,level::GLint,internalformat::GLenum,width::GLsizei,border::GLint,imagesize::GLsizei,data::Ptr)::Void
+export glCompressedTexImage1D
+@get_c_fun "libGL" glCompressedTexImage2D glCompressedTexImage2D(target::GLenum,level::GLint,internalformat::GLenum,width::GLsizei,height::GLsizei,border::GLint,imagesize::GLsizei,data::Ptr)::Void
+export glCompressedTexImage2D
+@get_c_fun "libGL" glCompressedTexImage3D glCompressedTexImage3D(target::GLenum,level::GLint,internalformat::GLenum,width::GLsizei,height::GLsizei,depth::GLsizei,border::GLint,imagesize::GLsizei,data::Ptr)::Void
+export glCompressedTexImage3D
+@get_c_fun "libGL" glCompressedTexSubImage1D glCompressedTexSubImage1D(target::GLenum,level::GLint,xoffset::GLint,width::GLsizei,format::GLenum,imagesize::GLsizei,data::Ptr)::Void
+export glCompressedTexSubImage1D
+@get_c_fun "libGL" glCompressedTexSubImage2D glCompressedTexSubImage2D(target::GLenum,level::GLint,xoffset::GLint,yoffset::GLint,width::GLsizei,height::GLsizei,format::GLenum,imagesize::GLsizei,data::Ptr)::Void
+export glCompressedTexSubImage2D
+@get_c_fun "libGL" glCompressedTexSubImage3D glCompressedTexSubImage3D(target::GLenum,level::GLint,xoffset::GLint,yoffset::GLint,zoffset::GLint,width::GLsizei,height::GLsizei,depth::GLsizei,format::GLenum,imagesize::GLsizei,data::Ptr)::Void
+export glCompressedTexSubImage3D
+@get_c_fun "libGL" glGetCompressedTexImage glGetCompressedTexImage(target::GLenum,lod::GLint,img::Ptr)::Void
+export glGetCompressedTexImage
+@get_c_fun "libGL" glMultiTexCoord1d glMultiTexCoord1d(target::GLenum,s::GLdouble)::Void
+export glMultiTexCoord1d
+@get_c_fun "libGL" glMultiTexCoord1dv glMultiTexCoord1dv(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord1dv
+@get_c_fun "libGL" glMultiTexCoord1f glMultiTexCoord1f(target::GLenum,s::GLfloat)::Void
+export glMultiTexCoord1f
+@get_c_fun "libGL" glMultiTexCoord1fv glMultiTexCoord1fv(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord1fv
+@get_c_fun "libGL" glMultiTexCoord1i glMultiTexCoord1i(target::GLenum,s::GLint)::Void
+export glMultiTexCoord1i
+@get_c_fun "libGL" glMultiTexCoord1iv glMultiTexCoord1iv(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord1iv
+@get_c_fun "libGL" glMultiTexCoord1s glMultiTexCoord1s(target::GLenum,s::GLshort)::Void
+export glMultiTexCoord1s
+@get_c_fun "libGL" glMultiTexCoord1sv glMultiTexCoord1sv(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord1sv
+@get_c_fun "libGL" glMultiTexCoord2d glMultiTexCoord2d(target::GLenum,s::GLdouble,t::GLdouble)::Void
+export glMultiTexCoord2d
+@get_c_fun "libGL" glMultiTexCoord2dv glMultiTexCoord2dv(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord2dv
+@get_c_fun "libGL" glMultiTexCoord2f glMultiTexCoord2f(target::GLenum,s::GLfloat,t::GLfloat)::Void
+export glMultiTexCoord2f
+@get_c_fun "libGL" glMultiTexCoord2fv glMultiTexCoord2fv(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord2fv
+@get_c_fun "libGL" glMultiTexCoord2i glMultiTexCoord2i(target::GLenum,s::GLint,t::GLint)::Void
+export glMultiTexCoord2i
+@get_c_fun "libGL" glMultiTexCoord2iv glMultiTexCoord2iv(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord2iv
+@get_c_fun "libGL" glMultiTexCoord2s glMultiTexCoord2s(target::GLenum,s::GLshort,t::GLshort)::Void
+export glMultiTexCoord2s
+@get_c_fun "libGL" glMultiTexCoord2sv glMultiTexCoord2sv(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord2sv
+@get_c_fun "libGL" glMultiTexCoord3d glMultiTexCoord3d(target::GLenum,s::GLdouble,t::GLdouble,r::GLdouble)::Void
+export glMultiTexCoord3d
+@get_c_fun "libGL" glMultiTexCoord3dv glMultiTexCoord3dv(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord3dv
+@get_c_fun "libGL" glMultiTexCoord3f glMultiTexCoord3f(target::GLenum,s::GLfloat,t::GLfloat,r::GLfloat)::Void
+export glMultiTexCoord3f
+@get_c_fun "libGL" glMultiTexCoord3fv glMultiTexCoord3fv(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord3fv
+@get_c_fun "libGL" glMultiTexCoord3i glMultiTexCoord3i(target::GLenum,s::GLint,t::GLint,r::GLint)::Void
+export glMultiTexCoord3i
+@get_c_fun "libGL" glMultiTexCoord3iv glMultiTexCoord3iv(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord3iv
+@get_c_fun "libGL" glMultiTexCoord3s glMultiTexCoord3s(target::GLenum,s::GLshort,t::GLshort,r::GLshort)::Void
+export glMultiTexCoord3s
+@get_c_fun "libGL" glMultiTexCoord3sv glMultiTexCoord3sv(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord3sv
+@get_c_fun "libGL" glMultiTexCoord4d glMultiTexCoord4d(target::GLenum,s::GLdouble,t::GLdouble,r::GLdouble,q::GLdouble)::Void
+export glMultiTexCoord4d
+@get_c_fun "libGL" glMultiTexCoord4dv glMultiTexCoord4dv(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord4dv
+@get_c_fun "libGL" glMultiTexCoord4f glMultiTexCoord4f(target::GLenum,s::GLfloat,t::GLfloat,r::GLfloat,q::GLfloat)::Void
+export glMultiTexCoord4f
+@get_c_fun "libGL" glMultiTexCoord4fv glMultiTexCoord4fv(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord4fv
+@get_c_fun "libGL" glMultiTexCoord4i glMultiTexCoord4i(target::GLenum,s::GLint,t::GLint,r::GLint,q::GLint)::Void
+export glMultiTexCoord4i
+@get_c_fun "libGL" glMultiTexCoord4iv glMultiTexCoord4iv(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord4iv
+@get_c_fun "libGL" glMultiTexCoord4s glMultiTexCoord4s(target::GLenum,s::GLshort,t::GLshort,r::GLshort,q::GLshort)::Void
+export glMultiTexCoord4s
+@get_c_fun "libGL" glMultiTexCoord4sv glMultiTexCoord4sv(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord4sv
+@get_c_fun "libGL" glLoadTransposeMatrixd glLoadTransposeMatrixd(m::GLdouble)::Void
+export glLoadTransposeMatrixd
+@get_c_fun "libGL" glLoadTransposeMatrixf glLoadTransposeMatrixf(m::GLfloat)::Void
+export glLoadTransposeMatrixf
+@get_c_fun "libGL" glMultTransposeMatrixd glMultTransposeMatrixd(m::GLdouble)::Void
+export glMultTransposeMatrixd
+@get_c_fun "libGL" glMultTransposeMatrixf glMultTransposeMatrixf(m::GLfloat)::Void
+export glMultTransposeMatrixf
+@get_c_fun "libGL" glSampleCoverage glSampleCoverage(value::GLclampf,invert::GLboolean)::Void
+export glSampleCoverage
+@get_c_fun "libGL" glActiveTextureARB glActiveTextureARB(texture::GLenum)::Void
+export glActiveTextureARB
+@get_c_fun "libGL" glClientActiveTextureARB glClientActiveTextureARB(texture::GLenum)::Void
+export glClientActiveTextureARB
+@get_c_fun "libGL" glMultiTexCoord1dARB glMultiTexCoord1dARB(target::GLenum,s::GLdouble)::Void
+export glMultiTexCoord1dARB
+@get_c_fun "libGL" glMultiTexCoord1dvARB glMultiTexCoord1dvARB(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord1dvARB
+@get_c_fun "libGL" glMultiTexCoord1fARB glMultiTexCoord1fARB(target::GLenum,s::GLfloat)::Void
+export glMultiTexCoord1fARB
+@get_c_fun "libGL" glMultiTexCoord1fvARB glMultiTexCoord1fvARB(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord1fvARB
+@get_c_fun "libGL" glMultiTexCoord1iARB glMultiTexCoord1iARB(target::GLenum,s::GLint)::Void
+export glMultiTexCoord1iARB
+@get_c_fun "libGL" glMultiTexCoord1ivARB glMultiTexCoord1ivARB(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord1ivARB
+@get_c_fun "libGL" glMultiTexCoord1sARB glMultiTexCoord1sARB(target::GLenum,s::GLshort)::Void
+export glMultiTexCoord1sARB
+@get_c_fun "libGL" glMultiTexCoord1svARB glMultiTexCoord1svARB(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord1svARB
+@get_c_fun "libGL" glMultiTexCoord2dARB glMultiTexCoord2dARB(target::GLenum,s::GLdouble,t::GLdouble)::Void
+export glMultiTexCoord2dARB
+@get_c_fun "libGL" glMultiTexCoord2dvARB glMultiTexCoord2dvARB(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord2dvARB
+@get_c_fun "libGL" glMultiTexCoord2fARB glMultiTexCoord2fARB(target::GLenum,s::GLfloat,t::GLfloat)::Void
+export glMultiTexCoord2fARB
+@get_c_fun "libGL" glMultiTexCoord2fvARB glMultiTexCoord2fvARB(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord2fvARB
+@get_c_fun "libGL" glMultiTexCoord2iARB glMultiTexCoord2iARB(target::GLenum,s::GLint,t::GLint)::Void
+export glMultiTexCoord2iARB
+@get_c_fun "libGL" glMultiTexCoord2ivARB glMultiTexCoord2ivARB(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord2ivARB
+@get_c_fun "libGL" glMultiTexCoord2sARB glMultiTexCoord2sARB(target::GLenum,s::GLshort,t::GLshort)::Void
+export glMultiTexCoord2sARB
+@get_c_fun "libGL" glMultiTexCoord2svARB glMultiTexCoord2svARB(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord2svARB
+@get_c_fun "libGL" glMultiTexCoord3dARB glMultiTexCoord3dARB(target::GLenum,s::GLdouble,t::GLdouble,r::GLdouble)::Void
+export glMultiTexCoord3dARB
+@get_c_fun "libGL" glMultiTexCoord3dvARB glMultiTexCoord3dvARB(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord3dvARB
+@get_c_fun "libGL" glMultiTexCoord3fARB glMultiTexCoord3fARB(target::GLenum,s::GLfloat,t::GLfloat,r::GLfloat)::Void
+export glMultiTexCoord3fARB
+@get_c_fun "libGL" glMultiTexCoord3fvARB glMultiTexCoord3fvARB(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord3fvARB
+@get_c_fun "libGL" glMultiTexCoord3iARB glMultiTexCoord3iARB(target::GLenum,s::GLint,t::GLint,r::GLint)::Void
+export glMultiTexCoord3iARB
+@get_c_fun "libGL" glMultiTexCoord3ivARB glMultiTexCoord3ivARB(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord3ivARB
+@get_c_fun "libGL" glMultiTexCoord3sARB glMultiTexCoord3sARB(target::GLenum,s::GLshort,t::GLshort,r::GLshort)::Void
+export glMultiTexCoord3sARB
+@get_c_fun "libGL" glMultiTexCoord3svARB glMultiTexCoord3svARB(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord3svARB
+@get_c_fun "libGL" glMultiTexCoord4dARB glMultiTexCoord4dARB(target::GLenum,s::GLdouble,t::GLdouble,r::GLdouble,q::GLdouble)::Void
+export glMultiTexCoord4dARB
+@get_c_fun "libGL" glMultiTexCoord4dvARB glMultiTexCoord4dvARB(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord4dvARB
+@get_c_fun "libGL" glMultiTexCoord4fARB glMultiTexCoord4fARB(target::GLenum,s::GLfloat,t::GLfloat,r::GLfloat,q::GLfloat)::Void
+export glMultiTexCoord4fARB
+@get_c_fun "libGL" glMultiTexCoord4fvARB glMultiTexCoord4fvARB(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord4fvARB
+@get_c_fun "libGL" glMultiTexCoord4iARB glMultiTexCoord4iARB(target::GLenum,s::GLint,t::GLint,r::GLint,q::GLint)::Void
+export glMultiTexCoord4iARB
+@get_c_fun "libGL" glMultiTexCoord4ivARB glMultiTexCoord4ivARB(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord4ivARB
+@get_c_fun "libGL" glMultiTexCoord4sARB glMultiTexCoord4sARB(target::GLenum,s::GLshort,t::GLshort,r::GLshort,q::GLshort)::Void
+export glMultiTexCoord4sARB
+@get_c_fun "libGL" glMultiTexCoord4svARB glMultiTexCoord4svARB(target::GLenum,v::Ptr)::Void
+export glMultiTexCoord4svARB
 typealias ptrdiff_t Int64
 export ptrdiff_t
 typealias size_t Int64
@@ -1047,20 +1047,20 @@ typealias GLuint64 uint64_t
 export GLuint64
 typealias GLvdpauSurfaceNV GLintptr
 export GLvdpauSurfaceNV
-@get_c_fun "libGL" glcreatedebugobjectmesa glCreateDebugObjectMESA()::GLhandleARB
-export glcreatedebugobjectmesa
-@get_c_fun "libGL" glcleardebuglogmesa glClearDebugLogMESA(obj::GLhandleARB,logtype::GLenum,shadertype::GLenum)::Void
-export glcleardebuglogmesa
-@get_c_fun "libGL" glgetdebuglogmesa glGetDebugLogMESA(obj::GLhandleARB,logtype::GLenum,shadertype::GLenum,maxlength::GLsizei,length::Ptr,debuglog::Ptr)::Void
-export glgetdebuglogmesa
-@get_c_fun "libGL" glgetdebugloglengthmesa glGetDebugLogLengthMESA(obj::GLhandleARB,logtype::GLenum,shadertype::GLenum)::GLsizei
-export glgetdebugloglengthmesa
+@get_c_fun "libGL" glCreateDebugObjectMESA glCreateDebugObjectMESA()::GLhandleARB
+export glCreateDebugObjectMESA
+@get_c_fun "libGL" glClearDebugLogMESA glClearDebugLogMESA(obj::GLhandleARB,logtype::GLenum,shadertype::GLenum)::Void
+export glClearDebugLogMESA
+@get_c_fun "libGL" glGetDebugLogMESA glGetDebugLogMESA(obj::GLhandleARB,logtype::GLenum,shadertype::GLenum,maxlength::GLsizei,length::Ptr,debuglog::Ptr)::Void
+export glGetDebugLogMESA
+@get_c_fun "libGL" glGetDebugLogLengthMESA glGetDebugLogLengthMESA(obj::GLhandleARB,logtype::GLenum,shadertype::GLenum)::GLsizei
+export glGetDebugLogLengthMESA
 #@get_c_fun "libGL" glprogramcallbackmesa glProgramCallbackMESA(target::GLenum,callback::GLprogramcallbackMESA,data::Ptr)::Void
 #export glprogramcallbackmesa
-@get_c_fun "libGL" glgetprogramregisterfvmesa glGetProgramRegisterfvMESA(target::GLenum,len::GLsizei,name::Ptr,v::Ptr)::Void
-export glgetprogramregisterfvmesa
-@get_c_fun "libGL" glblendequationseparateati glBlendEquationSeparateATI(modergb::GLenum,modea::GLenum)::Void
-export glblendequationseparateati
+@get_c_fun "libGL" glGetProgramRegisterfvMESA glGetProgramRegisterfvMESA(target::GLenum,len::GLsizei,name::Ptr,v::Ptr)::Void
+export glGetProgramRegisterfvMESA
+@get_c_fun "libGL" glBlendEquationSeparateATI glBlendEquationSeparateATI(modergb::GLenum,modea::GLenum)::Void
+export glBlendEquationSeparateATI
 typealias GLeglImageOES Ptr
 export GLeglImageOES
 const GL_VERSION_1_1 = 1

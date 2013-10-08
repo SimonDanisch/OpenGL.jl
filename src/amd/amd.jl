@@ -137,65 +137,65 @@ const TESSELLATION_MODE_AMD = 0x9004
 export TESSELLATION_MODE_AMD
 const UNSIGNED_INT_SAMPLER_BUFFER_AMD = 0x9003
 export UNSIGNED_INT_SAMPLER_BUFFER_AMD
-@get_c_fun "libGL" gldebugmessageenableamd glDebugMessageEnableAMD(category::GLenum, severity::GLenum, count::GLsizei, ids::Ptr{GLuint}, enabled::GLboolean)::Void
-export gldebugmessageenableamd
-@get_c_fun "libGL" gldebugmessageinsertamd glDebugMessageInsertAMD(category::GLenum, severity::GLenum, id::GLuint, length::GLsizei, buf::Ptr{GLchar})::Void
-export gldebugmessageinsertamd
-@get_c_fun "libGL" gldebugmessagecallbackamd glDebugMessageCallbackAMD((*[0]byte)(callback), userParam::Ptr{Void})::Void
-export gldebugmessagecallbackamd
-@get_c_fun "libGL" glgetdebugmessagelogamd glGetDebugMessageLogAMD(count::GLuCint, bufsize::GLsizei, categories::Ptr{GLenum}, severities::Ptr{GLCuint}, ids::Ptr{GLuint}, lengths::Ptr{GLsizei}, message::Ptr{GLchar})::Uint
-export glgetdebugmessagelogamd
-@get_c_fun "libGL" glblendfuncindexedamd glBlendFuncIndexedAMD(buf::GLuint, src::GLenum, dst::GLenum)::Void
-export glblendfuncindexedamd
-@get_c_fun "libGL" glblendfuncseparateindexedamd glBlendFuncSeparateIndexedAMD(buf::GLuint, srcRGB::GLenum, dstRGB::GLenum, srcAlpha::GLenum, dstAlpha::GLenum)::Void
-export glblendfuncseparateindexedamd
-@get_c_fun "libGL" glblendequationindexedamd glBlendEquationIndexedAMD(buf::GLuint, mode::GLenum)::Void
-export glblendequationindexedamd
-@get_c_fun "libGL" glblendequationseparateindexedamd glBlendEquationSeparateIndexedAMD(buf::GLuint, modeRGB::GLenum, modeAlpha::GLenum)::Void
-export glblendequationseparateindexedamd
-@get_c_fun "libGL" glmultidrawarraysindirectamd glMultiDrawArraysIndirectAMD(mode::GLenum, indirect::Ptr{Void}, primcount::GLsizei, stride::GLsizei)::Void
-export glmultidrawarraysindirectamd
-@get_c_fun "libGL" glmultidrawelementsindirectamd glMultiDrawElementsIndirectAMD(mode::GLenum, type_::GLenum, indirect::Ptr{Void}, primcount::GLsizei, stride::GLsizei)::Void
-export glmultidrawelementsindirectamd
-@get_c_fun "libGL" glgennamesamd glGenNamesAMD(identifier::GLenum, num::GLuint, names::Ptr{GLuint})::Void
-export glgennamesamd
-@get_c_fun "libGL" gldeletenamesamd glDeleteNamesAMD(identifier::GLenum, num::GLuint, names::Ptr{GLuint})::Void
-export gldeletenamesamd
-@get_c_fun "libGL" glisnameamd glIsNameAMD(identifier::GLenum, name::GLuCint)::Bool
-export glisnameamd
-@get_c_fun "libGL" glgetperfmonitorgroupsamd glGetPerfMonitorGroupsAMD(numGroups::Ptr{GLint}, groupsSize::GLsizei, groups::Ptr{GLuint})::Void
-export glgetperfmonitorgroupsamd
-@get_c_fun "libGL" glgetperfmonitorcountersamd glGetPerfMonitorCountersAMD(group::GLuint, numCounters::Ptr{GLint}, maxActiveCounters::Ptr{GLint}, counterSize::GLsizei, counters::Ptr{GLuint})::Void
-export glgetperfmonitorcountersamd
-@get_c_fun "libGL" glgetperfmonitorgroupstringamd glGetPerfMonitorGroupStringAMD(group::GLuint, bufSize::GLsizei, length::Ptr{GLsizei}, groupString::Ptr{GLchar})::Void
-export glgetperfmonitorgroupstringamd
-@get_c_fun "libGL" glgetperfmonitorcounterstringamd glGetPerfMonitorCounterStringAMD(group::GLuint, counter::GLuint, bufSize::GLsizei, length::Ptr{GLsizei}, counterString::Ptr{GLchar})::Void
-export glgetperfmonitorcounterstringamd
-@get_c_fun "libGL" glgetperfmonitorcounterinfoamd glGetPerfMonitorCounterInfoAMD(group::GLuint, counter::GLuint, pname::GLenum, data::Ptr{Void})::Void
-export glgetperfmonitorcounterinfoamd
-@get_c_fun "libGL" glgenperfmonitorsamd glGenPerfMonitorsAMD(n::GLsizei, monitors::Ptr{GLuint})::Void
-export glgenperfmonitorsamd
-@get_c_fun "libGL" gldeleteperfmonitorsamd glDeletePerfMonitorsAMD(n::GLsizei, monitors::Ptr{GLuint})::Void
-export gldeleteperfmonitorsamd
-@get_c_fun "libGL" glselectperfmonitorcountersamd glSelectPerfMonitorCountersAMD(monitor::GLuint, enable::GLboolean, group::GLuint, numCounters::GLint, counterList::Ptr{GLuint})::Void
-export glselectperfmonitorcountersamd
-@get_c_fun "libGL" glbeginperfmonitoramd glBeginPerfMonitorAMD(monitor::GLuint)::Void
-export glbeginperfmonitoramd
-@get_c_fun "libGL" glendperfmonitoramd glEndPerfMonitorAMD(monitor::GLuint)::Void
-export glendperfmonitoramd
-@get_c_fun "libGL" glgetperfmonitorcounterdataamd glGetPerfMonitorCounterDataAMD(monitor::GLuint, pname::GLenum, dataSize::GLsizei, data::Ptr{GLuint}, bytesWritten::Ptr{GLint})::Void
-export glgetperfmonitorcounterdataamd
-@get_c_fun "libGL" glsetmultisamplefvamd glSetMultisamplefvAMD(pname::GLenum, index::GLuint, val::Ptr{GLfloat})::Void
-export glsetmultisamplefvamd
-@get_c_fun "libGL" gltexstoragesparseamd glTexStorageSparseAMD(target::GLenum, internalFormat::GLenum, width::GLsizei, height::GLsizei, depth::GLsizei, layers::GLsizei, flags::GLbitfield)::Void
-export gltexstoragesparseamd
-@get_c_fun "libGL" gltexturestoragesparseamd glTextureStorageSparseAMD(texture::GLuint, target::GLenum, internalFormat::GLenum, width::GLsizei, height::GLsizei, depth::GLsizei, layers::GLsizei, flags::GLbitfield)::Void
-export gltexturestoragesparseamd
-@get_c_fun "libGL" glstencilopvalueamd glStencilOpValueAMD(face::GLenum, value::GLuint)::Void
-export glstencilopvalueamd
-@get_c_fun "libGL" gltessellationfactoramd glTessellationFactorAMD(factor::GLfloat)::Void
-export gltessellationfactoramd
-@get_c_fun "libGL" gltessellationmodeamd glTessellationModeAMD(mode::GLenum)::Void
-export gltessellationmodeamd
+@get_c_fun "libGL" glDebugMessageEnableAMD glDebugMessageEnableAMD(category::GLenum, severity::GLenum, count::GLsizei, ids::Ptr{GLuint}, enabled::GLboolean)::Void
+export glDebugMessageEnableAMD
+@get_c_fun "libGL" glDebugMessageInsertAMD glDebugMessageInsertAMD(category::GLenum, severity::GLenum, id::GLuint, length::GLsizei, buf::Ptr{GLchar})::Void
+export glDebugMessageInsertAMD
+@get_c_fun "libGL" glDebugMessageCallbackAMD glDebugMessageCallbackAMD((*[0]byte)(callback), userParam::Ptr{Void})::Void
+export glDebugMessageCallbackAMD
+@get_c_fun "libGL" glGetDebugMessageLogAMD glGetDebugMessageLogAMD(count::GLuCint, bufsize::GLsizei, categories::Ptr{GLenum}, severities::Ptr{GLCuint}, ids::Ptr{GLuint}, lengths::Ptr{GLsizei}, message::Ptr{GLchar})::Uint
+export glGetDebugMessageLogAMD
+@get_c_fun "libGL" glBlendFuncIndexedAMD glBlendFuncIndexedAMD(buf::GLuint, src::GLenum, dst::GLenum)::Void
+export glBlendFuncIndexedAMD
+@get_c_fun "libGL" glBlendFuncSeparateIndexedAMD glBlendFuncSeparateIndexedAMD(buf::GLuint, srcRGB::GLenum, dstRGB::GLenum, srcAlpha::GLenum, dstAlpha::GLenum)::Void
+export glBlendFuncSeparateIndexedAMD
+@get_c_fun "libGL" glBlendEquationIndexedAMD glBlendEquationIndexedAMD(buf::GLuint, mode::GLenum)::Void
+export glBlendEquationIndexedAMD
+@get_c_fun "libGL" glBlendEquationSeparateIndexedAMD glBlendEquationSeparateIndexedAMD(buf::GLuint, modeRGB::GLenum, modeAlpha::GLenum)::Void
+export glBlendEquationSeparateIndexedAMD
+@get_c_fun "libGL" glMultiDrawArraysIndirectAMD glMultiDrawArraysIndirectAMD(mode::GLenum, indirect::Ptr{Void}, primcount::GLsizei, stride::GLsizei)::Void
+export glMultiDrawArraysIndirectAMD
+@get_c_fun "libGL" glMultiDrawElementsIndirectAMD glMultiDrawElementsIndirectAMD(mode::GLenum, type_::GLenum, indirect::Ptr{Void}, primcount::GLsizei, stride::GLsizei)::Void
+export glMultiDrawElementsIndirectAMD
+@get_c_fun "libGL" glGenNamesAMD glGenNamesAMD(identifier::GLenum, num::GLuint, names::Ptr{GLuint})::Void
+export glGenNamesAMD
+@get_c_fun "libGL" glDeleteNamesAMD glDeleteNamesAMD(identifier::GLenum, num::GLuint, names::Ptr{GLuint})::Void
+export glDeleteNamesAMD
+@get_c_fun "libGL" glIsNameAMD glIsNameAMD(identifier::GLenum, name::GLuCint)::Bool
+export glIsNameAMD
+@get_c_fun "libGL" glGetPerfMonitorGroupsAMD glGetPerfMonitorGroupsAMD(numGroups::Ptr{GLint}, groupsSize::GLsizei, groups::Ptr{GLuint})::Void
+export glGetPerfMonitorGroupsAMD
+@get_c_fun "libGL" glGetPerfMonitorCountersAMD glGetPerfMonitorCountersAMD(group::GLuint, numCounters::Ptr{GLint}, maxActiveCounters::Ptr{GLint}, counterSize::GLsizei, counters::Ptr{GLuint})::Void
+export glGetPerfMonitorCountersAMD
+@get_c_fun "libGL" glGetPerfMonitorGroupStringAMD glGetPerfMonitorGroupStringAMD(group::GLuint, bufSize::GLsizei, length::Ptr{GLsizei}, groupString::Ptr{GLchar})::Void
+export glGetPerfMonitorGroupStringAMD
+@get_c_fun "libGL" glGetPerfMonitorCounterStringAMD glGetPerfMonitorCounterStringAMD(group::GLuint, counter::GLuint, bufSize::GLsizei, length::Ptr{GLsizei}, counterString::Ptr{GLchar})::Void
+export glGetPerfMonitorCounterStringAMD
+@get_c_fun "libGL" glGetPerfMonitorCounterInfoAMD glGetPerfMonitorCounterInfoAMD(group::GLuint, counter::GLuint, pname::GLenum, data::Ptr{Void})::Void
+export glGetPerfMonitorCounterInfoAMD
+@get_c_fun "libGL" glGenPerfMonitorsAMD glGenPerfMonitorsAMD(n::GLsizei, monitors::Ptr{GLuint})::Void
+export glGenPerfMonitorsAMD
+@get_c_fun "libGL" glDeletePerfMonitorsAMD glDeletePerfMonitorsAMD(n::GLsizei, monitors::Ptr{GLuint})::Void
+export glDeletePerfMonitorsAMD
+@get_c_fun "libGL" glSelectPerfMonitorCountersAMD glSelectPerfMonitorCountersAMD(monitor::GLuint, enable::GLboolean, group::GLuint, numCounters::GLint, counterList::Ptr{GLuint})::Void
+export glSelectPerfMonitorCountersAMD
+@get_c_fun "libGL" glBeginPerfMonitorAMD glBeginPerfMonitorAMD(monitor::GLuint)::Void
+export glBeginPerfMonitorAMD
+@get_c_fun "libGL" glEndPerfMonitorAMD glEndPerfMonitorAMD(monitor::GLuint)::Void
+export glEndPerfMonitorAMD
+@get_c_fun "libGL" glGetPerfMonitorCounterDataAMD glGetPerfMonitorCounterDataAMD(monitor::GLuint, pname::GLenum, dataSize::GLsizei, data::Ptr{GLuint}, bytesWritten::Ptr{GLint})::Void
+export glGetPerfMonitorCounterDataAMD
+@get_c_fun "libGL" glSetMultisamplefvAMD glSetMultisamplefvAMD(pname::GLenum, index::GLuint, val::Ptr{GLfloat})::Void
+export glSetMultisamplefvAMD
+@get_c_fun "libGL" glTexStorageSparseAMD glTexStorageSparseAMD(target::GLenum, internalFormat::GLenum, width::GLsizei, height::GLsizei, depth::GLsizei, layers::GLsizei, flags::GLbitfield)::Void
+export glTexStorageSparseAMD
+@get_c_fun "libGL" glTextureStorageSparseAMD glTextureStorageSparseAMD(texture::GLuint, target::GLenum, internalFormat::GLenum, width::GLsizei, height::GLsizei, depth::GLsizei, layers::GLsizei, flags::GLbitfield)::Void
+export glTextureStorageSparseAMD
+@get_c_fun "libGL" glStencilOpValueAMD glStencilOpValueAMD(face::GLenum, value::GLuint)::Void
+export glStencilOpValueAMD
+@get_c_fun "libGL" glTessellationFactorAMD glTessellationFactorAMD(factor::GLfloat)::Void
+export glTessellationFactorAMD
+@get_c_fun "libGL" glTessellationModeAMD glTessellationModeAMD(mode::GLenum)::Void
+export glTessellationModeAMD
 
 end #module AMD

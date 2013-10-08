@@ -1,22 +1,22 @@
 module OpenGL
 
-import OpenGLStd.glvertex2i, OpenGLStd.glvertex3i, OpenGLStd.glvertex2d, OpenGLStd.glvertex3d, OpenGLStd.glvertex4d,
-       OpenGLStd.gltexcoord2i, OpenGLStd.gltexcoord3i, OpenGLStd.gltexcoord4i, OpenGLStd.gltexcoord2d, OpenGLStd.gltexcoord3d,
-       OpenGLStd.gltexcoord4d, OpenGLStd.glnormal3d, OpenGLStd.glcolor3f, OpenGLStd.glcolor4f, OpenGLStd.glcolor3b, OpenGLStd.glcolor4b,
-       OpenGLStd.glscaled, OpenGLStd.gltranslated, OpenGLStd.glrotated, OpenGLStd.glenable, OpenGLStd.gldisable, OpenGLStd.glbegin,
-       OpenGLStd.glend, OpenGLStd.glpushmatrix, OpenGLStd.glloadidentity
+import OpenGLStd.glVertex2i, OpenGLStd.glVertex3i, OpenGLStd.glVertex2d, OpenGLStd.glVertex3d, OpenGLStd.glVertex4d,
+       OpenGLStd.glTexCoord2i, OpenGLStd.glTexCoord3i, OpenGLStd.glTexCoord4i, OpenGLStd.glTexCoord2d, OpenGLStd.glTexCoord3d,
+       OpenGLStd.glTexCoord4d, OpenGLStd.glNormal3d, OpenGLStd.glColor3f, OpenGLStd.glColor4f, OpenGLStd.glColor3b, OpenGLStd.glColor4b,
+       OpenGLStd.glScaled, OpenGLStd.glTranslated, OpenGLStd.glRotated, OpenGLStd.glEnable, OpenGLStd.glDisable, OpenGLStd.glBegin,
+       OpenGLStd.glEnd, OpenGLStd.glPushMatrix, OpenGLStd.glLoadIdentity
 
 import Images.imread
 
 #Handy stuff to make use of Julia features.
-export glvertex, glcolor,glcolorb, gltexcoord,glnormal,
-       glscale, gltranslate, glrotate,glrotate_r,
-       glprimitive,glpushed,
-       unit_frame, unit_frame_from, unit_frame_to,
-       rect_vertices, rect_vertices_around, glimread #glimg
+export glVertex, glColor, glColorb, glTexCoord, glNormal,
+       glScale, glTranslate, glRotate, glRotate_r,
+       glPrimitive, glPushed,
+       unitFrame, unitFrameFrom, unitFrameTo,
+       rectVertices, rectVerticesAround, glimread #glimg
 
-#TODO upgrade so glbegin/glpushmatrix can be used directly.
-#glenable (covered by autoFFI)
+#TODO upgrade so glBegin/glPushMatrix can be used directly.
+#glEnable (covered by autoFFI)
 
 #Macro to conveniently also support tupled arguments.
 #(TODO probably move elsewhere)
@@ -53,130 +53,130 @@ end
 
 #Overloading stuff
 #Vertices
-glvertex(i::Integer,j::Integer) = glvertex2i(i,j)
-glvertex(i::Integer,j::Integer,k::Integer) = glvertex3i(i,j,k)
-glvertex(i::Integer,j::Integer,k::Integer,l::Integer) = glvertex3i(i,j,k,l)
+glVertex(i::Integer,j::Integer) = glVertex2i(i,j)
+glVertex(i::Integer,j::Integer,k::Integer) = glVertex3i(i,j,k)
+glVertex(i::Integer,j::Integer,k::Integer,l::Integer) = glVertex3i(i,j,k,l)
 
-glvertex(x::Number,y::Number) = glvertex2d(x,y)
-glvertex(x::Number,y::Number,z::Number) = glvertex3d(x,y,z)
-glvertex(x::Number,y::Number,z::Number,w::Number) = glvertex4d(x,y,z,w)
+glVertex(x::Number,y::Number) = glVertex2d(x,y)
+glVertex(x::Number,y::Number,z::Number) = glVertex3d(x,y,z)
+glVertex(x::Number,y::Number,z::Number,w::Number) = glVertex4d(x,y,z,w)
 
-@also_tuple glvertex 2:4
+@also_tuple glVertex 2:4
 
-function glvertex{T}(v::Array{T,1})
+function glVertex{T}(v::Array{T,1})
     if length(v)==3
-        return glvertex(v[1],v[2],v[3])
+        return glVertex(v[1],v[2],v[3])
     end
     if length(v)==2
-        return glvertex(v[1],v[2])
+        return glVertex(v[1],v[2])
     end
     if length(v)==4
-        return glvertex(v[1],v[2],v[3],v[4])
+        return glVertex(v[1],v[2],v[3],v[4])
     end
 end
 
 #Texture coordinates
-gltexcoord(i::Integer,j::Integer) = gltexcoord2i(i,j)
-gltexcoord(i::Integer,j::Integer,k::Integer) = gltexcoord3i(i,j,k)
-gltexcoord(i::Integer,j::Integer,k::Integer,l::Integer) = gltexcoord4i(i,j,k,l)
+glTexCoord(i::Integer,j::Integer) = glTexCoord2i(i,j)
+glTexCoord(i::Integer,j::Integer,k::Integer) = glTexCoord3i(i,j,k)
+glTexCoord(i::Integer,j::Integer,k::Integer,l::Integer) = glTexCoord4i(i,j,k,l)
 
-gltexcoord(x::Number,y::Number) = gltexcoord2d(x,y)
-gltexcoord(x::Number,y::Number,z::Number) = gltexcoord3d(x,y,z)
-gltexcoord(x::Number,y::Number,z::Number,w::Number) = gltexcoord4d(x,y,z,w)
-@also_tuple gltexcoord 2:4
+glTexCoord(x::Number,y::Number) = glTexCoord2d(x,y)
+glTexCoord(x::Number,y::Number,z::Number) = glTexCoord3d(x,y,z)
+glTexCoord(x::Number,y::Number,z::Number,w::Number) = glTexCoord4d(x,y,z,w)
+@also_tuple glTexCoord 2:4
 
-glnormal(x::Number,y::Number,z::Number) = glnormal3d(x,y,z)
-#glnormal(i::Integer,j::Integer,k::Integer) = glnormal3b(i,j,k)
-@also_tuple glnormal 2:4
+glNormal(x::Number,y::Number,z::Number) = glNormal3d(x,y,z)
+#glNormal(i::Integer,j::Integer,k::Integer) = glNormal3b(i,j,k)
+@also_tuple glNormal 2:4
 
-glcolor(r::Number,g::Number,b::Number) = glcolor3f(r,g,b)
-glcolor(r::Number,g::Number,b::Number,a::Number) = glcolor4f(r,g,b,a)
-@also_tuple glcolor 3:4
+glColor(r::Number,g::Number,b::Number) = glColor3f(r,g,b)
+glColor(r::Number,g::Number,b::Number,a::Number) = glColor4f(r,g,b,a)
+@also_tuple glColor 3:4
 
-function glcolor{T}(v::Array{T,1})
+function glColor{T}(v::Array{T,1})
     if length(v)==3
-        return glcolor(v[1],v[2],v[3])
+        return glColor(v[1],v[2],v[3])
     end
     if length(v)==2
-        return glcolor(v[1],v[2])
+        return glColor(v[1],v[2])
     end
     if length(v)==4
-        return glcolor(v[1],v[2],v[3],v[4])
+        return glColor(v[1],v[2],v[3],v[4])
     end
 end
 
-function glcolor{T}(v::Array{T,2})
+function glColor{T}(v::Array{T,2})
     h, w = size(v)
     if h == 1
-        return glcolor(vec(v))
+        return glColor(vec(v))
     else
         error("Array must have 1 row (i.e., it must be like a vector).")
     end
 end
 
-glcolorb(r::Integer,g::Integer,b::Integer) = glcolor3b(r,g,b)
-glcolorb(r::Integer,g::Integer,b::Integer,a::Integer) = glcolor4b(r,g,b,a)
-@also_tuple glcolorb 3:4
+glColorb(r::Integer,g::Integer,b::Integer) = glColor3b(r,g,b)
+glColorb(r::Integer,g::Integer,b::Integer,a::Integer) = glColor4b(r,g,b,a)
+@also_tuple glColorb 3:4
 
-function glcolorb(v::Array{Integer,1})
+function glColorb(v::Array{Integer,1})
     if length(v)==3
-        return glcolorb(v[1],v[2],v[3])
+        return glColorb(v[1],v[2],v[3])
     end
     if length(v)==2
-        return glcolorb(v[1],v[2])
+        return glColorb(v[1],v[2])
     end
     if length(v)==4
-        return glcolorb(v[1],v[2],v[3],v[4])
+        return glColorb(v[1],v[2],v[3],v[4])
     end
 end
 
-function glcolorb{T}(v::Array{T,2})
+function glColorb{T}(v::Array{T,2})
     h, w = size(v)
     if h == 1
-        return glcolorb(vec(v))
+        return glColorb(vec(v))
     else
         error("Array must have 1 row (i.e., it must be like a vector).")
     end
 end
 
-glscale(x::Number,y::Number,z::Number) = glscaled(x,y,z)
-glscale(x::Number,y::Number) = glscaled(x,y,1)
-glscale(s::Number) = glscaled(s,s,s)
-@also_tuple glscale 1:3
+glScale(x::Number,y::Number,z::Number) = glScaled(x,y,z)
+glScale(x::Number,y::Number) = glScaled(x,y,1)
+glScale(s::Number) = glScaled(s,s,s)
+@also_tuple glScale 1:3
 
-gltranslate(x::Number,y::Number,z::Number) = gltranslated(x,y,z)
-gltranslate(x::Number,y::Number) = gltranslated(x,y,0)
-@also_tuple gltranslate 2:3
+glTranslate(x::Number,y::Number,z::Number) = glTranslated(x,y,z)
+glTranslate(x::Number,y::Number) = glTranslated(x,y,0)
+@also_tuple glTranslate 2:3
 
-glrotate(angle::Number, nx::Number,ny::Number,nz::Number) = glrotated(angle, nx,ny,nz)
-glrotate(angle::Number) = glrotated(angle,0,0,1)
-glrotate(angle::Number, n::(Number,Number,Number)) = glrotate(angle, n[1],n[2],n[3])
+glRotate(angle::Number, nx::Number,ny::Number,nz::Number) = glRotated(angle, nx,ny,nz)
+glRotate(angle::Number) = glRotated(angle,0,0,1)
+glRotate(angle::Number, n::(Number,Number,Number)) = glRotate(angle, n[1],n[2],n[3])
 
 #Damn degrees.
-glrotate_r(angle::Number) = glrotate(angle*180/pi)
-glrotate_r(angle::Number, nx::Number,ny::Number,nz::Number) = glrotate(angle*180/pi, nx,ny,nz)
-glrotate_r(angle::Number, n::(Number,Number,Number)) = glrotate(angle*180/pi, n)
+glRotate_r(angle::Number) = glRotate(angle*180/pi)
+glRotate_r(angle::Number, nx::Number,ny::Number,nz::Number) = glRotate(angle*180/pi, nx,ny,nz)
+glRotate_r(angle::Number, n::(Number,Number,Number)) = glRotate(angle*180/pi, n)
 
 #Enabling lists of stuff.
 type _GlEnable
     things::Vector
 end
 
-function glenable(things::Vector)
+function glEnable(things::Vector)
     for thing in things
-        glenable(thing)
+        glEnable(thing)
     end
     return _GlEnable(things)
 end
-glenable(things...) = glenable(things)
+glEnable(things...) = glEnable(things)
 
 #Disabling lists of stuff
-function gldisable(things::Vector)
+function glDisable(things::Vector)
     for thing in things
-        gldisable(thing)
+        glDisable(thing)
     end
 end
-gldisable(things...) = gldisable(things)
+glDisable(things...) = glDisable(things)
 
 #The whole `begin` ... `end` structures are rather bad for the savings from the
 # macros below..
@@ -184,66 +184,66 @@ gldisable(things...) = gldisable(things)
 #NOTE: if you `return` or something in the middle it won't end of course!
 # (no `cl:unwind-protect`)
 
-#glbegin for use _with_ @with
-#TODO will want to upgrade that so glbegin can be used directly.
+#glBegin for use _with_ @with
+#TODO will want to upgrade that so glBegin can be used directly.
 type _GlPrimitive
 end
 
-function glprimitive(primitive)
-    glbegin(primitive)
+function glPrimitive(primitive)
+    glBegin(primitive)
     return _GlPrimitive()
 end
 
 type _GlPushed
 end
 
-#glpushmatrix for with @with #TODO will want upgrade.
-function glpushed()
-    glpushmatrix()
+#glPushMatrix for with @with #TODO will want upgrade.
+function glPushed()
+    glPushMatrix()
     return _GlPushed()
 end
 
 #More functions
-function unit_frame()
-    glloadidentity()
-    gltranslate(-1,-1)
-    glscale(2)
+function unitFrame()
+    glLoadIdentity()
+    glTranslate(-1,-1)
+    glScale(2)
 end
 
 #Map the given range to the unit range.
-function unit_frame_from(fx::Number,fy::Number,tx::Number,ty::Number)
+function unitFrameFrom(fx::Number,fy::Number,tx::Number,ty::Number)
     assert( fx!=tx && fy!=ty, "There might be a division by zero here.." )
-    glscale(1/(tx-fx),1/(ty-fy))
-    gltranslate(-fx,-fy)
+    glScale(1/(tx-fx),1/(ty-fy))
+    glTranslate(-fx,-fy)
 end
 
 typealias Vector2 Union((Number,Number),Vector) #(just for here)
 
-unit_frame_from(fr::Vector2, to::Vector2) = unit_frame_from(fr[1],fr[2], to[1],to[2])
+unitFrameFrom(fr::Vector2, to::Vector2) = unitFrameFrom(fr[1],fr[2], to[1],to[2])
 
-@also_tuple unit_frame_from 2,4
+@also_tuple unitFrameFrom 2,4
 
 #Map the unit range to the given range.
-function unit_frame_to(fx::Number,fy::Number,tx::Number,ty::Number)
-    gltranslate(fx,fy)
-    glscale(tx-fx, ty-fy)
+function unitFrameTo(fx::Number,fy::Number,tx::Number,ty::Number)
+    glTranslate(fx,fy)
+    glScale(tx-fx, ty-fy)
 end
-unit_frame_to(fr::Vector2, to::Vector2) = unit_frame_to(fr[1],fr[2], to[1],to[2])
+unitFrameTo(fr::Vector2, to::Vector2) = unitFrameTo(fr[1],fr[2], to[1],to[2])
 
-@also_tuple unit_frame_from 2,4
+@also_tuple unitFrameFrom 2,4
 
 #Rectangle vertices (in QUADS, LINE_LOOP-able style)
-function rect_vertices(fx::Number,fy::Number,tx::Number,ty::Number)
-    glvertex(fx,fy)
-    glvertex(fx,ty)
-    glvertex(tx,ty)
-    glvertex(tx,fy)
+function rectVertices(fx::Number,fy::Number,tx::Number,ty::Number)
+    glVertex(fx,fy)
+    glVertex(fx,ty)
+    glVertex(tx,ty)
+    glVertex(tx,fy)
 end
-rect_vertices(fr::Vector2, to::Vector2) = rect_vertices(fr[1],fr[2], to[1],to[2])
+rectVertices(fr::Vector2, to::Vector2) = rectVertices(fr[1],fr[2], to[1],to[2])
 
-@also_tuple rect_vertices 2,4
+@also_tuple rectVertices 2,4
 
-vertices_rect_around(x::Number,y::Number, r::Number) = rect_vertices(x-r,y-r, x+r, y+r)
+vertices_rect_around(x::Number,y::Number, r::Number) = rectVertices(x-r,y-r, x+r, y+r)
 
 vertices_rect_around(pos::Vector2, r::Number) = vertices_rect_around(pos[1],pos[2],r)
 
