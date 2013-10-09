@@ -8,10 +8,10 @@ import OpenGLStd.glVertex2i, OpenGLStd.glVertex3i, OpenGLStd.glVertex2d, OpenGLS
 
 #Handy stuff to make use of Julia features.
 export glVertex, glColor, glColorb, glTexCoord, glNormal,
-       glScale, glTranslate, glRotate, glRotate_r,
+       glScale, glTranslate, glRotate, glRotateRad,
        glPrimitive, glPushed,
        unitFrame, unitFrameFrom, unitFrameTo,
-       rectVertices, rectVerticesAround, glimread #glimg
+       quad, centeredQuad, glimread #glimg
 
 #TODO upgrade so glBegin/glPushMatrix can be used directly.
 #glEnable (covered by autoFFI)
@@ -151,9 +151,9 @@ glRotate(angle::Number) = glRotated(angle,0,0,1)
 glRotate(angle::Number, n::(Number,Number,Number)) = glRotate(angle, n[1],n[2],n[3])
 
 #Damn degrees.
-glRotate_r(angle::Number) = glRotate(angle*180/pi)
-glRotate_r(angle::Number, nx::Number,ny::Number,nz::Number) = glRotate(angle*180/pi, nx,ny,nz)
-glRotate_r(angle::Number, n::(Number,Number,Number)) = glRotate(angle*180/pi, n)
+glRotateRad(angle::Number) = glRotate(angle*180/pi)
+glRotateRad(angle::Number, nx::Number,ny::Number,nz::Number) = glRotate(angle*180/pi, nx,ny,nz)
+glRotateRad(angle::Number, n::(Number,Number,Number)) = glRotate(angle*180/pi, n)
 
 #Enabling lists of stuff.
 type _GlEnable
@@ -231,32 +231,36 @@ unitFrameTo(fr::Vector2, to::Vector2) = unitFrameTo(fr[1],fr[2], to[1],to[2])
 @also_tuple unitFrameFrom 2,4
 
 #Rectangle vertices (in QUADS, LINE_LOOP-able style)
-function rectVertices(fx::Number,fy::Number,tx::Number,ty::Number)
+function quad(fx::Number,fy::Number,tx::Number,ty::Number)
     glVertex(fx,fy)
     glVertex(fx,ty)
     glVertex(tx,ty)
     glVertex(tx,fy)
 end
-rectVertices(fr::Vector2, to::Vector2) = rectVertices(fr[1],fr[2], to[1],to[2])
+quad(fr::Vector2, to::Vector2) = quad(fr[1],fr[2], to[1],to[2])
 
-@also_tuple rectVertices 2,4
+@also_tuple quad 2,4
 
-vertices_rect_around(x::Number,y::Number, r::Number) = rectVertices(x-r,y-r, x+r, y+r)
+centeredQuad(x::Number,y::Number, r::Number) = quad(x-r,y-r, x+r, y+r)
 
-vertices_rect_around(pos::Vector2, r::Number) = vertices_rect_around(pos[1],pos[2],r)
+centeredQuad(pos::Vector2, r::Number) = centeredQuad(pos[1],pos[2],r)
 
-@also_tuple vertices_rect_around 2:3
+@also_tuple centeredQuad 2:3
 
-# OpenGL expects a 1D, upside-down image array in an RGB format for textures (Images.jl's imread returns an Image datatype)
+# Going with a basic OpenGL RGB 1D-interleaved image-texture
 function glimread(filename::String)
-    img3D = imread(filename)
-    w = size(img3D.data,3)
-    h = size(img3D.data,2)
-    img = Array(Uint8,w*h*3)
-    for i=1:3, j=1:w, k=1:h
-        img[w*3*(j-1)+(i-1)*3+k] = img3D.data[i,(h+1)-j,k]
+    img = imread(filename)
+    w = size(img,2)
+    h = size(img,3)
+    img1D = Array(Uint8,w*h*3)
+    for i=1:3
+    	for j=1:w
+    		for k=1:h
+		        img1D[3*w*(j-1)+3*(i-1)+k] = img[i,w-j+1,k]
+		    end
+		end
     end
-    return img, w, h
+    return img1D, w, h
 end
 
 end

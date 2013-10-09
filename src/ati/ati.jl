@@ -1,6 +1,6 @@
 module ATI
 
-import GetC.@get_c_fun
+import GetC.@getCFun
 
 typealias GLenum Cuint
 typealias GLboolean Cuchar
@@ -397,181 +397,181 @@ const VERTEX_STREAM6_ATI = 0x8772
 export VERTEX_STREAM6_ATI
 const VERTEX_STREAM7_ATI = 0x8773
 export VERTEX_STREAM7_ATI
-@get_c_fun "libGL" glDrawBuffersATI glDrawBuffersATI(n::GLsizei, bufs::Ptr{GLenum})::Void
+@getCFun "libGL" glDrawBuffersATI glDrawBuffersATI(n::GLsizei, bufs::Ptr{GLenum})::Void
 export glDrawBuffersATI
-@get_c_fun "libGL" glElementPointerATI glElementPointerATI(type_::GLenum, pointer::Ptr{Void})::Void
+@getCFun "libGL" glElementPointerATI glElementPointerATI(type_::GLenum, pointer::Ptr{Void})::Void
 export glElementPointerATI
-@get_c_fun "libGL" glDrawElementArrayATI glDrawElementArrayATI(mode::GLenum, count::GLsizei)::Void
+@getCFun "libGL" glDrawElementArrayATI glDrawElementArrayATI(mode::GLenum, count::GLsizei)::Void
 export glDrawElementArrayATI
-@get_c_fun "libGL" glDrawRangeElementArrayATI glDrawRangeElementArrayATI(mode::GLenum, start::GLuint, end_::GLuint, count::GLsizei)::Void
+@getCFun "libGL" glDrawRangeElementArrayATI glDrawRangeElementArrayATI(mode::GLenum, start::GLuint, end_::GLuint, count::GLsizei)::Void
 export glDrawRangeElementArrayATI
-@get_c_fun "libGL" glTexBumpParameterivATI glTexBumpParameterivATI(pname::GLenum, param::Ptr{GLint})::Void
+@getCFun "libGL" glTexBumpParameterivATI glTexBumpParameterivATI(pname::GLenum, param::Ptr{GLint})::Void
 export glTexBumpParameterivATI
-@get_c_fun "libGL" glTexBumpParameterfvATI glTexBumpParameterfvATI(pname::GLenum, param::Ptr{GLfloat})::Void
+@getCFun "libGL" glTexBumpParameterfvATI glTexBumpParameterfvATI(pname::GLenum, param::Ptr{GLfloat})::Void
 export glTexBumpParameterfvATI
-@get_c_fun "libGL" glGetTexBumpParameterivATI glGetTexBumpParameterivATI(pname::GLenum, param::Ptr{GLint})::Void
+@getCFun "libGL" glGetTexBumpParameterivATI glGetTexBumpParameterivATI(pname::GLenum, param::Ptr{GLint})::Void
 export glGetTexBumpParameterivATI
-@get_c_fun "libGL" glGetTexBumpParameterfvATI glGetTexBumpParameterfvATI(pname::GLenum, param::Ptr{GLfloat})::Void
+@getCFun "libGL" glGetTexBumpParameterfvATI glGetTexBumpParameterfvATI(pname::GLenum, param::Ptr{GLfloat})::Void
 export glGetTexBumpParameterfvATI
-@get_c_fun "libGL" glGenFragmentShadersATI glGenFragmentShadersATI(range_::GLuCint)::Uint
+@getCFun "libGL" glGenFragmentShadersATI glGenFragmentShadersATI(range_::GLuCint)::Uint
 export glGenFragmentShadersATI
-@get_c_fun "libGL" glBindFragmentShaderATI glBindFragmentShaderATI(id::GLuint)::Void
+@getCFun "libGL" glBindFragmentShaderATI glBindFragmentShaderATI(id::GLuint)::Void
 export glBindFragmentShaderATI
-@get_c_fun "libGL" glDeleteFragmentShaderATI glDeleteFragmentShaderATI(id::GLuint)::Void
+@getCFun "libGL" glDeleteFragmentShaderATI glDeleteFragmentShaderATI(id::GLuint)::Void
 export glDeleteFragmentShaderATI
-@get_c_fun "libGL" glBeginFragmentShaderATI glBeginFragmentShaderATI()::Void
+@getCFun "libGL" glBeginFragmentShaderATI glBeginFragmentShaderATI()::Void
 export glBeginFragmentShaderATI
-@get_c_fun "libGL" glEndFragmentShaderATI glEndFragmentShaderATI()::Void
+@getCFun "libGL" glEndFragmentShaderATI glEndFragmentShaderATI()::Void
 export glEndFragmentShaderATI
-@get_c_fun "libGL" glPassTexCoordATI glPassTexCoordATI(dst::GLuint, coord::GLuint, swizzle::GLenum)::Void
+@getCFun "libGL" glPassTexCoordATI glPassTexCoordATI(dst::GLuint, coord::GLuint, swizzle::GLenum)::Void
 export glPassTexCoordATI
-@get_c_fun "libGL" glSampleMapATI glSampleMapATI(dst::GLuint, interp::GLuint, swizzle::GLenum)::Void
+@getCFun "libGL" glSampleMapATI glSampleMapATI(dst::GLuint, interp::GLuint, swizzle::GLenum)::Void
 export glSampleMapATI
-@get_c_fun "libGL" glColorFragmentOp1ATI glColorFragmentOp1ATI(op::GLenum, dst::GLuint, dstMask::GLuint, dstMod::GLuint, arg1::GLuint, arg1Rep::GLuint, arg1Mod::GLuint)::Void
+@getCFun "libGL" glColorFragmentOp1ATI glColorFragmentOp1ATI(op::GLenum, dst::GLuint, dstMask::GLuint, dstMod::GLuint, arg1::GLuint, arg1Rep::GLuint, arg1Mod::GLuint)::Void
 export glColorFragmentOp1ATI
-@get_c_fun "libGL" glColorFragmentOp2ATI glColorFragmentOp2ATI(op::GLenum, dst::GLuint, dstMask::GLuint, dstMod::GLuint, arg1::GLuint, arg1Rep::GLuint, arg1Mod::GLuint, arg2::GLuint, arg2Rep::GLuint, arg2Mod::GLuint)::Void
+@getCFun "libGL" glColorFragmentOp2ATI glColorFragmentOp2ATI(op::GLenum, dst::GLuint, dstMask::GLuint, dstMod::GLuint, arg1::GLuint, arg1Rep::GLuint, arg1Mod::GLuint, arg2::GLuint, arg2Rep::GLuint, arg2Mod::GLuint)::Void
 export glColorFragmentOp2ATI
-@get_c_fun "libGL" glColorFragmentOp3ATI glColorFragmentOp3ATI(op::GLenum, dst::GLuint, dstMask::GLuint, dstMod::GLuint, arg1::GLuint, arg1Rep::GLuint, arg1Mod::GLuint, arg2::GLuint, arg2Rep::GLuint, arg2Mod::GLuint, arg3::GLuint, arg3Rep::GLuint, arg3Mod::GLuint)::Void
+@getCFun "libGL" glColorFragmentOp3ATI glColorFragmentOp3ATI(op::GLenum, dst::GLuint, dstMask::GLuint, dstMod::GLuint, arg1::GLuint, arg1Rep::GLuint, arg1Mod::GLuint, arg2::GLuint, arg2Rep::GLuint, arg2Mod::GLuint, arg3::GLuint, arg3Rep::GLuint, arg3Mod::GLuint)::Void
 export glColorFragmentOp3ATI
-@get_c_fun "libGL" glAlphaFragmentOp1ATI glAlphaFragmentOp1ATI(op::GLenum, dst::GLuint, dstMod::GLuint, arg1::GLuint, arg1Rep::GLuint, arg1Mod::GLuint)::Void
+@getCFun "libGL" glAlphaFragmentOp1ATI glAlphaFragmentOp1ATI(op::GLenum, dst::GLuint, dstMod::GLuint, arg1::GLuint, arg1Rep::GLuint, arg1Mod::GLuint)::Void
 export glAlphaFragmentOp1ATI
-@get_c_fun "libGL" glAlphaFragmentOp2ATI glAlphaFragmentOp2ATI(op::GLenum, dst::GLuint, dstMod::GLuint, arg1::GLuint, arg1Rep::GLuint, arg1Mod::GLuint, arg2::GLuint, arg2Rep::GLuint, arg2Mod::GLuint)::Void
+@getCFun "libGL" glAlphaFragmentOp2ATI glAlphaFragmentOp2ATI(op::GLenum, dst::GLuint, dstMod::GLuint, arg1::GLuint, arg1Rep::GLuint, arg1Mod::GLuint, arg2::GLuint, arg2Rep::GLuint, arg2Mod::GLuint)::Void
 export glAlphaFragmentOp2ATI
-@get_c_fun "libGL" glAlphaFragmentOp3ATI glAlphaFragmentOp3ATI(op::GLenum, dst::GLuint, dstMod::GLuint, arg1::GLuint, arg1Rep::GLuint, arg1Mod::GLuint, arg2::GLuint, arg2Rep::GLuint, arg2Mod::GLuint, arg3::GLuint, arg3Rep::GLuint, arg3Mod::GLuint)::Void
+@getCFun "libGL" glAlphaFragmentOp3ATI glAlphaFragmentOp3ATI(op::GLenum, dst::GLuint, dstMod::GLuint, arg1::GLuint, arg1Rep::GLuint, arg1Mod::GLuint, arg2::GLuint, arg2Rep::GLuint, arg2Mod::GLuint, arg3::GLuint, arg3Rep::GLuint, arg3Mod::GLuint)::Void
 export glAlphaFragmentOp3ATI
-@get_c_fun "libGL" glSetFragmentShaderConstantATI glSetFragmentShaderConstantATI(dst::GLuint, value::Ptr{GLfloat})::Void
+@getCFun "libGL" glSetFragmentShaderConstantATI glSetFragmentShaderConstantATI(dst::GLuint, value::Ptr{GLfloat})::Void
 export glSetFragmentShaderConstantATI
-@get_c_fun "libGL" glMapObjectBufferATI glMapObjectBufferATI(buffer::GLuCint)::Ptr{Void}
+@getCFun "libGL" glMapObjectBufferATI glMapObjectBufferATI(buffer::GLuCint)::Ptr{Void}
 export glMapObjectBufferATI
-@get_c_fun "libGL" glUnmapObjectBufferATI glUnmapObjectBufferATI(buffer::GLuint)::Void
+@getCFun "libGL" glUnmapObjectBufferATI glUnmapObjectBufferATI(buffer::GLuint)::Void
 export glUnmapObjectBufferATI
-@get_c_fun "libGL" glPNTrianglesiATI glPNTrianglesiATI(pname::GLenum, param::GLint)::Void
+@getCFun "libGL" glPNTrianglesiATI glPNTrianglesiATI(pname::GLenum, param::GLint)::Void
 export glPNTrianglesiATI
-@get_c_fun "libGL" glPNTrianglesfATI glPNTrianglesfATI(pname::GLenum, param::GLfloat)::Void
+@getCFun "libGL" glPNTrianglesfATI glPNTrianglesfATI(pname::GLenum, param::GLfloat)::Void
 export glPNTrianglesfATI
-@get_c_fun "libGL" glStencilOpSeparateATI glStencilOpSeparateATI(face::GLenum, sfail::GLenum, dpfail::GLenum, dppass::GLenum)::Void
+@getCFun "libGL" glStencilOpSeparateATI glStencilOpSeparateATI(face::GLenum, sfail::GLenum, dpfail::GLenum, dppass::GLenum)::Void
 export glStencilOpSeparateATI
-@get_c_fun "libGL" glStencilFuncSeparateATI glStencilFuncSeparateATI(frontfunc::GLenum, backfunc::GLenum, ref::GLint, mask::GLuint)::Void
+@getCFun "libGL" glStencilFuncSeparateATI glStencilFuncSeparateATI(frontfunc::GLenum, backfunc::GLenum, ref::GLint, mask::GLuint)::Void
 export glStencilFuncSeparateATI
-@get_c_fun "libGL" glNewObjectBufferATI glNewObjectBufferATI(size::GLsizei, poCinter::Ptr{Void}, usage::GLenum)::Uint
+@getCFun "libGL" glNewObjectBufferATI glNewObjectBufferATI(size::GLsizei, poCinter::Ptr{Void}, usage::GLenum)::Uint
 export glNewObjectBufferATI
-@get_c_fun "libGL" glIsObjectBufferATI glIsObjectBufferATI(buffer::GLuCint)::Bool
+@getCFun "libGL" glIsObjectBufferATI glIsObjectBufferATI(buffer::GLuCint)::Bool
 export glIsObjectBufferATI
-@get_c_fun "libGL" glUpdateObjectBufferATI glUpdateObjectBufferATI(buffer::GLuint, offset::GLuint, size::GLsizei, pointer::Ptr{Void}, preserve::GLenum)::Void
+@getCFun "libGL" glUpdateObjectBufferATI glUpdateObjectBufferATI(buffer::GLuint, offset::GLuint, size::GLsizei, pointer::Ptr{Void}, preserve::GLenum)::Void
 export glUpdateObjectBufferATI
-@get_c_fun "libGL" glGetObjectBufferfvATI glGetObjectBufferfvATI(buffer::GLuint, pname::GLenum, params::Ptr{GLfloat})::Void
+@getCFun "libGL" glGetObjectBufferfvATI glGetObjectBufferfvATI(buffer::GLuint, pname::GLenum, params::Ptr{GLfloat})::Void
 export glGetObjectBufferfvATI
-@get_c_fun "libGL" glGetObjectBufferivATI glGetObjectBufferivATI(buffer::GLuint, pname::GLenum, params::Ptr{GLint})::Void
+@getCFun "libGL" glGetObjectBufferivATI glGetObjectBufferivATI(buffer::GLuint, pname::GLenum, params::Ptr{GLint})::Void
 export glGetObjectBufferivATI
-@get_c_fun "libGL" glFreeObjectBufferATI glFreeObjectBufferATI(buffer::GLuint)::Void
+@getCFun "libGL" glFreeObjectBufferATI glFreeObjectBufferATI(buffer::GLuint)::Void
 export glFreeObjectBufferATI
-@get_c_fun "libGL" glArrayObjectATI glArrayObjectATI(array::GLenum, size::GLint, type_::GLenum, stride::GLsizei, buffer::GLuint, offset::GLuint)::Void
+@getCFun "libGL" glArrayObjectATI glArrayObjectATI(array::GLenum, size::GLint, type_::GLenum, stride::GLsizei, buffer::GLuint, offset::GLuint)::Void
 export glArrayObjectATI
-@get_c_fun "libGL" glGetArrayObjectfvATI glGetArrayObjectfvATI(array::GLenum, pname::GLenum, params::Ptr{GLfloat})::Void
+@getCFun "libGL" glGetArrayObjectfvATI glGetArrayObjectfvATI(array::GLenum, pname::GLenum, params::Ptr{GLfloat})::Void
 export glGetArrayObjectfvATI
-@get_c_fun "libGL" glGetArrayObjectivATI glGetArrayObjectivATI(array::GLenum, pname::GLenum, params::Ptr{GLint})::Void
+@getCFun "libGL" glGetArrayObjectivATI glGetArrayObjectivATI(array::GLenum, pname::GLenum, params::Ptr{GLint})::Void
 export glGetArrayObjectivATI
-@get_c_fun "libGL" glVariantArrayObjectATI glVariantArrayObjectATI(id::GLuint, type_::GLenum, stride::GLsizei, buffer::GLuint, offset::GLuint)::Void
+@getCFun "libGL" glVariantArrayObjectATI glVariantArrayObjectATI(id::GLuint, type_::GLenum, stride::GLsizei, buffer::GLuint, offset::GLuint)::Void
 export glVariantArrayObjectATI
-@get_c_fun "libGL" glGetVariantArrayObjectfvATI glGetVariantArrayObjectfvATI(id::GLuint, pname::GLenum, params::Ptr{GLfloat})::Void
+@getCFun "libGL" glGetVariantArrayObjectfvATI glGetVariantArrayObjectfvATI(id::GLuint, pname::GLenum, params::Ptr{GLfloat})::Void
 export glGetVariantArrayObjectfvATI
-@get_c_fun "libGL" glGetVariantArrayObjectivATI glGetVariantArrayObjectivATI(id::GLuint, pname::GLenum, params::Ptr{GLint})::Void
+@getCFun "libGL" glGetVariantArrayObjectivATI glGetVariantArrayObjectivATI(id::GLuint, pname::GLenum, params::Ptr{GLint})::Void
 export glGetVariantArrayObjectivATI
-@get_c_fun "libGL" glVertexAttribArrayObjectATI glVertexAttribArrayObjectATI(index::GLuint, size::GLint, type_::GLenum, normalized::GLboolean, stride::GLsizei, buffer::GLuint, offset::GLuint)::Void
+@getCFun "libGL" glVertexAttribArrayObjectATI glVertexAttribArrayObjectATI(index::GLuint, size::GLint, type_::GLenum, normalized::GLboolean, stride::GLsizei, buffer::GLuint, offset::GLuint)::Void
 export glVertexAttribArrayObjectATI
-@get_c_fun "libGL" glGetVertexAttribArrayObjectfvATI glGetVertexAttribArrayObjectfvATI(index::GLuint, pname::GLenum, params::Ptr{GLfloat})::Void
+@getCFun "libGL" glGetVertexAttribArrayObjectfvATI glGetVertexAttribArrayObjectfvATI(index::GLuint, pname::GLenum, params::Ptr{GLfloat})::Void
 export glGetVertexAttribArrayObjectfvATI
-@get_c_fun "libGL" glGetVertexAttribArrayObjectivATI glGetVertexAttribArrayObjectivATI(index::GLuint, pname::GLenum, params::Ptr{GLint})::Void
+@getCFun "libGL" glGetVertexAttribArrayObjectivATI glGetVertexAttribArrayObjectivATI(index::GLuint, pname::GLenum, params::Ptr{GLint})::Void
 export glGetVertexAttribArrayObjectivATI
-@get_c_fun "libGL" glVertexStream1sATI glVertexStream1sATI(stream::GLenum, x::GLshort)::Void
+@getCFun "libGL" glVertexStream1sATI glVertexStream1sATI(stream::GLenum, x::GLshort)::Void
 export glVertexStream1sATI
-@get_c_fun "libGL" glVertexStream1svATI glVertexStream1svATI(stream::GLenum, coords::Ptr{GLshort})::Void
+@getCFun "libGL" glVertexStream1svATI glVertexStream1svATI(stream::GLenum, coords::Ptr{GLshort})::Void
 export glVertexStream1svATI
-@get_c_fun "libGL" glVertexStream1iATI glVertexStream1iATI(stream::GLenum, x::GLint)::Void
+@getCFun "libGL" glVertexStream1iATI glVertexStream1iATI(stream::GLenum, x::GLint)::Void
 export glVertexStream1iATI
-@get_c_fun "libGL" glVertexStream1ivATI glVertexStream1ivATI(stream::GLenum, coords::Ptr{GLint})::Void
+@getCFun "libGL" glVertexStream1ivATI glVertexStream1ivATI(stream::GLenum, coords::Ptr{GLint})::Void
 export glVertexStream1ivATI
-@get_c_fun "libGL" glVertexStream1fATI glVertexStream1fATI(stream::GLenum, x::GLfloat)::Void
+@getCFun "libGL" glVertexStream1fATI glVertexStream1fATI(stream::GLenum, x::GLfloat)::Void
 export glVertexStream1fATI
-@get_c_fun "libGL" glVertexStream1fvATI glVertexStream1fvATI(stream::GLenum, coords::Ptr{GLfloat})::Void
+@getCFun "libGL" glVertexStream1fvATI glVertexStream1fvATI(stream::GLenum, coords::Ptr{GLfloat})::Void
 export glVertexStream1fvATI
-@get_c_fun "libGL" glVertexStream1dATI glVertexStream1dATI(stream::GLenum, x::GLdouble)::Void
+@getCFun "libGL" glVertexStream1dATI glVertexStream1dATI(stream::GLenum, x::GLdouble)::Void
 export glVertexStream1dATI
-@get_c_fun "libGL" glVertexStream1dvATI glVertexStream1dvATI(stream::GLenum, coords::Ptr{GLdouble})::Void
+@getCFun "libGL" glVertexStream1dvATI glVertexStream1dvATI(stream::GLenum, coords::Ptr{GLdouble})::Void
 export glVertexStream1dvATI
-@get_c_fun "libGL" glVertexStream2sATI glVertexStream2sATI(stream::GLenum, x::GLshort, y::GLshort)::Void
+@getCFun "libGL" glVertexStream2sATI glVertexStream2sATI(stream::GLenum, x::GLshort, y::GLshort)::Void
 export glVertexStream2sATI
-@get_c_fun "libGL" glVertexStream2svATI glVertexStream2svATI(stream::GLenum, coords::Ptr{GLshort})::Void
+@getCFun "libGL" glVertexStream2svATI glVertexStream2svATI(stream::GLenum, coords::Ptr{GLshort})::Void
 export glVertexStream2svATI
-@get_c_fun "libGL" glVertexStream2iATI glVertexStream2iATI(stream::GLenum, x::GLint, y::GLint)::Void
+@getCFun "libGL" glVertexStream2iATI glVertexStream2iATI(stream::GLenum, x::GLint, y::GLint)::Void
 export glVertexStream2iATI
-@get_c_fun "libGL" glVertexStream2ivATI glVertexStream2ivATI(stream::GLenum, coords::Ptr{GLint})::Void
+@getCFun "libGL" glVertexStream2ivATI glVertexStream2ivATI(stream::GLenum, coords::Ptr{GLint})::Void
 export glVertexStream2ivATI
-@get_c_fun "libGL" glVertexStream2fATI glVertexStream2fATI(stream::GLenum, x::GLfloat, y::GLfloat)::Void
+@getCFun "libGL" glVertexStream2fATI glVertexStream2fATI(stream::GLenum, x::GLfloat, y::GLfloat)::Void
 export glVertexStream2fATI
-@get_c_fun "libGL" glVertexStream2fvATI glVertexStream2fvATI(stream::GLenum, coords::Ptr{GLfloat})::Void
+@getCFun "libGL" glVertexStream2fvATI glVertexStream2fvATI(stream::GLenum, coords::Ptr{GLfloat})::Void
 export glVertexStream2fvATI
-@get_c_fun "libGL" glVertexStream2dATI glVertexStream2dATI(stream::GLenum, x::GLdouble, y::GLdouble)::Void
+@getCFun "libGL" glVertexStream2dATI glVertexStream2dATI(stream::GLenum, x::GLdouble, y::GLdouble)::Void
 export glVertexStream2dATI
-@get_c_fun "libGL" glVertexStream2dvATI glVertexStream2dvATI(stream::GLenum, coords::Ptr{GLdouble})::Void
+@getCFun "libGL" glVertexStream2dvATI glVertexStream2dvATI(stream::GLenum, coords::Ptr{GLdouble})::Void
 export glVertexStream2dvATI
-@get_c_fun "libGL" glVertexStream3sATI glVertexStream3sATI(stream::GLenum, x::GLshort, y::GLshort, z::GLshort)::Void
+@getCFun "libGL" glVertexStream3sATI glVertexStream3sATI(stream::GLenum, x::GLshort, y::GLshort, z::GLshort)::Void
 export glVertexStream3sATI
-@get_c_fun "libGL" glVertexStream3svATI glVertexStream3svATI(stream::GLenum, coords::Ptr{GLshort})::Void
+@getCFun "libGL" glVertexStream3svATI glVertexStream3svATI(stream::GLenum, coords::Ptr{GLshort})::Void
 export glVertexStream3svATI
-@get_c_fun "libGL" glVertexStream3iATI glVertexStream3iATI(stream::GLenum, x::GLint, y::GLint, z::GLint)::Void
+@getCFun "libGL" glVertexStream3iATI glVertexStream3iATI(stream::GLenum, x::GLint, y::GLint, z::GLint)::Void
 export glVertexStream3iATI
-@get_c_fun "libGL" glVertexStream3ivATI glVertexStream3ivATI(stream::GLenum, coords::Ptr{GLint})::Void
+@getCFun "libGL" glVertexStream3ivATI glVertexStream3ivATI(stream::GLenum, coords::Ptr{GLint})::Void
 export glVertexStream3ivATI
-@get_c_fun "libGL" glVertexStream3fATI glVertexStream3fATI(stream::GLenum, x::GLfloat, y::GLfloat, z::GLfloat)::Void
+@getCFun "libGL" glVertexStream3fATI glVertexStream3fATI(stream::GLenum, x::GLfloat, y::GLfloat, z::GLfloat)::Void
 export glVertexStream3fATI
-@get_c_fun "libGL" glVertexStream3fvATI glVertexStream3fvATI(stream::GLenum, coords::Ptr{GLfloat})::Void
+@getCFun "libGL" glVertexStream3fvATI glVertexStream3fvATI(stream::GLenum, coords::Ptr{GLfloat})::Void
 export glVertexStream3fvATI
-@get_c_fun "libGL" glVertexStream3dATI glVertexStream3dATI(stream::GLenum, x::GLdouble, y::GLdouble, z::GLdouble)::Void
+@getCFun "libGL" glVertexStream3dATI glVertexStream3dATI(stream::GLenum, x::GLdouble, y::GLdouble, z::GLdouble)::Void
 export glVertexStream3dATI
-@get_c_fun "libGL" glVertexStream3dvATI glVertexStream3dvATI(stream::GLenum, coords::Ptr{GLdouble})::Void
+@getCFun "libGL" glVertexStream3dvATI glVertexStream3dvATI(stream::GLenum, coords::Ptr{GLdouble})::Void
 export glVertexStream3dvATI
-@get_c_fun "libGL" glVertexStream4sATI glVertexStream4sATI(stream::GLenum, x::GLshort, y::GLshort, z::GLshort, w::GLshort)::Void
+@getCFun "libGL" glVertexStream4sATI glVertexStream4sATI(stream::GLenum, x::GLshort, y::GLshort, z::GLshort, w::GLshort)::Void
 export glVertexStream4sATI
-@get_c_fun "libGL" glVertexStream4svATI glVertexStream4svATI(stream::GLenum, coords::Ptr{GLshort})::Void
+@getCFun "libGL" glVertexStream4svATI glVertexStream4svATI(stream::GLenum, coords::Ptr{GLshort})::Void
 export glVertexStream4svATI
-@get_c_fun "libGL" glVertexStream4iATI glVertexStream4iATI(stream::GLenum, x::GLint, y::GLint, z::GLint, w::GLint)::Void
+@getCFun "libGL" glVertexStream4iATI glVertexStream4iATI(stream::GLenum, x::GLint, y::GLint, z::GLint, w::GLint)::Void
 export glVertexStream4iATI
-@get_c_fun "libGL" glVertexStream4ivATI glVertexStream4ivATI(stream::GLenum, coords::Ptr{GLint})::Void
+@getCFun "libGL" glVertexStream4ivATI glVertexStream4ivATI(stream::GLenum, coords::Ptr{GLint})::Void
 export glVertexStream4ivATI
-@get_c_fun "libGL" glVertexStream4fATI glVertexStream4fATI(stream::GLenum, x::GLfloat, y::GLfloat, z::GLfloat, w::GLfloat)::Void
+@getCFun "libGL" glVertexStream4fATI glVertexStream4fATI(stream::GLenum, x::GLfloat, y::GLfloat, z::GLfloat, w::GLfloat)::Void
 export glVertexStream4fATI
-@get_c_fun "libGL" glVertexStream4fvATI glVertexStream4fvATI(stream::GLenum, coords::Ptr{GLfloat})::Void
+@getCFun "libGL" glVertexStream4fvATI glVertexStream4fvATI(stream::GLenum, coords::Ptr{GLfloat})::Void
 export glVertexStream4fvATI
-@get_c_fun "libGL" glVertexStream4dATI glVertexStream4dATI(stream::GLenum, x::GLdouble, y::GLdouble, z::GLdouble, w::GLdouble)::Void
+@getCFun "libGL" glVertexStream4dATI glVertexStream4dATI(stream::GLenum, x::GLdouble, y::GLdouble, z::GLdouble, w::GLdouble)::Void
 export glVertexStream4dATI
-@get_c_fun "libGL" glVertexStream4dvATI glVertexStream4dvATI(stream::GLenum, coords::Ptr{GLdouble})::Void
+@getCFun "libGL" glVertexStream4dvATI glVertexStream4dvATI(stream::GLenum, coords::Ptr{GLdouble})::Void
 export glVertexStream4dvATI
-@get_c_fun "libGL" glNormalStream3bATI glNormalStream3bATI(stream::GLenum, nx::GLbyte, ny::GLbyte, nz::GLbyte)::Void
+@getCFun "libGL" glNormalStream3bATI glNormalStream3bATI(stream::GLenum, nx::GLbyte, ny::GLbyte, nz::GLbyte)::Void
 export glNormalStream3bATI
-@get_c_fun "libGL" glNormalStream3bvATI glNormalStream3bvATI(stream::GLenum, coords::Ptr{GLbyte})::Void
+@getCFun "libGL" glNormalStream3bvATI glNormalStream3bvATI(stream::GLenum, coords::Ptr{GLbyte})::Void
 export glNormalStream3bvATI
-@get_c_fun "libGL" glNormalStream3sATI glNormalStream3sATI(stream::GLenum, nx::GLshort, ny::GLshort, nz::GLshort)::Void
+@getCFun "libGL" glNormalStream3sATI glNormalStream3sATI(stream::GLenum, nx::GLshort, ny::GLshort, nz::GLshort)::Void
 export glNormalStream3sATI
-@get_c_fun "libGL" glNormalStream3svATI glNormalStream3svATI(stream::GLenum, coords::Ptr{GLshort})::Void
+@getCFun "libGL" glNormalStream3svATI glNormalStream3svATI(stream::GLenum, coords::Ptr{GLshort})::Void
 export glNormalStream3svATI
-@get_c_fun "libGL" glNormalStream3iATI glNormalStream3iATI(stream::GLenum, nx::GLint, ny::GLint, nz::GLint)::Void
+@getCFun "libGL" glNormalStream3iATI glNormalStream3iATI(stream::GLenum, nx::GLint, ny::GLint, nz::GLint)::Void
 export glNormalStream3iATI
-@get_c_fun "libGL" glNormalStream3ivATI glNormalStream3ivATI(stream::GLenum, coords::Ptr{GLint})::Void
+@getCFun "libGL" glNormalStream3ivATI glNormalStream3ivATI(stream::GLenum, coords::Ptr{GLint})::Void
 export glNormalStream3ivATI
-@get_c_fun "libGL" glNormalStream3fATI glNormalStream3fATI(stream::GLenum, nx::GLfloat, ny::GLfloat, nz::GLfloat)::Void
+@getCFun "libGL" glNormalStream3fATI glNormalStream3fATI(stream::GLenum, nx::GLfloat, ny::GLfloat, nz::GLfloat)::Void
 export glNormalStream3fATI
-@get_c_fun "libGL" glNormalStream3fvATI glNormalStream3fvATI(stream::GLenum, coords::Ptr{GLfloat})::Void
+@getCFun "libGL" glNormalStream3fvATI glNormalStream3fvATI(stream::GLenum, coords::Ptr{GLfloat})::Void
 export glNormalStream3fvATI
-@get_c_fun "libGL" glNormalStream3dATI glNormalStream3dATI(stream::GLenum, nx::GLdouble, ny::GLdouble, nz::GLdouble)::Void
+@getCFun "libGL" glNormalStream3dATI glNormalStream3dATI(stream::GLenum, nx::GLdouble, ny::GLdouble, nz::GLdouble)::Void
 export glNormalStream3dATI
-@get_c_fun "libGL" glNormalStream3dvATI glNormalStream3dvATI(stream::GLenum, coords::Ptr{GLdouble})::Void
+@getCFun "libGL" glNormalStream3dvATI glNormalStream3dvATI(stream::GLenum, coords::Ptr{GLdouble})::Void
 export glNormalStream3dvATI
-@get_c_fun "libGL" glClientActiveVertexStreamATI glClientActiveVertexStreamATI(stream::GLenum)::Void
+@getCFun "libGL" glClientActiveVertexStreamATI glClientActiveVertexStreamATI(stream::GLenum)::Void
 export glClientActiveVertexStreamATI
-@get_c_fun "libGL" glVertexBlendEnviATI glVertexBlendEnviATI(pname::GLenum, param::GLint)::Void
+@getCFun "libGL" glVertexBlendEnviATI glVertexBlendEnviATI(pname::GLenum, param::GLint)::Void
 export glVertexBlendEnviATI
-@get_c_fun "libGL" glVertexBlendEnvfATI glVertexBlendEnvfATI(pname::GLenum, param::GLfloat)::Void
+@getCFun "libGL" glVertexBlendEnvfATI glVertexBlendEnvfATI(pname::GLenum, param::GLfloat)::Void
 export glVertexBlendEnvfATI
 
 end #module ATI
