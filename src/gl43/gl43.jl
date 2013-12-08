@@ -4407,7 +4407,7 @@ export glCopyImageSubData
 export glDebugMessageControl
 @getCFun "libGL" glDebugMessageInsert glDebugMessageInsert(source::GLenum, type_::GLenum, id::GLuint, severity::GLenum, length::GLsizei, buf::Ptr{GLchar})::Void
 export glDebugMessageInsert
-@getCFun "libGL" glDebugMessageCallback glDebugMessageCallback((*[0]byte)(callback), userParam::Ptr{Void})::Void
+@getCFun "libGL" glDebugMessageCallback glDebugMessageCallback(callback::Ptr{Void}, userParam::Ptr{Void})::Void
 export glDebugMessageCallback
 @getCFun "libGL" glGetDebugMessageLog glGetDebugMessageLog(count::GLuCint, bufsize::GLsizei, sources::Ptr{GLenum}, types::Ptr{GLenum}, ids::Ptr{GLCuint}, severities::Ptr{GLenum}, lengths::Ptr{GLsizei}, messageLog::Ptr{GLchar})::Uint
 export glGetDebugMessageLog
