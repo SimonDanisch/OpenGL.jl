@@ -261,6 +261,7 @@ function glimread(filename::String)
     end
     return img1D, w, h
 end
+#same for grayscale
 function glimreadGray(filename::String)
 
     img = imread(filename)
@@ -277,3 +278,4 @@ function glimreadGray(filename::String)
     return img1D, w, h
 end
 end
+
