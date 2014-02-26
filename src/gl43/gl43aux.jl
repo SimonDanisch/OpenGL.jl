@@ -277,4 +277,3 @@ function glimreadGray(filename::String)
     return img1D, w, h
 end
 end
-
